@@ -4,6 +4,7 @@ import ClientLogoMarquee from '../components/ClientLogoMarquee'
 import Services from '../components/Services'
 import WhyChooseUs from '../components/WhyChooseUs'
 import MajorAreas from '../components/MajorAreas'
+import HomeProjects from '../components/HomeProjects'
 import Contact from '../components/Contact'
 
 const HomePage = () => {
@@ -14,6 +15,7 @@ const HomePage = () => {
       <Services />
       <WhyChooseUs />
       <MajorAreas />
+      <HomeProjects />
       <Contact />
     </main>
   )

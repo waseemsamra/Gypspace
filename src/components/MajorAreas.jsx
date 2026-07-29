@@ -68,7 +68,7 @@ const MajorAreas = () => {
                 </div>
               </div>
               <div className="p-lg">
-                <h3 className="font-headline-md text-headline-md text-primary mb-sm">
+                <h3 className="font-headline-md text-xl font-semibold text-primary mb-sm">
                   {area.title}
                 </h3>
                 <p className="font-body-md text-body-md text-secondary mb-xl line-clamp-2">

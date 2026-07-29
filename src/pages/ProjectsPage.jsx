@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import Hero from '../components/Hero'
 import Services from '../components/Services'
@@ -6,6 +6,9 @@ import WhyChooseUs from '../components/WhyChooseUs'
 import Contact from '../components/Contact'
 
 const ProjectsPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   const projects = [
     {
       id: 1,
