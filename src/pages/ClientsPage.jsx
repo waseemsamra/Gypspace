@@ -28,7 +28,7 @@ const ClientsPage = () => {
     { name: 'Veloche Interiors', project: 'Interior Fit-out', location: 'Dubai, UAE', logo: '/veloche-global.png' },
     { name: 'Wahat Babil Electromechanical LLC', project: 'MEP Works', location: 'Dubai, UAE', logo: '/wahat-babil.png' },
     { name: 'Yaser Fannari', project: 'Technical Works', location: 'Dubai, UAE', logo: '/yaser-fanari.png' },
-    { name: 'Yoshi COntruction', project: 'Construction', location: 'Dubai, UAE' },
+    { name: 'Yoshi COntruction', project: 'Construction', location: 'Dubai, UAE', logo: '/yoshii.jpeg' },
   ]
 
   useEffect(() => {
