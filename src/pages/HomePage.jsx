@@ -1,5 +1,6 @@
 import React from 'react'
 import Hero from '../components/Hero'
+import ClientLogoMarquee from '../components/ClientLogoMarquee'
 import Services from '../components/Services'
 import WhyChooseUs from '../components/WhyChooseUs'
 import MajorAreas from '../components/MajorAreas'
@@ -9,6 +10,7 @@ const HomePage = () => {
   return (
     <main>
       <Hero />
+      <ClientLogoMarquee />
       <Services />
       <WhyChooseUs />
       <MajorAreas />

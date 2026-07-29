@@ -21,6 +21,7 @@ import SustainabilityPage from './pages/SustainabilityPage'
 import SpecificationsPage from './pages/SpecificationsPage'
 import TermsPage from './pages/TermsPage'
 import QuotePage from './pages/QuotePage'
+import ClientsPage from './pages/ClientsPage'
 
 const App = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
           <Route path="specifications" element={<SpecificationsPage />} />
           <Route path="terms" element={<TermsPage />} />
           <Route path="quote" element={<QuotePage />} />
+          <Route path="clients" element={<ClientsPage />} />
         </Route>
       </Routes>
     </Router>

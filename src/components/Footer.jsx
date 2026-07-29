@@ -43,6 +43,11 @@ const Footer = () => {
               Civil Works
             </a>
           </li>
+          <li>
+            <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/clients">
+              Clients
+            </a>
+          </li>
         </ul>
       </div>
       <div>
