@@ -17,6 +17,7 @@ export async function uploadImage(file) {
     Key: key,
     Body: buffer,
     ContentType: file.type,
+    ACL: 'public-read',
   }))
 
   return `https://${import.meta.env.VITE_AWS_S3_BUCKET}.s3.${import.meta.env.VITE_AWS_REGION}.amazonaws.com/${key}`
