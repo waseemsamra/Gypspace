@@ -156,7 +156,7 @@ const TermsPage = () => {
                 <h3 className="font-headline-sm text-headline-sm mb-sm">Legal Inquiry?</h3>
                 <p className="font-body-md opacity-80">Direct all legal communications and compliance verification requests to our legal department.</p>
               </div>
-              <a className="inline-flex items-center gap-sm bg-on-primary text-primary px-xl py-md rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-colors" href="mailto:legal@gypspace.ae">
+              <a className="inline-flex items-center gap-sm bg-on-primary text-primary px-xl py-md rounded-lg font-label-md text-label-md hover:bg-surface-variant transition-colors" href="mailto:info@gypspace.com">
                 <span className="material-symbols-outlined">mail</span>
                 Email Legal Dept
               </a>

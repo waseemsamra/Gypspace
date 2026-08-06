@@ -37,7 +37,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="font-label-md text-label-md uppercase text-secondary">General Inquiries</p>
-                    <p className="font-body-md text-body-md">+971 4 000 0000</p>
+                    <p className="font-body-md text-body-md">+971 558612239</p>
                   </div>
                 </div>
               </div>

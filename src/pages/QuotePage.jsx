@@ -37,7 +37,7 @@ const QuotePage = () => {
                   </div>
                   <div className="space-y-xs">
                     <label className="font-label-md text-label-md text-on-surface-variant">Phone Number</label>
-                    <input className="w-full h-12 px-md bg-white border border-outline-variant rounded-lg font-body-md focus:border-on-tertiary-container focus:ring-0 form-focus-glow transition-all" placeholder="+971 00 000 0000" type="tel" />
+                     <input className="w-full h-12 px-md bg-white border border-outline-variant rounded-lg font-body-md focus:border-on-tertiary-container focus:ring-0 form-focus-glow transition-all" placeholder="+971 55 861 2239" type="tel" />
                   </div>
                 </div>
               </div>
@@ -165,7 +165,7 @@ const QuotePage = () => {
               <p className="text-sm text-on-surface-variant">Our engineering desks are staffed 24/7 for urgent technical consultations.</p>
               <div className="flex items-center gap-sm mt-sm">
                 <span className="material-symbols-outlined text-on-tertiary-container">call</span>
-                <span className="font-mono-utility text-label-md font-bold text-primary">+971 (4) 222-3400</span>
+                <span className="font-mono-utility text-label-md font-bold text-primary">+971 558612239</span>
               </div>
             </div>
           </aside>

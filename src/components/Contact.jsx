@@ -16,11 +16,11 @@ const Contact = () => {
             <div className="space-y-lg">
               <div className="flex items-center gap-md">
                 <span className="material-symbols-outlined">call</span>
-                <span className="font-mono-utility">+971 4 000 0000</span>
+                <span className="font-mono-utility">+971 558612239</span>
               </div>
               <div className="flex items-center gap-md">
                 <span className="material-symbols-outlined">mail</span>
-                <span className="font-mono-utility">projects@gypspace.ae</span>
+                <span className="font-mono-utility">info@gypspace.com</span>
               </div>
               <div className="flex items-center gap-md">
                 <span className="material-symbols-outlined">location_on</span>
