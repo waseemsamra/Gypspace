@@ -85,7 +85,7 @@ const ProductionPage = () => {
                 <img
                   alt="Gypspace facility overview"
                   className="w-full h-auto object-cover rounded-lg"
-                  src="/production_hero.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/production_hero.jpg"
                 />
               </div>
               <div className="absolute bottom-[-20px] left-[-20px] bg-white p-lg border border-outline-variant/30 rounded-xl shadow-xl z-20">
@@ -148,7 +148,7 @@ const ProductionPage = () => {
             <div className="md:col-span-2 md:row-span-2 relative overflow-hidden group">
               <div
                 className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-                style={{ backgroundImage: `url('/production_gallery1.jpg')` }}
+                style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/production_gallery1.jpg')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/20 to-transparent z-10"></div>
               <div className="absolute bottom-0 left-0 p-xl z-20 w-full">
@@ -222,7 +222,7 @@ const ProductionPage = () => {
               <div className="group relative aspect-[4/5] overflow-hidden rounded-xl border border-outline-variant/30">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url('/production_gallery1.jpg')` }}
+                  style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/production_gallery1.jpg')` }}
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-xl">
                   <div>
@@ -234,7 +234,7 @@ const ProductionPage = () => {
               <div className="group relative aspect-[4/5] overflow-hidden rounded-xl border border-outline-variant/30">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url('/production_gallery2.jpg')` }}
+                  style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/production_gallery2.jpg')` }}
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-xl">
                   <div>
@@ -246,7 +246,7 @@ const ProductionPage = () => {
               <div className="group relative aspect-[4/5] overflow-hidden rounded-xl border border-outline-variant/30">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url('/production_gallery3.jpg')` }}
+                  style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/production_gallery3.jpg')` }}
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-xl">
                   <div>

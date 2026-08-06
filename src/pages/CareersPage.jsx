@@ -37,7 +37,7 @@ const CareersPage = () => {
           <div className="absolute inset-0 z-0">
             <div
               className="w-full h-full bg-cover bg-center opacity-60 mix-blend-overlay"
-              style={{ backgroundImage: `url('/careers_hero.jpg')` }}
+              style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/careers_hero.jpg')` }}
             />
             <div className="absolute inset-0 bg-gradient-to-r from-primary-container via-primary-container/40 to-transparent"></div>
           </div>
@@ -82,7 +82,7 @@ const CareersPage = () => {
                 <div className="aspect-[4/5] rounded-xl overflow-hidden border border-outline-variant">
                   <img
                     className="w-full h-full object-cover"
-                    src="/careers_culture.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/careers_culture.jpg"
                     alt="Gypspace technical team culture"
                   />
                 </div>

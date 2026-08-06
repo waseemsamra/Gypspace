@@ -14,7 +14,7 @@ const CivilPage = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-on-background/80 to-transparent z-10" />
             <img
               className="w-full h-full object-cover"
-              src="/civil_hero.jpg"
+              src="https://gypspace.s3.us-east-1.amazonaws.com/civil_hero.jpg"
               alt="A large scale construction site at dusk showing the massive steel reinforcement grid for a foundational structural base"
             />
           </div>
@@ -73,7 +73,7 @@ const CivilPage = () => {
                 <div className="absolute right-0 bottom-0 w-1/2 h-full opacity-10 pointer-events-none">
                   <img
                     className="w-full h-full object-cover grayscale"
-                    src="/civil_blueprint.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/civil_blueprint.jpg"
                     alt="Technical blueprint overlay of structural beams and pillars"
                   />
                 </div>

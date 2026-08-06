@@ -5,7 +5,7 @@
       "subtitle": "End-to-end technical services across MEP, Fit-out, and Civil disciplines in the UAE.",
       "ctaText": "Explore Our Work",
       "ctaLink": "/projects",
-      "heroImage": "/hero-image.png",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/hero-image.png",
       "badge": "FLAGSHIP PROJECT"
     },
     "stats": [
@@ -41,7 +41,7 @@
     ]
   },
   "whyChooseUs": {
-    "image": "/why_choose_us.jpg",
+    "image": "https://gypspace.s3.us-east-1.amazonaws.com/why_choose_us.jpg",
     "heading": "Engineered for Excellence",
     "description": "Gypspace Technical Services LLC operates at the intersection of traditional engineering and future-ready innovation. We build with the precision required by today's leading corporations.",
     "features": [
@@ -56,64 +56,64 @@
       "title": "Corporate Headquarters",
       "category": "fitout",
       "description": "A multi-floor executive workspace focusing on minimalist aesthetics and seamless technical integration.",
-      "image": "/project_1.jpg",
-      "heroImage": "/main-project.png",
-      "blueprintImage": "/project_1.jpg",
-      "gallery1": "/fitout_gallery1.jpg",
-      "gallery2": "/fitout_gallery2.jpg"
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/main-project.png",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery1.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery2.jpg"
     },
     {
       "id": 2,
       "title": "Precision Lab Facility",
       "category": "mep",
       "description": "State-of-the-art technical environment designed for maximum operational efficiency and clinical precision.",
-      "image": "/project_2.jpg",
-      "heroImage": "/lab.png",
-      "blueprintImage": "/project_2.jpg",
-      "gallery1": "/mep_case_study.jpg",
-      "gallery2": "/mep_fire_safety.jpg"
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/lab.png",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/mep_case_study.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/mep_fire_safety.jpg"
     },
     {
       "id": 3,
       "title": "Executive Hospitality Suite",
       "category": "fitout",
       "description": "Luxury interior solutions featuring bespoke cabinetry and advanced smart-room technology.",
-      "image": "/project_3.jpg",
-      "heroImage": "/lobby.png",
-      "blueprintImage": "/project_3.jpg",
-      "gallery1": "/production_gallery1.jpg",
-      "gallery2": "/production_gallery2.jpg"
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/lobby.png",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/production_gallery1.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/production_gallery2.jpg"
     }
   ],
   "clients": [
-    { "name": "Abeer Alamal Technical Works", "project": "Technical Works", "location": "Dubai, UAE", "logo": "/abeer_alamal.jpeg" },
-    { "name": "Al Qabdah Global Contructions", "project": "Construction", "location": "Dubai, UAE", "logo": "/al_qabdah.png" },
-    { "name": "Buildmode", "project": "Industrial Fit-out", "location": "Dubai, UAE", "logo": "/build_mode.png" },
-    { "name": "Cosmo Interiors", "project": "Interior Design", "location": "Dubai, UAE", "logo": "/cosmo-interiors.png" },
-    { "name": "Echo Art Décor Cont.", "project": "Decor & Fit-out", "location": "Dubai, UAE", "logo": "/echo-art.png" },
-    { "name": "Elenora Interior Design", "project": "Interior Design", "location": "Dubai, UAE", "logo": "/elenora.jpeg" },
-    { "name": "Emaar", "project": "Commercial Fit-out", "location": "Dubai, UAE", "logo": "/emaar.png" },
-    { "name": "Fino Interiors", "project": "Interior Fit-out", "location": "Dubai, UAE", "logo": "/fino-international.png" },
-    { "name": "Golden Square Interior Design", "project": "Interior Design", "location": "Dubai, UAE", "logo": "/golden-square.png" },
-    { "name": "Naam creations", "project": "Creative Solutions", "location": "Dubai, UAE", "logo": "/Naam-creation.png" },
-    { "name": "Nakheel", "project": "Civil & Fit-out", "location": "Dubai, UAE", "logo": "/Nakheel_Properties.png" },
-    { "name": "Orbis Creative Solutions", "project": "Creative Solutions", "location": "Dubai, UAE", "logo": "/orbis_interiors.png" },
-    { "name": "Oculus Middle East", "project": "Technical Services", "location": "Dubai, UAE", "logo": "/Oculus.png" },
-    { "name": "Pza Interiors", "project": "Interior Fit-out", "location": "Dubai, UAE", "logo": "/pza-interiors.png" },
-    { "name": "Roche Bobois", "project": "Luxury Furniture", "location": "Dubai, UAE", "logo": "/roche-bobois.svg" },
-    { "name": "Royat Massar Decorations LLC", "project": "Decorations", "location": "Dubai, UAE", "logo": "/royat-massar.png" },
-    { "name": "Sharif Carpentry", "project": "Carpentry & Joinery", "location": "Dubai, UAE", "logo": "/sharif_carpentry.png" },
-    { "name": "Veloche Interiors", "project": "Interior Fit-out", "location": "Dubai, UAE", "logo": "/veloche-global.png" },
-    { "name": "Wahat Babil Electromechanical LLC", "project": "MEP Works", "location": "Dubai, UAE", "logo": "/wahat-babil.png" },
-    { "name": "Yaser Fannari", "project": "Technical Works", "location": "Dubai, UAE", "logo": "/yaser-fanari.png" },
-    { "name": "Yoshi COntruction", "project": "Construction", "location": "Dubai, UAE", "logo": "/yoshii.jpeg" }
+    { "name": "Abeer Alamal Technical Works", "project": "Technical Works", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/abeer_alamal.jpeg" },
+    { "name": "Al Qabdah Global Contructions", "project": "Construction", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/al_qabdah.png" },
+    { "name": "Buildmode", "project": "Industrial Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/build_mode.png" },
+    { "name": "Cosmo Interiors", "project": "Interior Design", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/cosmo-interiors.png" },
+    { "name": "Echo Art Décor Cont.", "project": "Decor & Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/echo-art.png" },
+    { "name": "Elenora Interior Design", "project": "Interior Design", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/elenora.jpeg" },
+    { "name": "Emaar", "project": "Commercial Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/emaar.png" },
+    { "name": "Fino Interiors", "project": "Interior Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/fino-international.png" },
+    { "name": "Golden Square Interior Design", "project": "Interior Design", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/golden-square.png" },
+    { "name": "Naam creations", "project": "Creative Solutions", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/Naam-creation.png" },
+    { "name": "Nakheel", "project": "Civil & Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/Nakheel_Properties.png" },
+    { "name": "Orbis Creative Solutions", "project": "Creative Solutions", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/orbis_interiors.png" },
+    { "name": "Oculus Middle East", "project": "Technical Services", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/Oculus.png" },
+    { "name": "Pza Interiors", "project": "Interior Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/pza-interiors.png" },
+    { "name": "Roche Bobois", "project": "Luxury Furniture", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/roche-bobois.svg" },
+    { "name": "Royat Massar Decorations LLC", "project": "Decorations", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/royat-massar.png" },
+    { "name": "Sharif Carpentry", "project": "Carpentry & Joinery", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/sharif_carpentry.png" },
+    { "name": "Veloche Interiors", "project": "Interior Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/veloche-global.png" },
+    { "name": "Wahat Babil Electromechanical LLC", "project": "MEP Works", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/wahat-babil.png" },
+    { "name": "Yaser Fannari", "project": "Technical Works", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/yaser-fanari.png" },
+    { "name": "Yoshi COntruction", "project": "Construction", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/yoshii.jpeg" }
   ],
   "gallery": [
-    { "id": 1, "url": "/project_1.jpg", "caption": "Corporate Headquarters", "category": "fitout" },
-    { "id": 2, "url": "/project_2.jpg", "caption": "Precision Lab Facility", "category": "mep" },
-    { "id": 3, "url": "/project_3.jpg", "caption": "Executive Hospitality Suite", "category": "fitout" },
-    { "id": 4, "url": "/major_mep.jpg", "caption": "MEP Works", "category": "mep" },
-    { "id": 5, "url": "/major_civil.jpg", "caption": "Civil Works", "category": "civil" },
-    { "id": 6, "url": "/fitout_gallery1.jpg", "caption": "Fitout Gallery 1", "category": "fitout" }
+    { "id": 1, "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg", "caption": "Corporate Headquarters", "category": "fitout" },
+    { "id": 2, "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg", "caption": "Precision Lab Facility", "category": "mep" },
+    { "id": 3, "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg", "caption": "Executive Hospitality Suite", "category": "fitout" },
+    { "id": 4, "url": "https://gypspace.s3.us-east-1.amazonaws.com/major_mep.jpg", "caption": "MEP Works", "category": "mep" },
+    { "id": 5, "url": "https://gypspace.s3.us-east-1.amazonaws.com/major_civil.jpg", "caption": "Civil Works", "category": "civil" },
+    { "id": 6, "url": "https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery1.jpg", "caption": "Fitout Gallery 1", "category": "fitout" }
   ]
 }

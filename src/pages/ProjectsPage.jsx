@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import Services from '../components/Services'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Contact from '../components/Contact'
+import HomeProjects from '../components/HomeProjects'
 
 const ProjectsPage = () => {
   useEffect(() => {
@@ -14,21 +15,21 @@ const ProjectsPage = () => {
       id: 1,
       title: 'Corporate Headquarters',
       description: 'A multi-floor executive workspace focusing on minimalist aesthetics and seamless technical integration.',
-      image: '/project_1.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg',
       alt: 'Corporate Headquarters'
     },
     {
       id: 2,
       title: 'Precision Lab Facility',
       description: 'State-of-the-art technical environment designed for maximum operational efficiency and clinical precision.',
-      image: '/project_2.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg',
       alt: 'Precision Lab Facility'
     },
     {
       id: 3,
       title: 'Executive Hospitality Suite',
       description: 'Luxury interior solutions featuring bespoke cabinetry and advanced smart-room technology.',
-      image: '/project_3.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg',
       alt: 'Executive Hospitality Suite'
     }
   ]
@@ -39,7 +40,7 @@ const ProjectsPage = () => {
         <div className="absolute inset-0 z-0 transition-all duration-700 opacity-100 translate-y-0">
           <div
             className="w-full h-full bg-cover bg-center brightness-[0.95]"
-            style={{ backgroundImage: `url('/joinery.png')` }}
+            style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/joinery.png')` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-surface/90 to-transparent" />
         </div>
@@ -91,6 +92,7 @@ const ProjectsPage = () => {
           </div>
         </div>
       </section>
+      <HomeProjects showMoreButton />
       <Services />
       <WhyChooseUs />
       <Contact />

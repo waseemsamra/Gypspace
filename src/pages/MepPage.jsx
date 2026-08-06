@@ -38,7 +38,7 @@ const MepPage = () => {
               <div className="relative bg-surface-container-highest rounded-xl overflow-hidden shadow-2xl aspect-[4/3] border border-outline-variant/30">
                 <img
                   className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700"
-                  src="/mep_hvac.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/mep_hvac.jpg"
                   alt="A high-tech, wide-angle photograph of a massive commercial HVAC plant room"
                 />
                 <div className="absolute bottom-6 left-6 bg-primary/90 backdrop-blur-md p-md border-l-4 border-technical-cyan text-white max-w-xs">
@@ -73,7 +73,7 @@ const MepPage = () => {
                 <div className="flex-1 rounded-lg overflow-hidden bg-surface-container h-64 md:h-auto border border-outline-variant">
                   <img
                     className="w-full h-full object-cover"
-                    src="/mep_hvac.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/mep_hvac.jpg"
                     alt="A detailed technical diagram overlaying a photo of high-performance ventilation ducting"
                   />
                 </div>
@@ -105,7 +105,7 @@ const MepPage = () => {
                 <div className="flex-1 order-2 md:order-1 rounded-lg overflow-hidden bg-surface-container h-64 md:h-auto">
                   <img
                     className="w-full h-full object-cover"
-                    src="/mep_fire_safety.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/mep_fire_safety.jpg"
                     alt="A close-up shot of a professional fire suppression system control panel"
                   />
                 </div>
@@ -205,7 +205,7 @@ const MepPage = () => {
               <div className="relative aspect-video rounded-xl overflow-hidden group">
                 <img
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                  src="/mep_case_study.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/mep_case_study.jpg"
                   alt="A professional architectural photograph of a sleek, glass-walled skyscraper lobby at night"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-on-background/80 to-transparent" />

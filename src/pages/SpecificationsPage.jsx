@@ -76,7 +76,7 @@ const SpecificationsPage = () => {
                 <div className="absolute -inset-4 bg-tertiary-container/5 rounded-xl transition-all group-hover:scale-105"></div>
                 <img
                   className="relative z-10 w-full h-[500px] object-cover rounded-xl shadow-2xl border border-outline-variant"
-                  src="/spec_facility.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/spec_facility.jpg"
                   alt="Dubai technical production hub"
                 />
               </div>
@@ -132,7 +132,7 @@ const SpecificationsPage = () => {
             <div className="md:col-span-1 lg:col-span-1 bg-surface-container-high rounded-xl overflow-hidden relative group">
               <img
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                src="/spec_joinery.jpg"
+                src="https://gypspace.s3.us-east-1.amazonaws.com/spec_joinery.jpg"
                 alt="Joinery detail"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-lg">
@@ -172,7 +172,7 @@ const SpecificationsPage = () => {
               <div className="order-2 lg:order-1">
                 <img
                   className="w-full h-[600px] object-cover rounded-xl shadow-lg border border-outline-variant"
-                  src="/spec_quality.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/spec_quality.jpg"
                   alt="Quality control framework"
                 />
               </div>

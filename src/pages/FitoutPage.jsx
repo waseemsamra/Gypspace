@@ -13,7 +13,7 @@ const FitoutPage = () => {
           <div className="absolute inset-0 z-0">
             <div
               className="w-full h-full bg-cover bg-center opacity-70"
-              style={{ backgroundImage: `url('/fitout_hero.jpg')` }}
+              style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/fitout_hero.jpg')` }}
             />
             <div className="absolute inset-0 hero-gradient" />
           </div>
@@ -138,7 +138,7 @@ const FitoutPage = () => {
                 <div className="aspect-square relative rounded-xl overflow-hidden shadow-2xl border border-white/10">
                   <img
                     className="w-full h-full object-cover"
-                    src="/fitout_workshop.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/fitout_workshop.jpg"
                     alt="A professional photograph showing the inside of a high-tech joinery workshop"
                   />
                 </div>
@@ -168,7 +168,7 @@ const FitoutPage = () => {
             <div className="md:col-span-2 md:row-span-2 relative group cursor-pointer overflow-hidden rounded-lg">
               <div
                 className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-                style={{ backgroundImage: `url('/fitout_gallery1.jpg')` }}
+                style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery1.jpg')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-lg flex flex-col justify-end">
                 <span className="font-label-md text-label-md text-tertiary-fixed mb-xs">RETAIL</span>
@@ -178,7 +178,7 @@ const FitoutPage = () => {
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <div
                 className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-                style={{ backgroundImage: `url('/fitout_gallery2.jpg')` }}
+                style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery2.jpg')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-md flex flex-col justify-end">
                 <span className="font-label-md text-label-md text-tertiary-fixed mb-xs">CORPORATE</span>
@@ -188,7 +188,7 @@ const FitoutPage = () => {
             <div className="relative group cursor-pointer overflow-hidden rounded-lg">
               <div
                 className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-                style={{ backgroundImage: `url('/fitout_gallery3.jpg')` }}
+                style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery3.jpg')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-md flex flex-col justify-end">
                 <span className="font-label-md text-label-md text-tertiary-fixed mb-xs">HOSPITALITY</span>
@@ -198,7 +198,7 @@ const FitoutPage = () => {
             <div className="md:col-span-2 relative group cursor-pointer overflow-hidden rounded-lg">
               <div
                 className="w-full h-full bg-cover bg-center group-hover:scale-105 transition-transform duration-700"
-                style={{ backgroundImage: `url('/fitout_gallery4.jpg')` }}
+                style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery4.jpg')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-lg flex flex-col justify-end">
                 <span className="font-label-md text-label-md text-tertiary-fixed mb-xs">CO-WORKING</span>

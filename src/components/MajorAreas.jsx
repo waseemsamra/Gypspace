@@ -8,7 +8,7 @@ const MajorAreas = () => {
   const areas = cmsData?.home?.majorAreas || [
     {
       id: 'mep',
-      image: '/major_mep.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/major_mep.jpg',
       icon: 'settings_input_component',
       label: 'Technical Precision',
       title: 'M.E.P Works',
@@ -18,7 +18,7 @@ const MajorAreas = () => {
     },
     {
       id: 'fitout',
-      image: '/major_fitout.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/major_fitout.jpg',
       icon: 'architecture',
       label: 'Bespoke Interiors',
       title: 'Fit-out Works',
@@ -28,7 +28,7 @@ const MajorAreas = () => {
     },
     {
       id: 'civil',
-      image: '/major_civil.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/major_civil.jpg',
       icon: 'foundation',
       label: 'Structural Integrity',
       title: 'Civil Works',

@@ -21,7 +21,7 @@ const ServicesPage = () => {
           <div className="absolute inset-0 opacity-40">
             <div
               className="w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url('/service_hero.jpg')` }}
+              style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/service_hero.jpg')` }}
             />
           </div>
           <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px]" />
@@ -90,7 +90,7 @@ const ServicesPage = () => {
               <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
                 <img
                   className="w-full h-full object-cover"
-                  src="/service_hero.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/service_hero.jpg"
                   alt="Inside a high-tech Dubai joinery facility, featuring advanced CNC machinery and master craftsmen working on bespoke luxury wood panels. The workshop is pristine, well-lit with industrial LED strips, and showcases a blend of traditional craftsmanship and modern robotics. The color palette is dominated by warm wood tones against cool grey concrete and metallic machinery."
                 />
               </div>
@@ -103,7 +103,7 @@ const ServicesPage = () => {
               <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
                 <img
                   className="w-full h-full object-cover"
-                  src="/service_fitout.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/service_fitout.jpg"
                   alt="A professional turnkey fit-out project in a luxury corporate office. The image shows the transition from raw architectural space to finished interior, featuring complex MEP installations, acoustic ceiling panels, and sleek marble flooring. The scene is bright and airy, with a focus on clean lines and technical execution. Lighting is warm and integrated into the architecture."
                 />
               </div>
@@ -170,7 +170,7 @@ const ServicesPage = () => {
               <div className="aspect-[16/10] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
                 <img
                   className="w-full h-full object-cover"
-                  src="/service_consulting.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/service_consulting.jpg"
                   alt="A clean, modern technical consulting environment featuring high-fidelity 3D blueprints on digital displays. The setting is a minimalist studio with glass walls and professional lighting. Consultants are seen in the background discussing technical drawings of a complex laboratory facility. The aesthetic is extremely clean, using a palette of whites, cool greys, and technical blue accents."
                 />
               </div>

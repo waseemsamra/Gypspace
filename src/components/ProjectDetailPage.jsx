@@ -35,7 +35,7 @@ const ProjectDetailPage = ({ project }) => {
             <div className="absolute inset-0 z-0">
               <div
                 className="w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url('/main-project.png')` }}
+                style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/main-project.png')` }}
               />
               <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px]" />
             </div>

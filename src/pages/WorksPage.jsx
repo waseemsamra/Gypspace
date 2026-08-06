@@ -33,7 +33,7 @@ const WorksPage = () => {
       title: 'Global Corporate HQ',
       subtitle: 'Minimalist Technical Integration',
       category: 'Corporate',
-      image: '/work_1.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_1.jpg',
       span: 'md:col-span-8',
       height: 'h-[480px]',
       hasLink: true
@@ -43,7 +43,7 @@ const WorksPage = () => {
       title: 'Advanced Research Lab',
       subtitle: 'Clinical Precision & MEP',
       category: 'Specialized',
-      image: '/work_2.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_2.jpg',
       span: 'md:col-span-4',
       height: 'h-[480px]',
       hasLink: false
@@ -53,7 +53,7 @@ const WorksPage = () => {
       title: 'Royal Hospitality Lounge',
       subtitle: 'Bespoke Joinery & Smart Systems',
       category: 'Hospitality',
-      image: '/work_3.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_3.jpg',
       span: 'md:col-span-4',
       height: 'h-[400px]',
       hasLink: false
@@ -63,7 +63,7 @@ const WorksPage = () => {
       title: 'Modern Innovation Hub',
       subtitle: 'Collaborative Workspace Engineering',
       category: 'Commercial',
-      image: '/work_4.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_4.jpg',
       span: 'md:col-span-8',
       height: 'h-[400px]',
       hasLink: false
@@ -73,7 +73,7 @@ const WorksPage = () => {
       title: 'Boutique Concept Store',
       subtitle: 'Brand-Centric Fit-out',
       category: 'Retail',
-      image: '/work_5.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_5.jpg',
       span: 'md:col-span-6',
       height: 'h-[360px]',
       hasLink: false
@@ -83,7 +83,7 @@ const WorksPage = () => {
       title: 'Artisan Café',
       subtitle: 'Immersive Culinary Spaces',
       category: 'F&B',
-      image: '/work_6.jpg',
+      image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_6.jpg',
       span: 'md:col-span-6',
       height: 'h-[360px]',
       hasLink: false

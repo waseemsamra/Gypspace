@@ -38,7 +38,7 @@ const AboutPage = () => {
           <div className="absolute inset-0 z-0">
             <div
               className="w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url('/about_hero.jpg')` }}
+              style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/about_hero.jpg')` }}
             />
             <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px]" />
           </div>
@@ -118,7 +118,7 @@ const AboutPage = () => {
                 <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
                   <img
                     className="w-full h-full object-cover"
-                    src="/about_facility.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/about_facility.jpg"
                     alt="A modern, high-tech manufacturing facility for high-end joinery and furniture production"
                   />
                 </div>
@@ -201,7 +201,7 @@ const AboutPage = () => {
               <div className="md:col-span-8 group relative overflow-hidden rounded-xl border border-outline-variant reveal-on-scroll">
                 <img
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="/portfolio_1.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/portfolio_1.jpg"
                   alt="Palm Jumeirah Villa"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-lg">
@@ -216,7 +216,7 @@ const AboutPage = () => {
               <div className="md:col-span-4 group relative overflow-hidden rounded-xl border border-outline-variant reveal-on-scroll" style={{ transitionDelay: '100ms' }}>
                 <img
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="/portfolio_2.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/portfolio_2.jpg"
                   alt="Artisan Café"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-lg">
@@ -231,7 +231,7 @@ const AboutPage = () => {
               <div className="md:col-span-4 group relative overflow-hidden rounded-xl border border-outline-variant reveal-on-scroll" style={{ transitionDelay: '200ms' }}>
                 <img
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="/portfolio_3.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/portfolio_3.jpg"
                   alt="Boutique Concept"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-lg">
@@ -246,7 +246,7 @@ const AboutPage = () => {
               <div className="md:col-span-4 group relative overflow-hidden rounded-xl border border-outline-variant reveal-on-scroll" style={{ transitionDelay: '300ms' }}>
                 <img
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="/portfolio_4.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/portfolio_4.jpg"
                   alt="Luxe Hotel Suite"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-lg">
@@ -261,7 +261,7 @@ const AboutPage = () => {
               <div className="md:col-span-4 group relative overflow-hidden rounded-xl border border-outline-variant reveal-on-scroll" style={{ transitionDelay: '400ms' }}>
                 <img
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  src="/portfolio_5.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/portfolio_5.jpg"
                   alt="Corporate Hub"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-lg">

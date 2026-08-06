@@ -46,7 +46,7 @@ const ContactPage = () => {
               <div className="aspect-square bg-surface-container border border-outline-variant overflow-hidden relative group">
                 <img
                   className="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
-                  src="/contact_hero.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/contact_hero.jpg"
                   alt="An ultra-modern, high-tech engineering office in Dubai with clean lines, polished concrete floors, and large blueprint diagrams on the walls"
                 />
                 <div className="absolute inset-0 bg-primary/10 mix-blend-multiply" />
@@ -219,7 +219,7 @@ const ContactPage = () => {
                 <img
                   className="w-full h-full object-cover"
                    data-location="Office C-1802, 27 Ontario Tower Business Bay Dubai"
-                   src="/contact_map.jpg"
+                   src="https://gypspace.s3.us-east-1.amazonaws.com/contact_map.jpg"
                    alt="Office C-1802, 27 Ontario Tower Business Bay Dubai facility location"
                 />
                 <div className="absolute inset-0 bg-primary/5 pointer-events-none" />

@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
             <div className="absolute -top-12 -left-12 w-64 h-64 bg-secondary-fixed/30 rounded-full blur-3xl" />
             <div className="relative rounded-xl overflow-hidden border border-outline-variant shadow-sm">
               <EditableImage
-                src={sectionData.image || '/why_choose_us.jpg'}
+                src={sectionData.image || 'https://gypspace.s3.us-east-1.amazonaws.com/why_choose_us.jpg'}
                 onChange={(value) => updateField('image', value)}
                 alt="Why choose us"
                 editMode={isEditMode}

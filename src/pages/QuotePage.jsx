@@ -151,7 +151,7 @@ const QuotePage = () => {
               <div className="h-48 w-full bg-surface-container-highest rounded-lg relative overflow-hidden">
                 <img
                   className="w-full h-full object-cover"
-                  src="/quote_reference.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/quote_reference.jpg"
                   alt="Dubai Technical Hub"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-md">

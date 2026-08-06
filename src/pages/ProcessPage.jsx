@@ -45,7 +45,7 @@ const ProcessPage = () => {
               <div className="relative rounded-lg overflow-hidden border border-outline-variant shadow-2xl">
                 <img
                   className="w-full aspect-[4/3] object-cover"
-                  src="/process_hero.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/process_hero.jpg"
                   alt="A macro close-up of a high-precision CNC milling machine carving intricate patterns into a block of dark walnut wood"
                 />
               </div>
@@ -67,7 +67,7 @@ const ProcessPage = () => {
                 <div className="relative rounded-xl overflow-hidden border border-outline-variant shadow-sm group">
                   <img
                     className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/process_step1.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/process_step1.jpg"
                     alt="An architect's desk featuring a high-end dual-monitor setup displaying complex 3D wireframe models"
                   />
                   <div className="absolute top-md left-md bg-navy-tech text-white px-md py-xs rounded font-mono-utility">01 / STAGE</div>
@@ -119,7 +119,7 @@ const ProcessPage = () => {
                 <div className="relative rounded-xl overflow-hidden border border-outline-variant shadow-sm group">
                   <img
                     className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/process_step2.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/process_step2.jpg"
                     alt="A clean, industrial design lab showing various material samples like brushed brass, marble slabs, and custom acoustic panels"
                   />
                   <div className="absolute top-md right-md bg-navy-tech text-white px-md py-xs rounded font-mono-utility">02 / STAGE</div>
@@ -133,7 +133,7 @@ const ProcessPage = () => {
                 <div className="relative rounded-xl overflow-hidden border border-outline-variant shadow-sm group">
                   <img
                     className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/process_step3.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/process_step3.jpg"
                     alt="The interior of a high-tech manufacturing facility with multiple large-scale CNC machines in operation"
                   />
                   <div className="absolute top-md left-md bg-navy-tech text-white px-md py-xs rounded font-mono-utility">03 / STAGE</div>
@@ -179,7 +179,7 @@ const ProcessPage = () => {
                 <div className="relative rounded-xl overflow-hidden border border-outline-variant shadow-sm group">
                   <img
                     className="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-105"
-                    src="/process_step4.jpg"
+                    src="https://gypspace.s3.us-east-1.amazonaws.com/process_step4.jpg"
                     alt="A close-up of a master artisan's hands wearing white gloves, using a high-precision caliper"
                   />
                   <div className="absolute top-md right-md bg-navy-tech text-white px-md py-xs rounded font-mono-utility">04 / STAGE</div>

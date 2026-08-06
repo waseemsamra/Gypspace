@@ -41,7 +41,7 @@ const BrandStoryPage = () => {
           <div className="absolute inset-0 z-0">
             <img
               className="w-full h-full object-cover"
-              src="/brand_hero.jpg"
+              src="https://gypspace.s3.us-east-1.amazonaws.com/brand_hero.jpg"
               alt="Gypspace lobby"
             />
             <div className="absolute inset-0 bg-primary-container/40 backdrop-blur-[2px]"></div>
@@ -87,7 +87,7 @@ const BrandStoryPage = () => {
                 <div className="absolute -right-20 -top-20 w-64 h-64 border-8 border-outline-variant/30 rounded-full"></div>
                 <img
                   className="w-full aspect-video object-cover rounded-xl shadow-2xl relative z-10"
-                  src="/brand_mission.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/brand_mission.jpg"
                   alt="CNC milling"
                 />
               </div>
@@ -154,7 +154,7 @@ const BrandStoryPage = () => {
               <div className="md:col-span-2 relative group overflow-hidden rounded-xl border border-white/10 h-[400px]">
                 <img
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  src="/brand_bento1.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/brand_bento1.jpg"
                   alt="Precision joinery"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-transparent to-transparent"></div>
@@ -166,7 +166,7 @@ const BrandStoryPage = () => {
               <div className="relative group overflow-hidden rounded-xl border border-white/10 h-[400px]">
                 <img
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  src="/brand_bento2.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/brand_bento2.jpg"
                   alt="CNC optimization"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary-container/90 via-transparent to-transparent"></div>
@@ -185,7 +185,7 @@ const BrandStoryPage = () => {
               <div className="md:col-span-2 relative group overflow-hidden rounded-xl border border-white/10 h-[300px]">
                 <img
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                  src="/brand_bento4.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/brand_bento4.jpg"
                   alt="Structural integration"
                 />
                 <div className="absolute inset-0 bg-black/40 p-lg flex flex-col justify-end">
@@ -234,7 +234,7 @@ const BrandStoryPage = () => {
               <div className="w-40 h-40 shrink-0 bg-surface-container-highest flex items-center justify-center overflow-hidden grayscale">
                 <img
                   className="w-full h-full object-cover"
-                  src="/brand_leadership.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/brand_leadership.jpg"
                   alt="Managing Director"
                 />
               </div>

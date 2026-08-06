@@ -36,7 +36,7 @@ const SustainabilityPage = () => {
           <div className="absolute inset-0 z-0">
             <img
               className="w-full h-full object-cover grayscale-[30%]"
-              src="/sustainability_hero.jpg"
+              src="https://gypspace.s3.us-east-1.amazonaws.com/sustainability_hero.jpg"
               alt="Sustainable engineering"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-surface/95 via-surface/60 to-transparent"></div>
@@ -106,7 +106,7 @@ const SustainabilityPage = () => {
               <div className="aspect-video rounded-xl overflow-hidden shadow-xl">
                 <img
                   className="w-full h-full object-cover"
-                  src="/sustainability_tech.jpg"
+                  src="https://gypspace.s3.us-east-1.amazonaws.com/sustainability_tech.jpg"
                   alt="Energy efficient engineering"
                 />
               </div>
