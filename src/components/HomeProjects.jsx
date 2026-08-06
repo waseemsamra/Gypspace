@@ -119,7 +119,7 @@ const HomeProjects = ({ showMoreButton = false, initialCount = 6 }) => {
 
   const visibleProjects = showMoreButton
     ? filteredProjects.slice(0, visibleCount)
-    : filteredProjects
+    : filteredProjects.slice(0, initialCount)
 
   const hasMore = showMoreButton && visibleCount < filteredProjects.length
 
