@@ -27,6 +27,7 @@ const Header = () => {
   const navLinks = [
     { to: '/services', label: 'Services' },
     { to: '/projects', label: 'Projects' },
+    { to: '/gallery', label: 'Gallery' },
     { to: '/process', label: 'Process' },
     { to: '/works', label: 'Works' },
     { to: '/brand-story', label: 'Brand Story' },

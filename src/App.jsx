@@ -22,36 +22,47 @@ import SpecificationsPage from './pages/SpecificationsPage'
 import TermsPage from './pages/TermsPage'
 import QuotePage from './pages/QuotePage'
 import ClientsPage from './pages/ClientsPage'
+import GalleryPage from './pages/GalleryPage'
+import AdminLogin from './pages/AdminLogin'
+import AdminDashboard from './pages/AdminDashboard'
+import AdminImages from './pages/AdminImages'
+import { AdminProvider } from './contexts/AdminContext'
 
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="about" element={<AboutPage />} />
-          <Route path="services" element={<ServicesPage />} />
-          <Route path="process" element={<ProcessPage />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route path="fitout" element={<FitoutPage />} />
-          <Route path="mep" element={<MepPage />} />
-          <Route path="civil" element={<CivilPage />} />
-          <Route path="projects" element={<ProjectsPage />} />
-          <Route path="projects/1" element={<Project1Page />} />
-          <Route path="projects/2" element={<Project2Page />} />
-          <Route path="projects/3" element={<Project3Page />} />
-          <Route path="works" element={<WorksPage />} />
-          <Route path="production" element={<ProductionPage />} />
-          <Route path="brand-story" element={<BrandStoryPage />} />
-          <Route path="careers" element={<CareersPage />} />
-          <Route path="sustainability" element={<SustainabilityPage />} />
-          <Route path="specifications" element={<SpecificationsPage />} />
-          <Route path="terms" element={<TermsPage />} />
-          <Route path="quote" element={<QuotePage />} />
-          <Route path="clients" element={<ClientsPage />} />
-        </Route>
-      </Routes>
-    </Router>
+    <AdminProvider>
+      <Router>
+        <Routes>
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/admin" element={<AdminDashboard />} />
+          <Route path="/admin/images" element={<AdminImages />} />
+          <Route path="/" element={<Layout />}>
+            <Route index element={<HomePage />} />
+            <Route path="about" element={<AboutPage />} />
+            <Route path="services" element={<ServicesPage />} />
+            <Route path="process" element={<ProcessPage />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route path="fitout" element={<FitoutPage />} />
+            <Route path="mep" element={<MepPage />} />
+            <Route path="civil" element={<CivilPage />} />
+            <Route path="projects" element={<ProjectsPage />} />
+            <Route path="projects/1" element={<Project1Page />} />
+            <Route path="projects/2" element={<Project2Page />} />
+            <Route path="projects/3" element={<Project3Page />} />
+            <Route path="works" element={<WorksPage />} />
+            <Route path="production" element={<ProductionPage />} />
+            <Route path="brand-story" element={<BrandStoryPage />} />
+            <Route path="careers" element={<CareersPage />} />
+            <Route path="sustainability" element={<SustainabilityPage />} />
+            <Route path="specifications" element={<SpecificationsPage />} />
+            <Route path="terms" element={<TermsPage />} />
+            <Route path="quote" element={<QuotePage />} />
+            <Route path="clients" element={<ClientsPage />} />
+            <Route path="gallery" element={<GalleryPage />} />
+          </Route>
+        </Routes>
+      </Router>
+    </AdminProvider>
   )
 }
 
