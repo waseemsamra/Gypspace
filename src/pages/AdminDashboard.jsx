@@ -3,6 +3,7 @@ import { useNavigate, Navigate } from 'react-router-dom'
 import { useAdmin } from '../contexts/AdminContext'
 import initialCmsData from '../data/cmsData.json'
 import AdminImages from './AdminImages'
+import { uploadImage } from '../lib/s3'
 
 const AdminDashboard = () => {
   const { isAuthenticated, logout, cmsData, updateCmsData, exportData, importData } = useAdmin()
@@ -51,7 +52,7 @@ const AdminDashboard = () => {
     }
   }
 
-  const handleDirectoryUpload = (e) => {
+  const handleDirectoryUpload = async (e) => {
     const files = Array.from(e.target.files)
     const imageFiles = files.filter(file => file.type.startsWith('image/'))
     
@@ -66,27 +67,35 @@ const AdminDashboard = () => {
     const currentGallery = editData || []
     const maxId = currentGallery.length > 0 ? Math.max(...currentGallery.map(i => i.id)) : 0
     const newGallery = [...currentGallery]
+    let uploadErrors = []
 
-    imageFiles.forEach((file, index) => {
-      const reader = new FileReader()
-      reader.onload = (event) => {
+    for (let index = 0; index < imageFiles.length; index++) {
+      const file = imageFiles[index]
+      try {
+        const publicUrl = await uploadFileToS3(file)
+        
         const newItem = {
           id: maxId + index + 1,
-          url: event.target.result,
+          url: publicUrl,
           caption: file.name.replace(/\.[^/.]+$/, ''),
           category: 'general'
         }
         newGallery.push(newItem)
-        processed++
-
-        if (processed === imageFiles.length) {
-          setEditData(newGallery)
-          setUploadStatus(`Successfully uploaded ${imageFiles.length} images`)
-          setTimeout(() => setUploadStatus(''), 3000)
-        }
+      } catch (error) {
+        uploadErrors.push(`${file.name}: ${error.message}`)
       }
-      reader.readAsDataURL(file)
-    })
+      
+      processed++
+      
+      if (processed === imageFiles.length) {
+        setEditData(newGallery)
+        if (uploadErrors.length > 0) {
+          setError(`Failed to upload ${uploadErrors.length} images: ${uploadErrors.join(', ')}`)
+        }
+        setUploadStatus(`Successfully uploaded ${processed - uploadErrors.length} of ${imageFiles.length} images`)
+        setTimeout(() => setUploadStatus(''), 3000)
+      }
+    }
 
     e.target.value = ''
   }

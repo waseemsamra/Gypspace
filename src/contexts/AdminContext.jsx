@@ -13,7 +13,17 @@ const loadCmsData = () => {
     const stored = localStorage.getItem('gypspace_cms_data')
     if (stored) {
       const parsed = JSON.parse(stored)
-      return { ...initialCmsData, ...parsed }
+      const merged = { ...initialCmsData, ...parsed }
+      
+      if (!merged.gallery || !Array.isArray(merged.gallery)) {
+        merged.gallery = initialCmsData.gallery
+      } else {
+        merged.gallery = merged.gallery.filter(item => {
+          return item && typeof item === 'object' && item.id && item.url
+        })
+      }
+      
+      return merged
     }
   } catch (e) {
     console.error('Failed to load CMS data', e)
@@ -23,9 +33,14 @@ const loadCmsData = () => {
 
 const saveCmsData = (data) => {
   try {
-    localStorage.setItem('gypspace_cms_data', JSON.stringify(data, null, 2))
+    const serialized = JSON.stringify(data, null, 2)
+    const sizeInMB = (serialized.length / (1024 * 1024)).toFixed(2)
+    if (sizeInMB > 4.5) {
+      console.warn(`CMS data size (${sizeInMB}MB) is approaching localStorage limit (~5MB). Images may not persist. Consider using S3 URLs instead of data uploads.`)
+    }
+    localStorage.setItem('gypspace_cms_data', serialized)
   } catch (e) {
-    console.error('Failed to save CMS data', e)
+    console.error('Failed to save CMS data. localStorage may be full. Try removing some images or use S3 URLs.', e)
   }
 }
 
@@ -60,6 +75,11 @@ export const AdminProvider = ({ children }) => {
     saveCmsData(newData)
   }
 
+  const resetCmsData = () => {
+    setCmsData(initialCmsData)
+    saveCmsData(initialCmsData)
+  }
+
   const exportData = () => {
     const blob = new Blob([JSON.stringify(cmsData, null, 2)], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
@@ -89,7 +109,7 @@ export const AdminProvider = ({ children }) => {
   }
 
   return (
-    <AdminContext.Provider value={{ isAuthenticated, login, logout, cmsData, updateCmsData, exportData, importData }}>
+    <AdminContext.Provider value={{ isAuthenticated, login, logout, cmsData, updateCmsData, resetCmsData, exportData, importData }}>
       {children}
     </AdminContext.Provider>
   )

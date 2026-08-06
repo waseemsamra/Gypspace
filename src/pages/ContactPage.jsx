@@ -28,7 +28,7 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <p className="font-label-md text-label-md uppercase text-secondary">Headquarters</p>
-                    <p className="font-body-md text-body-md">Dubai Production City, UAE</p>
+                     <p className="font-body-md text-body-md">Office C-1802, 27 Ontario Tower Business Bay Dubai</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-md">
@@ -200,14 +200,12 @@ const ContactPage = () => {
                 <h2 className="font-headline-md text-headline-md mb-md">Visit Our Facility</h2>
                 <p className="font-body-md text-body-md text-on-surface-variant mb-xl">Located in the heart of Dubai's media and production hub, our facility houses both design and high-precision production units.</p>
                 <div className="space-y-lg">
-                  <div>
-                    <p className="font-label-md text-label-md text-secondary uppercase mb-xs">ADDRESS</p>
-                    <p className="font-body-md text-body-md">
-                      Building A3, Units 14-16<br />
-                      Dubai Production City<br />
-                      Dubai, United Arab Emirates
-                    </p>
-                  </div>
+                   <div>
+                     <p className="font-label-md text-label-md text-secondary uppercase mb-xs">ADDRESS</p>
+                     <p className="font-body-md text-body-md">
+                       Office C-1802, 27 Ontario Tower Business Bay Dubai
+                     </p>
+                   </div>
                   <div>
                     <p className="font-label-md text-label-md text-secondary uppercase mb-xs">OFFICE HOURS</p>
                     <p className="font-body-md text-body-md">
@@ -220,9 +218,9 @@ const ContactPage = () => {
               <div className="md:w-2/3 h-[400px] bg-surface-container-highest border border-outline-variant relative overflow-hidden group">
                 <img
                   className="w-full h-full object-cover"
-                  data-location="Dubai Production City"
-                  src="/contact_map.jpg"
-                  alt="Dubai Production City facility location"
+                   data-location="Office C-1802, 27 Ontario Tower Business Bay Dubai"
+                   src="/contact_map.jpg"
+                   alt="Office C-1802, 27 Ontario Tower Business Bay Dubai facility location"
                 />
                 <div className="absolute inset-0 bg-primary/5 pointer-events-none" />
                 <div className="absolute bottom-md left-md bg-surface p-md border border-outline-variant shadow-xl">

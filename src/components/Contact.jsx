@@ -25,7 +25,7 @@ const Contact = () => {
               <div className="flex items-center gap-md">
                 <span className="material-symbols-outlined">location_on</span>
                 <span className="font-body-sm">
-                  Tech District, Business Bay, Dubai, UAE
+                  Office C-1802, 27 Ontario Tower Business Bay Dubai
                 </span>
               </div>
             </div>
