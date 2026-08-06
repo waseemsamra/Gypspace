@@ -4,13 +4,50 @@
       "title": "Precision Engineering & Interior Excellence",
       "subtitle": "End-to-end technical services across MEP, Fit-out, and Civil disciplines in the UAE.",
       "ctaText": "Explore Our Work",
-      "ctaLink": "/projects"
+      "ctaLink": "/projects",
+      "heroImage": "/hero-image.png",
+      "badge": "FLAGSHIP PROJECT"
     },
     "stats": [
       { "label": "Projects Delivered", "value": "150+" },
       { "label": "Years Experience", "value": "15+" },
       { "label": "Client Partners", "value": "80+" },
       { "label": "Cities Covered", "value": "5" }
+    ],
+    "servicesTitle": "Systematic approaches",
+    "servicesSubtitle": "Systematic approaches to complex technical challenges, tailored to your industrial requirements.",
+    "services": [
+      {
+        "id": 1,
+        "icon": "architecture",
+        "title": "Engineering Design",
+        "description": "Comprehensive blueprinting and conceptual modeling focused on mechanical integrity and spatial efficiency for modern facilities.",
+        "features": ["CAD/CAM Integration", "Structural Integrity Analysis"]
+      },
+      {
+        "id": 2,
+        "icon": "account_tree",
+        "title": "Project Management",
+        "description": "End-to-end lifecycle oversight, ensuring critical milestones are met with precision while maintaining strict compliance with safety standards.",
+        "features": ["Agile Technical Delivery", "Resource Optimization"]
+      },
+      {
+        "id": 3,
+        "icon": "precision_manufacturing",
+        "title": "Technical Consulting",
+        "description": "Specialized advisory services for digital transformation, industrial automation, and operational performance enhancement.",
+        "features": ["Feasibility Studies", "System Audits"]
+      }
+    ]
+  },
+  "whyChooseUs": {
+    "image": "/why_choose_us.jpg",
+    "heading": "Engineered for Excellence",
+    "description": "Gypspace Technical Services LLC operates at the intersection of traditional engineering and future-ready innovation. We build with the precision required by today's leading corporations.",
+    "features": [
+      { "icon": "verified", "title": "Unmatched Reliability", "description": "Consistent delivery schedules and rigorous quality control protocols that exceed industry benchmarks." },
+      { "icon": "groups", "title": "Deep Expertise", "description": "A multi-disciplinary team of certified engineers and project managers with global field experience." },
+      { "icon": "adjust", "title": "Precision Focused", "description": "Every dimension, every material, and every line of code is optimized for peak performance." }
     ]
   },
   "projects": [

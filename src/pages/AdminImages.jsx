@@ -69,7 +69,7 @@ const AdminImages = () => {
     <div className="min-h-screen bg-surface">
       <div className="max-w-container-max mx-auto px-gutter py-2xl">
         <h1 className="font-display-lg text-display-lg text-primary mb-sm">Gallery Images</h1>
-        <p className="text-on-surface-variant font-body-md mb-lg">Click any image to edit details. Upload images directly to S3.</p>
+        <p className="text-on-surface-variant font-body-md mb-lg">Click any image to edit details. Upload images directly.</p>
 
         <div className="mb-6 flex items-center gap-3">
           <label className="px-md py-2 border border-outline-variant rounded-lg font-label-md text-label-md text-primary cursor-pointer hover:bg-surface-container transition-colors">

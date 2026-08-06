@@ -1,59 +1,68 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-
-const projects = [
-  {
-    id: 1,
-    title: 'Corporate Headquarters',
-    category: 'fitout',
-    image: '/project_1.jpg',
-    alt: 'Corporate Headquarters',
-    link: '/projects/1'
-  },
-  {
-    id: 2,
-    title: 'Precision Lab Facility',
-    category: 'mep',
-    image: '/project_2.jpg',
-    alt: 'Precision Lab Facility',
-    link: '/projects/2'
-  },
-  {
-    id: 3,
-    title: 'Executive Hospitality Suite',
-    category: 'fitout',
-    image: '/project_3.jpg',
-    alt: 'Executive Hospitality Suite',
-    link: '/projects/3'
-  },
-  {
-    id: 4,
-    title: 'MEP Advanced Installation',
-    category: 'mep',
-    image: '/mep_case_study.jpg',
-    alt: 'MEP Advanced Installation',
-    link: '/projects/1'
-  },
-  {
-    id: 5,
-    title: 'Fire Safety Systems',
-    category: 'mep',
-    image: '/mep_fire_safety.jpg',
-    alt: 'Fire Safety Systems',
-    link: '/projects/2'
-  },
-  {
-    id: 6,
-    title: 'Structural Deep Foundation',
-    category: 'civil',
-    image: '/civil_blueprint.jpg',
-    alt: 'Structural Deep Foundation',
-    link: '/projects/3'
-  }
-]
+import { useAdmin } from '../contexts/AdminContext'
+import { EditableText } from './EditableFields'
 
 const HomeProjects = () => {
   const [activeCategory, setActiveCategory] = useState('all')
+  const { cmsData, updateCmsData, isEditMode } = useAdmin()
+
+  const projects = cmsData?.home?.projects || [
+    {
+      id: 1,
+      title: 'Corporate Headquarters',
+      category: 'fitout',
+      image: '/project_1.jpg',
+      alt: 'Corporate Headquarters',
+      link: '/projects/1'
+    },
+    {
+      id: 2,
+      title: 'Precision Lab Facility',
+      category: 'mep',
+      image: '/project_2.jpg',
+      alt: 'Precision Lab Facility',
+      link: '/projects/2'
+    },
+    {
+      id: 3,
+      title: 'Executive Hospitality Suite',
+      category: 'fitout',
+      image: '/project_3.jpg',
+      alt: 'Executive Hospitality Suite',
+      link: '/projects/3'
+    },
+    {
+      id: 4,
+      title: 'MEP Advanced Installation',
+      category: 'mep',
+      image: '/mep_case_study.jpg',
+      alt: 'MEP Advanced Installation',
+      link: '/projects/1'
+    },
+    {
+      id: 5,
+      title: 'Fire Safety Systems',
+      category: 'mep',
+      image: '/mep_fire_safety.jpg',
+      alt: 'Fire Safety Systems',
+      link: '/projects/2'
+    },
+    {
+      id: 6,
+      title: 'Structural Deep Foundation',
+      category: 'civil',
+      image: '/civil_blueprint.jpg',
+      alt: 'Structural Deep Foundation',
+      link: '/projects/3'
+    }
+  ]
+
+  const updateProject = (index, field, value) => {
+    const updated = [...projects]
+    updated[index] = { ...updated[index], [field]: value }
+    updateCmsData('home', { ...cmsData.home, projects: updated })
+  }
 
   const filteredProjects = activeCategory === 'all'
     ? projects
@@ -63,12 +72,20 @@ const HomeProjects = () => {
     <section className="py-2xl bg-surface">
       <div className="max-w-container-max mx-auto px-gutter">
         <div className="mb-xl max-w-xl">
-          <h2 className="font-headline-md text-headline-md text-primary mb-sm">
-            Our Projects
-          </h2>
-          <p className="text-on-surface-variant font-body-md max-w-xl border-l-4 border-primary pl-md">
-            A selection of our diversified portfolio across MEP, Fit-out, and Civil disciplines.
-          </p>
+          <EditableText
+            value={cmsData?.home?.projectsTitle || 'Our Projects'}
+            onChange={(value) => updateCmsData('home', { ...cmsData.home, projectsTitle: value })}
+            as="h2"
+            className="font-headline-md text-headline-md text-primary mb-sm"
+            editMode={isEditMode}
+          />
+          <EditableText
+            value={cmsData?.home?.projectsSubtitle || 'A selection of our diversified portfolio across MEP, Fit-out, and Civil disciplines.'}
+            onChange={(value) => updateCmsData('home', { ...cmsData.home, projectsSubtitle: value })}
+            as="p"
+            className="text-on-surface-variant font-body-md max-w-xl border-l-4 border-primary pl-md"
+            editMode={isEditMode}
+          />
         </div>
 
         <div className="mb-lg">
@@ -85,7 +102,7 @@ const HomeProjects = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
-          {filteredProjects.map((project) => (
+          {filteredProjects.map((project, idx) => (
             <Link key={project.id} to={project.link} className="group flex flex-col gap-md">
               <div className="relative aspect-video overflow-hidden rounded-xl border border-outline-variant">
                 <img
@@ -95,7 +112,13 @@ const HomeProjects = () => {
                 />
               </div>
               <div>
-                <h3 className="font-headline-sm text-lg font-semibold text-primary mb-xs">{project.title}</h3>
+                <EditableText
+                  value={project.title}
+                  onChange={(value) => updateProject(idx, 'title', value)}
+                  as="h3"
+                  className="font-headline-sm text-lg font-semibold text-primary mb-xs"
+                  editMode={isEditMode}
+                />
                 <p className="text-on-surface-variant font-body-sm mb-md capitalize">
                   {project.category === 'mep' ? 'MEP Works' : project.category === 'fitout' ? 'Fit-out Works' : 'Civil Works'}
                 </p>

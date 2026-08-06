@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { useAdmin } from '../contexts/AdminContext'
 
 const Header = () => {
   const headerRef = useRef(null)
   const [mobileOpen, setMobileOpen] = useState(false)
   const location = useLocation()
+  const { isAuthenticated, isEditMode, toggleEditMode, logout } = useAdmin()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,13 +59,43 @@ const Header = () => {
             </Link>
           ))}
         </nav>
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center gap-3">
           <Link
             className="bg-navy-tech text-white px-md py-sm rounded-lg font-label-md hover:bg-opacity-90 transition-all uppercase tracking-wider"
             to="/quote"
           >
             Get a Quote
           </Link>
+          {isAuthenticated && (
+            <>
+              <button
+                onClick={toggleEditMode}
+                className={`px-md py-sm rounded-lg font-label-md uppercase tracking-wider transition-all ${
+                  isEditMode
+                    ? 'bg-green-600 text-white'
+                    : 'bg-primary text-on-primary'
+                }`}
+              >
+                {isEditMode ? 'Edit Mode On' : 'Edit Mode'}
+              </button>
+              {isEditMode && (
+                <button
+                  onClick={() => {
+                    alert('Changes saved successfully!')
+                  }}
+                  className="px-md py-sm bg-green-600 text-white rounded-lg font-label-md uppercase tracking-wider hover:bg-green-700 transition-all"
+                >
+                  Save
+                </button>
+              )}
+              <button
+                onClick={logout}
+                className="px-md py-sm border border-outline-variant rounded-lg font-label-md uppercase tracking-wider hover:bg-surface-container transition-colors"
+              >
+                Logout
+              </button>
+            </>
+          )}
         </div>
         <button
           className="md:hidden text-primary"
@@ -87,13 +119,41 @@ const Header = () => {
                 {link.label}
               </Link>
             ))}
-            <Link
-              className="bg-navy-tech text-white px-md py-sm rounded-lg font-label-md text-center uppercase tracking-wider"
-              to="/quote"
-              onClick={() => setMobileOpen(false)}
-            >
-              Get a Quote
-            </Link>
+             <Link
+               className="bg-navy-tech text-white px-md py-sm rounded-lg font-label-md text-center uppercase tracking-wider"
+               to="/quote"
+               onClick={() => setMobileOpen(false)}
+             >
+               Get a Quote
+             </Link>
+             {isAuthenticated && (
+               <>
+                 <button
+                   onClick={() => { toggleEditMode(); setMobileOpen(false) }}
+                   className={`w-full px-md py-sm rounded-lg font-label-md text-center uppercase tracking-wider ${
+                     isEditMode
+                       ? 'bg-green-600 text-white'
+                       : 'bg-primary text-on-primary'
+                   }`}
+                 >
+                   {isEditMode ? 'Edit Mode On' : 'Edit Mode'}
+                 </button>
+                 {isEditMode && (
+                   <button
+                     onClick={() => { alert('Changes saved successfully!'); setMobileOpen(false) }}
+                     className="w-full px-md py-sm bg-green-600 text-white rounded-lg font-label-md text-center uppercase tracking-wider"
+                   >
+                     Save
+                   </button>
+                 )}
+                 <button
+                   onClick={() => { logout(); setMobileOpen(false) }}
+                   className="w-full px-md py-sm border border-outline-variant rounded-lg font-label-md text-center uppercase tracking-wider"
+                 >
+                   Logout
+                 </button>
+               </>
+             )}
           </nav>
         </div>
       )}

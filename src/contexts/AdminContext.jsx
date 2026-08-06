@@ -47,6 +47,7 @@ const saveCmsData = (data) => {
 export const AdminProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false)
   const [cmsData, setCmsData] = useState(loadCmsData)
+  const [isEditMode, setIsEditMode] = useState(false)
 
   useEffect(() => {
     const session = localStorage.getItem('gypspace_admin_session')
@@ -66,7 +67,12 @@ export const AdminProvider = ({ children }) => {
 
   const logout = () => {
     setIsAuthenticated(false)
+    setIsEditMode(false)
     localStorage.removeItem('gypspace_admin_session')
+  }
+
+  const toggleEditMode = () => {
+    setIsEditMode(prev => !prev)
   }
 
   const updateCmsData = (section, data) => {
@@ -109,7 +115,7 @@ export const AdminProvider = ({ children }) => {
   }
 
   return (
-    <AdminContext.Provider value={{ isAuthenticated, login, logout, cmsData, updateCmsData, resetCmsData, exportData, importData }}>
+    <AdminContext.Provider value={{ isAuthenticated, login, logout, cmsData, updateCmsData, resetCmsData, exportData, importData, isEditMode, toggleEditMode }}>
       {children}
     </AdminContext.Provider>
   )
