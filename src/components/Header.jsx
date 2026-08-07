@@ -40,10 +40,14 @@ const Header = () => {
     { to: '/contact', label: 'Contact' },
   ]
 
+  const navTextClass = scrolled ? 'text-gray-900' : 'text-white'
+  const navHoverClass = scrolled ? 'hover:text-gray-900' : 'hover:text-white'
+  const activeBorderClass = scrolled ? 'border-gray-900' : 'border-white'
+
   return (
     <header
       ref={headerRef}
-      className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-gray-200 border-b border-gray-300 shadow-sm' : 'bg-transparent border-b border-transparent'}`}
+      className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-gray-200 border-b border-gray-300 shadow-sm' : 'bg-black/10 border-b border-transparent'}`}
     >
       <div className="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
         <Link to="/" className="flex items-center">
@@ -53,7 +57,7 @@ const Header = () => {
           {navLinks.map((link) => (
             <Link
               key={link.to}
-              className={`font-label-md text-label-md transition-colors ${isActive(link.to) ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-700 hover:text-gray-900'}`}
+              className={`font-label-md text-label-md transition-colors ${isActive(link.to) ? `${navTextClass} border-b-2 ${activeBorderClass} pb-1` : `${navTextClass} ${navHoverClass}`}`}
               to={link.to}
             >
               {link.label}
@@ -99,7 +103,7 @@ const Header = () => {
           )}
         </div>
         <button
-          className="md:hidden text-primary"
+          className={`md:hidden ${scrolled ? 'text-gray-900' : 'text-white'}`}
           onClick={() => setMobileOpen(!mobileOpen)}
         >
           <span className="material-symbols-outlined">
@@ -108,12 +112,12 @@ const Header = () => {
         </button>
       </div>
       {mobileOpen && (
-        <div className={`md:hidden border-t px-gutter py-lg transition-colors duration-300 ${scrolled ? 'bg-gray-200 border-gray-300' : 'bg-gray-200/95 border-gray-300'}`}>
+        <div className={`md:hidden border-t px-gutter py-lg transition-colors duration-300 ${scrolled ? 'bg-gray-200 border-gray-300' : 'bg-black/50 border-gray-700'}`}>
           <nav className="flex flex-col gap-md">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
-                className={`font-label-md text-label-md transition-colors ${isActive(link.to) ? 'text-gray-900 font-bold' : 'text-gray-700 hover:text-gray-900'}`}
+                className={`font-label-md text-label-md transition-colors ${isActive(link.to) ? `${navTextClass} font-bold` : `${navTextClass} ${navHoverClass}`}`}
                 to={link.to}
                 onClick={() => setMobileOpen(false)}
               >

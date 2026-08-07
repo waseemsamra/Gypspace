@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 const Layout = () => {
   return (
-    <div className="font-body-md text-body-md overflow-x-hidden scroll-smooth pt-20">
+    <div className="font-body-md text-body-md overflow-x-hidden scroll-smooth">
       <Header />
       <Outlet />
       <Footer />

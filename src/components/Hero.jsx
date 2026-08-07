@@ -16,7 +16,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative h-screen md:h-[85vh] flex items-center overflow-hidden">
+    <section className="relative h-screen md:h-[85vh] flex items-center overflow-hidden pt-20">
       <div className="absolute inset-0 z-0">
         <EditableImage
           src={heroData.heroImage || 'https://gypspace.s3.us-east-1.amazonaws.com/hero-image.png'}
