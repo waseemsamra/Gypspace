@@ -1,11 +1,23 @@
 import React from 'react'
+import { useAdmin } from '../contexts/AdminContext'
 
 const Footer = () => {
+  const { cmsData } = useAdmin()
+  const gallery = cmsData?.gallery || []
+  const mainLogo = gallery.find(item => {
+    const caption = (item.caption || '').toLowerCase()
+    const url = (item.url || '').toLowerCase()
+    return /main[-\s_]?logo/.test(caption) || /main[-\s_]?logo/.test(url) || /logo/.test(caption) || /logo/.test(url)
+  })
+  const logoSrc = mainLogo?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/gallery/1786124797730-main-logo.png'
   return (
     <footer className="w-full py-xl px-lg border-t border-outline-variant bg-surface-container-highest">
       <div className="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
       <div className="md:col-span-1">
-        <div className="font-headline-sm text-headline-sm font-bold text-primary mb-md">Gypspace</div>
+        <div className="flex items-center gap-3 mb-md">
+          <img src={logoSrc} alt="Gypspace" className="h-[6.5rem] w-auto object-contain" />
+          <div className="font-headline-sm text-headline-sm font-bold text-primary">Gypspace</div>
+        </div>
         <p className="font-body-sm text-body-sm text-on-surface-variant">
           Advanced technical services, engineering, and interior fit-out solutions for high-performance architectural environments.
         </p>

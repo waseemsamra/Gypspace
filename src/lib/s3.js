@@ -1,4 +1,4 @@
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
+import { S3Client, PutObjectCommand, ListObjectsV2Command } from '@aws-sdk/client-s3'
 import heic2any from 'heic2any'
 
 const s3 = new S3Client({
@@ -35,4 +35,33 @@ export async function uploadImage(file) {
   }))
 
   return `https://${import.meta.env.VITE_AWS_S3_BUCKET}.s3.${import.meta.env.VITE_AWS_REGION}.amazonaws.com/${key}`
+}
+
+export async function listS3Images(maxKeys = 50, continuationToken) {
+  const response = await s3.send(new ListObjectsV2Command({
+    Bucket: import.meta.env.VITE_AWS_S3_BUCKET,
+    MaxKeys: maxKeys,
+    ContinuationToken: continuationToken,
+  }))
+
+  const imageExtensions = ['.jpg', '.jpeg', '.png', '.gif', '.webp', '.svg', '.heic', '.heif']
+  const images = []
+  if (response.Contents) {
+    for (const object of response.Contents) {
+      const key = object.Key || ''
+      const lowerKey = key.toLowerCase()
+      if (imageExtensions.some(ext => lowerKey.endsWith(ext))) {
+        images.push({
+          url: `https://${import.meta.env.VITE_AWS_S3_BUCKET}.s3.${import.meta.env.VITE_AWS_REGION}.amazonaws.com/${key}`,
+          caption: key.split('/').pop(),
+          key,
+        })
+      }
+    }
+  }
+
+  return {
+    images,
+    nextContinuationToken: response.IsTruncated ? response.NextContinuationToken : undefined,
+  }
 }

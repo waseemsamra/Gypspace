@@ -5,17 +5,20 @@ import { useAdmin } from '../contexts/AdminContext'
 const Header = () => {
   const headerRef = useRef(null)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
   const location = useLocation()
-  const { isAuthenticated, isEditMode, toggleEditMode, logout } = useAdmin()
+  const { isAuthenticated, isEditMode, toggleEditMode, logout, cmsData } = useAdmin()
+  const gallery = cmsData?.gallery || []
+  const mainLogo = gallery.find(item => {
+    const caption = (item.caption || '').toLowerCase()
+    const url = (item.url || '').toLowerCase()
+    return /main[-\s_]?logo/.test(caption) || /main[-\s_]?logo/.test(url) || /logo/.test(caption) || /logo/.test(url)
+  })
+  const logoSrc = mainLogo?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/gallery/1786124797730-main-logo.png'
 
   useEffect(() => {
     const handleScroll = () => {
-      const header = headerRef.current
-      if (window.scrollY > 20) {
-        header.classList.add('shadow-sm')
-      } else {
-        header.classList.remove('shadow-sm')
-      }
+      setScrolled(window.scrollY > 20)
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
@@ -40,19 +43,17 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className="w-full sticky top-0 z-50 bg-surface dark:bg-inverse-surface border-b border-outline-variant dark:border-outline"
+      className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-gray-200 border-b border-gray-300 shadow-sm' : 'bg-transparent border-b border-transparent'}`}
     >
       <div className="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
-        <Link to="/">
-          <span className="text-headline-md font-headline-md font-bold tracking-tighter text-primary dark:text-primary-fixed">
-            GYPSPACE
-          </span>
+        <Link to="/" className="flex items-center">
+          <img src={logoSrc} alt="Gypspace" className="h-[6.6rem] w-auto object-contain" />
         </Link>
         <nav className="hidden md:flex items-center gap-xl">
           {navLinks.map((link) => (
             <Link
               key={link.to}
-              className={`font-label-md text-label-md transition-colors ${isActive(link.to) ? 'text-primary dark:text-primary-fixed border-b-2 border-primary dark:border-primary-fixed pb-1' : 'text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed'}`}
+              className={`font-label-md text-label-md transition-colors ${isActive(link.to) ? 'text-gray-900 border-b-2 border-gray-900 pb-1' : 'text-gray-700 hover:text-gray-900'}`}
               to={link.to}
             >
               {link.label}
@@ -107,12 +108,12 @@ const Header = () => {
         </button>
       </div>
       {mobileOpen && (
-        <div className="md:hidden bg-surface border-t border-outline-variant px-gutter py-lg">
+        <div className={`md:hidden border-t px-gutter py-lg transition-colors duration-300 ${scrolled ? 'bg-gray-200 border-gray-300' : 'bg-gray-200/95 border-gray-300'}`}>
           <nav className="flex flex-col gap-md">
             {navLinks.map((link) => (
               <Link
                 key={link.to}
-                className={`font-label-md text-label-md transition-colors ${isActive(link.to) ? 'text-primary dark:text-primary-fixed font-bold' : 'text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed'}`}
+                className={`font-label-md text-label-md transition-colors ${isActive(link.to) ? 'text-gray-900 font-bold' : 'text-gray-700 hover:text-gray-900'}`}
                 to={link.to}
                 onClick={() => setMobileOpen(false)}
               >
@@ -120,12 +121,12 @@ const Header = () => {
               </Link>
             ))}
              <Link
-               className="bg-navy-tech text-white px-md py-sm rounded-lg font-label-md text-center uppercase tracking-wider"
-               to="/quote"
-               onClick={() => setMobileOpen(false)}
-             >
-               Get a Quote
-             </Link>
+                className="bg-navy-tech text-white px-md py-sm rounded-lg font-label-md text-center uppercase tracking-wider"
+                to="/quote"
+                onClick={() => setMobileOpen(false)}
+              >
+                Get a Quote
+              </Link>
              {isAuthenticated && (
                <>
                  <button
