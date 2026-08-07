@@ -1,4 +1,5 @@
 import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3'
+import heic2any from 'heic2any'
 
 const s3 = new S3Client({
   region: import.meta.env.VITE_AWS_REGION,
@@ -9,14 +10,28 @@ const s3 = new S3Client({
 })
 
 export async function uploadImage(file) {
-  const key = `gallery/${Date.now()}-${file.name}`
-  const buffer = await file.arrayBuffer()
+  let finalFile = file
+
+  if (file.name.toLowerCase().endsWith('.heic') || file.type === 'image/heic' || file.type === 'image/heif') {
+    const blob = await heic2any({
+      blob: file,
+      toType: 'image/jpeg',
+      quality: 0.9,
+    })
+
+    const convertedBlob = blob instanceof Blob ? blob : blob[0]
+    const newName = file.name.replace(/\.heic$/i, '.jpeg').replace(/\.heif$/i, '.jpeg')
+    finalFile = new File([convertedBlob], newName, { type: 'image/jpeg' })
+  }
+
+  const key = `gallery/${Date.now()}-${finalFile.name}`
+  const buffer = await finalFile.arrayBuffer()
 
   await s3.send(new PutObjectCommand({
     Bucket: import.meta.env.VITE_AWS_S3_BUCKET,
     Key: key,
     Body: buffer,
-    ContentType: file.type,
+    ContentType: 'image/jpeg',
   }))
 
   return `https://${import.meta.env.VITE_AWS_S3_BUCKET}.s3.${import.meta.env.VITE_AWS_REGION}.amazonaws.com/${key}`
