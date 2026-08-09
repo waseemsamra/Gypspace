@@ -28,7 +28,7 @@ const AboutPage = () => {
     return () => observer.disconnect()
   }, [])
 
-  const aboutHeroImage = { url: 'https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png' }
+  const aboutHeroImage = { url: 'https://gypspace.s3.us-east-1.amazonaws.com/hero-image.png' }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -66,12 +66,6 @@ const AboutPage = () => {
               alt="Technical and industrial environment"
             />
           </div>
-          <div className="max-w-container-max mx-auto px-gutter relative z-20 w-full">
-            <div className="max-w-3xl">
-              <h1 className="font-display-lg text-display-lg text-white mb-lg">We Build Better.</h1>
-              <p className="text-white/90 text-body-lg font-body-lg max-w-lg">Dedicated to excellence in fit-out and joinery, transforming visions into architectural realities across the UAE.</p>
-            </div>
-          </div>
         </section>
 
         {/* Intro Section */}
@@ -87,7 +81,7 @@ const AboutPage = () => {
                 <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
                   <img
                     className="w-full h-full object-cover"
-                    src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png'}
+                    src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/hero-image.png'}
                     alt="About Gypspace"
                   />
                 </div>
