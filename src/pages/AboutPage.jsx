@@ -44,7 +44,7 @@ const AboutPage = () => {
             <div className="absolute inset-0 bg-primary/60 backdrop-blur-[2px] z-10" />
             <img
               className="w-full h-full object-cover"
-              src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/about_hero.jpg'}
+              src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png'}
               alt="Technical and industrial environment"
             />
           </div>
@@ -69,23 +69,11 @@ const AboutPage = () => {
                 <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
                   <img
                     className="w-full h-full object-cover"
-                    src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/about_hero.jpg'}
+                    src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png'}
                     alt="About Gypspace"
                   />
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Who We Are */}
-        <section className="py-2xl bg-white border-b border-outline-variant">
-          <div className="max-w-container-max mx-auto px-gutter">
-            <div className="max-w-3xl mx-auto text-center reveal-on-scroll active">
-              <h2 className="font-headline-md text-headline-md text-primary mb-lg">A Legacy of Precision</h2>
-              <p className="text-on-surface-variant font-body-lg text-body-lg mb-4">At Gypspace, we believe that successful projects are built on more than just materials and workmanship. They require proper planning, technical knowledge, skilled people, coordination and attention to detail.</p>
-              <p className="text-on-surface-variant font-body-lg text-body-lg mb-4">Our team brings hands-on experience across civil, interior finishing, fit-out, renovation and automation works, allowing us to support projects from initial preparation through to final completion.</p>
-              <p className="text-on-surface-variant font-body-lg text-body-lg">Whether it is a commercial space, office, retail environment, villa or residential property, we aim to provide solutions that are functional, aesthetically refined and built to last.</p>
             </div>
           </div>
         </section>
@@ -299,67 +287,6 @@ const AboutPage = () => {
             <Link to="/contact" className="bg-white text-primary px-xl py-md font-label-md text-label-md rounded hover:bg-surface-container-low transition-colors shadow-lg inline-block">Connect With Us</Link>
           </div>
         </section>
-
-        {/* Footer */}
-        <footer className="w-full pt-2xl pb-lg bg-[#0f172a] text-white font-body-md">
-          <div className="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-4 gap-2xl">
-            <div className="flex flex-col gap-lg">
-              <div className="flex items-center gap-md">
-                <img alt="Gypspace" className="h-10 object-contain object-left brightness-0 invert" src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/main-logo.png'} />
-              </div>
-              <p className="font-body-sm text-white/70 max-w-xs">
-                14+ years of technical excellence in fit-out and joinery. Turning visions into structural realities across the UAE.
-              </p>
-              <div className="flex gap-md">
-                <a className="text-white/50 hover:text-white transition-colors" href="#"><span className="material-symbols-outlined">share</span></a>
-                <a className="text-white/50 hover:text-white transition-colors" href="#"><span className="material-symbols-outlined">hub</span></a>
-                <a className="text-white/50 hover:text-white transition-colors" href="#"><span className="material-symbols-outlined">public</span></a>
-              </div>
-            </div>
-            <div className="flex flex-col gap-lg">
-              <h5 className="font-label-md text-label-md text-white uppercase tracking-widest">Services</h5>
-              <nav className="flex flex-col gap-md">
-                <Link className="text-white/70 hover:text-white font-body-sm transition-colors" to="/mep">M.E.P Works</Link>
-                <Link className="text-white/70 hover:text-white font-body-sm transition-colors" to="/fitout">Fit-out Works</Link>
-                <Link className="text-white/70 hover:text-white font-body-sm transition-colors" to="/civil">Civil Works</Link>
-                <Link className="text-white/70 hover:text-white font-body-sm transition-colors" to="/production">Bespoke Production</Link>
-              </nav>
-            </div>
-            <div className="flex flex-col gap-lg">
-              <h5 className="font-label-md text-label-md text-white uppercase tracking-widest">Company</h5>
-              <nav className="flex flex-col gap-md">
-                <Link className="text-white/70 hover:text-white font-body-sm transition-colors" to="/about">About Us</Link>
-                <Link className="text-white/70 hover:text-white font-body-sm transition-colors" to="/process">Our Process</Link>
-                <Link className="text-white/70 hover:text-white font-body-sm transition-colors" to="/careers">Careers</Link>
-                <Link className="text-white/70 hover:text-white font-body-sm transition-colors" to="/brand-story">Brand Story</Link>
-              </nav>
-            </div>
-            <div className="flex flex-col gap-lg">
-              <h5 className="font-label-md text-label-md text-white uppercase tracking-widest">Contact Us</h5>
-              <div className="flex flex-col gap-md">
-                <div className="flex items-start gap-sm">
-                  <span className="material-symbols-outlined text-white/50 text-[20px]">location_on</span>
-                  <p className="text-white/70 font-body-sm">Dubai Industrial City, UAE</p>
-                </div>
-                <div className="flex items-start gap-sm">
-                  <span className="material-symbols-outlined text-white/50 text-[20px]">mail</span>
-                  <p className="text-white/70 font-body-sm">info@gypspace.com</p>
-                </div>
-                <div className="flex items-start gap-sm">
-                  <span className="material-symbols-outlined text-white/50 text-[20px]">call</span>
-                  <p className="text-white/70 font-body-sm">+971 4 XXX XXXX</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="max-w-container-max mx-auto px-gutter mt-2xl pt-lg border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-md">
-            <p className="font-body-sm text-white/50">© 2024 Gypspace Technical Services LLC. All rights reserved.</p>
-            <div className="flex gap-xl">
-              <Link className="text-white/50 hover:text-white font-body-sm transition-colors" to="/terms">Privacy Policy</Link>
-              <Link className="text-white/50 hover:text-white font-body-sm transition-colors" to="/terms">Terms of Service</Link>
-            </div>
-          </div>
-        </footer>
       </main>
     </div>
   )
