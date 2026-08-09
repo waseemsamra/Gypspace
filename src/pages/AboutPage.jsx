@@ -4,13 +4,31 @@ import { useAdmin } from '../contexts/AdminContext'
 
 const AboutPage = () => {
   const containerRef = useRef(null)
-  const { cmsData } = useAdmin()
-  const gallery = cmsData?.gallery || []
-  const aboutHeroImage = gallery.find(item => {
-    const caption = (item.caption || '').toLowerCase()
-    const url = (item.url || '').toLowerCase()
-    return caption.includes('about') || url.includes('about')
-  }) || gallery[0]
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
+    const observerOptions = { threshold: 0.1 }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active')
+        }
+      })
+    }, observerOptions)
+
+    const container = containerRef.current
+    if (container) {
+      const elements = container.querySelectorAll('.reveal-on-scroll')
+      elements.forEach((el) => observer.observe(el))
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
+  const aboutHeroImage = { url: 'https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png' }
 
   useEffect(() => {
     window.scrollTo(0, 0)
