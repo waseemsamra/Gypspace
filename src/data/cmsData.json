@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "home": {
     "hero": {
       "title": "Precision Engineering & Interior Excellence",
@@ -15,28 +16,28 @@
       { "label": "Cities Covered", "value": "5" }
     ],
     "servicesTitle": "Systematic approaches",
-    "servicesSubtitle": "Systematic approaches to complex technical challenges, tailored to your industrial requirements.",
+    "servicesSubtitle": "Professional execution, quality workmanship, and reliable project delivery tailored to your project requirements.",
     "services": [
       {
         "id": 1,
-        "icon": "architecture",
-        "title": "Engineering Design",
-        "description": "Comprehensive blueprinting and conceptual modeling focused on mechanical integrity and spatial efficiency for modern facilities.",
-        "features": ["CAD/CAM Integration", "Structural Integrity Analysis"]
+        "number": "01",
+        "title": "Site Assessment & Planning",
+        "description": "We assess the site requirements, review drawings and specifications, and plan the work sequence to ensure smooth and efficient execution.",
+        "features": ["Site inspection & measurements", "Drawing & scope review"]
       },
       {
         "id": 2,
-        "icon": "account_tree",
-        "title": "Project Management",
-        "description": "End-to-end lifecycle oversight, ensuring critical milestones are met with precision while maintaining strict compliance with safety standards.",
-        "features": ["Agile Technical Delivery", "Resource Optimization"]
+        "number": "02",
+        "title": "Professional Execution",
+        "description": "Our experienced team executes the works with attention to detail, proper coordination, and adherence to approved specifications.",
+        "features": ["Skilled workforce", "Quality workmanship"]
       },
       {
         "id": 3,
-        "icon": "precision_manufacturing",
-        "title": "Technical Consulting",
-        "description": "Specialized advisory services for digital transformation, industrial automation, and operational performance enhancement.",
-        "features": ["Feasibility Studies", "System Audits"]
+        "number": "03",
+        "title": "Quality & Timely Delivery",
+        "description": "We maintain quality throughout the project while coordinating with other trades and working toward agreed project timelines.",
+        "features": ["Quality control & inspection", "Timely project completion"]
       }
     ]
   },

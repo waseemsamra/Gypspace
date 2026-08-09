@@ -7,24 +7,24 @@ const Services = () => {
   const servicesData = cmsData?.home?.services || [
     {
       id: 1,
-      icon: 'architecture',
-      title: 'Engineering Design',
-      description: 'Comprehensive blueprinting and conceptual modeling focused on mechanical integrity and spatial efficiency for modern facilities.',
-      features: ['CAD/CAM Integration', 'Structural Integrity Analysis'],
+      number: '01',
+      title: 'Site Assessment & Planning',
+      description: 'We assess the site requirements, review drawings and specifications, and plan the work sequence to ensure smooth and efficient execution.',
+      features: ['Site inspection & measurements', 'Drawing & scope review'],
     },
     {
       id: 2,
-      icon: 'account_tree',
-      title: 'Project Management',
-      description: 'End-to-end lifecycle oversight, ensuring critical milestones are met with precision while maintaining strict compliance with safety standards.',
-      features: ['Agile Technical Delivery', 'Resource Optimization'],
+      number: '02',
+      title: 'Professional Execution',
+      description: 'Our experienced team executes the works with attention to detail, proper coordination, and adherence to approved specifications.',
+      features: ['Skilled workforce', 'Quality workmanship'],
     },
     {
       id: 3,
-      icon: 'precision_manufacturing',
-      title: 'Technical Consulting',
-      description: 'Specialized advisory services for digital transformation, industrial automation, and operational performance enhancement.',
-      features: ['Feasibility Studies', 'System Audits'],
+      number: '03',
+      title: 'Quality & Timely Delivery',
+      description: 'We maintain quality throughout the project while coordinating with other trades and working toward agreed project timelines.',
+      features: ['Quality control & inspection', 'Timely project completion'],
     },
   ]
 
@@ -46,7 +46,7 @@ const Services = () => {
             editMode={isEditMode}
           />
           <EditableText
-            value={cmsData?.home?.servicesSubtitle || 'Systematic approaches to complex technical challenges, tailored to your industrial requirements.'}
+            value={cmsData?.home?.servicesSubtitle || 'Professional execution, quality workmanship, and reliable project delivery tailored to your project requirements.'}
             onChange={(value) => updateCmsData('home', { ...cmsData.home, servicesSubtitle: value })}
             as="p"
             className="text-on-surface-variant font-body-md max-w-xl border-l-4 border-primary pl-md"
@@ -59,19 +59,14 @@ const Services = () => {
               key={service.id}
               className="group bg-white border border-outline-variant p-lg rounded-xl hover:border-primary transition-all duration-300 flex flex-col h-full"
             >
-              <div className="w-12 h-12 bg-primary-container/10 rounded-lg flex items-center justify-center mb-lg group-hover:bg-primary group-hover:text-white transition-colors">
-                <span
-                  className="material-symbols-outlined text-[28px]"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  {service.icon}
-                </span>
+              <div className="text-4xl font-headline-md text-primary/20 mb-4 group-hover:text-primary/40 transition-colors">
+                {service.number}
               </div>
               <EditableText
                 value={service.title}
                 onChange={(value) => handleUpdate(idx, 'title', value)}
                 as="h3"
-                className="font-headline-sm text-headline-sm text-primary mb-md"
+                className="font-label-md text-label-md text-primary mb-md"
                 editMode={isEditMode}
               />
               <EditableText

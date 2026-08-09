@@ -13,6 +13,10 @@ const loadCmsData = () => {
     const stored = localStorage.getItem('gypspace_cms_data')
     if (stored) {
       const parsed = JSON.parse(stored)
+      if (parsed.version !== initialCmsData.version) {
+        localStorage.removeItem('gypspace_cms_data')
+        return initialCmsData
+      }
       const merged = { ...initialCmsData, ...parsed }
       
       if (!merged.gallery || !Array.isArray(merged.gallery)) {
