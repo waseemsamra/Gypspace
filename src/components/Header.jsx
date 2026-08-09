@@ -49,7 +49,7 @@ const Header = () => {
       className={`w-full fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-gray-200 border-b border-gray-300 shadow-sm' : 'bg-black/10 border-b border-transparent'}`}
     >
       <div className="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
-        <Link to="/" className="flex items-center ml-auto md:ml-0">
+        <Link to="/" className="flex items-center">
           <img src={logoSrc} alt="Gypspace" className="h-full max-h-20 w-auto object-contain" />
         </Link>
         <nav className="hidden md:flex items-center gap-xl">
