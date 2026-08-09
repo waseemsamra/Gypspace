@@ -25,14 +25,14 @@ const WorksPage = () => {
     return () => observer.disconnect()
   }, [])
 
-  const filters = ['All Projects', 'Corporate', 'Specialized', 'Residential', 'Hospitality']
+  const filters = ['All Projects', 'Residential', 'Commercial', 'F & B', 'Renovations', 'Joinery Works']
 
   const projects = [
     {
       id: 1,
-      title: 'Global Corporate HQ',
-      subtitle: 'Minimalist Technical Integration',
-      category: 'Corporate',
+      title: 'Luxury Residential Villa',
+      subtitle: 'Premium Living Space',
+      category: 'Residential',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_1.jpg',
       span: 'md:col-span-8',
       height: 'h-[480px]',
@@ -40,9 +40,9 @@ const WorksPage = () => {
     },
     {
       id: 2,
-      title: 'Advanced Research Lab',
-      subtitle: 'Clinical Precision & MEP',
-      category: 'Specialized',
+      title: 'Commercial Office Complex',
+      subtitle: 'Corporate Fit-out Excellence',
+      category: 'Commercial',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_2.jpg',
       span: 'md:col-span-4',
       height: 'h-[480px]',
@@ -50,9 +50,9 @@ const WorksPage = () => {
     },
     {
       id: 3,
-      title: 'Royal Hospitality Lounge',
-      subtitle: 'Bespoke Joinery & Smart Systems',
-      category: 'Hospitality',
+      title: 'Hotel & Restaurant Fitout',
+      subtitle: 'Bespoke Hospitality Interiors',
+      category: 'F & B',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_3.jpg',
       span: 'md:col-span-4',
       height: 'h-[400px]',
@@ -60,9 +60,9 @@ const WorksPage = () => {
     },
     {
       id: 4,
-      title: 'Modern Innovation Hub',
-      subtitle: 'Collaborative Workspace Engineering',
-      category: 'Commercial',
+      title: 'Villa Renovation',
+      subtitle: 'Full-Scale Renovation',
+      category: 'Renovations',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_4.jpg',
       span: 'md:col-span-8',
       height: 'h-[400px]',
@@ -70,9 +70,9 @@ const WorksPage = () => {
     },
     {
       id: 5,
-      title: 'Boutique Concept Store',
-      subtitle: 'Brand-Centric Fit-out',
-      category: 'Retail',
+      title: 'Custom Joinery Works',
+      subtitle: 'Precision Carpentry',
+      category: 'Joinery Works',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_5.jpg',
       span: 'md:col-span-6',
       height: 'h-[360px]',
@@ -80,9 +80,9 @@ const WorksPage = () => {
     },
     {
       id: 6,
-      title: 'Artisan Café',
-      subtitle: 'Immersive Culinary Spaces',
-      category: 'F&B',
+      title: 'Office Renovation',
+      subtitle: 'Modern Workspace Upgrade',
+      category: 'Renovations',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/work_6.jpg',
       span: 'md:col-span-6',
       height: 'h-[360px]',
