@@ -1,13 +1,9 @@
 {
-  "version": 3,
+  "version": 4,
   "home": {
     "hero": {
-      "title": "Precision Engineering & Interior Excellence",
-      "subtitle": "End-to-end technical services across MEP, Fit-out, and Civil disciplines in the UAE.",
-      "ctaText": "Explore Our Work",
-      "ctaLink": "/projects",
-    "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png"
-  },
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png"
+    },
     "stats": [
       { "label": "Projects Delivered", "value": "150+" },
       { "label": "Years Experience", "value": "15+" },
