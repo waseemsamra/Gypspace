@@ -12,9 +12,9 @@ const Header = () => {
   const mainLogo = gallery.find(item => {
     const caption = (item.caption || '').toLowerCase()
     const url = (item.url || '').toLowerCase()
-    return /main[-\s_]?logo/.test(caption) || /main[-\s_]?logo/.test(url) || /logo/.test(caption) || /logo/.test(url)
+    return /main[-\s_]?logo/.test(caption) || /main[-\s_]?logo/.test(url)
   })
-  const logoSrc = mainLogo?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/gallery/1786124797730-main-logo.png'
+  const logoSrc = mainLogo?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/main-logo.png'
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,7 +51,7 @@ const Header = () => {
     >
       <div className="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
         <Link to="/" className="flex items-center">
-          <img src={logoSrc} alt="Gypspace" className="h-[6.6rem] w-auto object-contain" />
+          <img src={logoSrc} alt="Gypspace" className="h-[4.2rem] w-auto object-contain" />
         </Link>
         <nav className="hidden md:flex items-center gap-xl">
           {navLinks.map((link) => (

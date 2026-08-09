@@ -5,7 +5,7 @@
       "subtitle": "End-to-end technical services across MEP, Fit-out, and Civil disciplines in the UAE.",
       "ctaText": "Explore Our Work",
       "ctaLink": "/projects",
-      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/hero-image.png",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png",
       "badge": "FLAGSHIP PROJECT"
     },
     "stats": [
@@ -109,7 +109,7 @@
     { "name": "Yoshi COntruction", "project": "Construction", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/yoshii.jpeg" }
   ],
   "gallery": [
-    { "id": 1, "url": "https://gypspace.s3.us-east-1.amazonaws.com/gallery/1786124797730-main-logo.png", "caption": "main-logo", "category": "general" },
+    { "id": 1, "url": "https://gypspace.s3.us-east-1.amazonaws.com/main-logo.png", "caption": "main-logo", "category": "general" },
     { "id": 2, "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg", "caption": "Corporate Headquarters", "category": "fitout" },
     { "id": 3, "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg", "caption": "Precision Lab Facility", "category": "mep" },
     { "id": 4, "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg", "caption": "Executive Hospitality Suite", "category": "fitout" },
