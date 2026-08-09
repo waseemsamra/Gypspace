@@ -48,12 +48,27 @@ const AboutPage = () => {
               alt="Technical and industrial environment"
             />
           </div>
-          <div className="max-w-container-max mx-auto px-gutter relative z-20 w-full">
-            <div className="max-w-3xl">
-              <span className="inline-block px-md py-xs bg-secondary-container text-on-secondary-container font-label-md text-label-md rounded-full mb-md uppercase tracking-wider">Technical Services | Fit-Out | Renovation | Civil Works | Home Automation</span>
-              <h1 className="font-display-lg text-display-lg text-white mb-lg">About Gypspace: Building, Transforming &amp; Connecting Spaces</h1>
-              <p className="text-white/90 text-body-lg font-body-lg mb-md">Gypspace Technical Services LLC is a UAE-based technical services, fit-out and renovation company delivering comprehensive solutions for commercial and residential spaces. Our expertise includes gypsum and ceiling works, partitions, tiling, painting, plastering, block and concrete works, interior fit-out, renovation, and smart home automation, supported by professional project execution and quality workmanship.</p>
-              <p className="text-white/90 text-body-lg font-body-lg">We work with contractors, consultants, businesses, property owners and homeowners to deliver practical, reliable and high-quality solutions tailored to the requirements of every project. From individual technical works to complete renovation and fit-out packages, our team focuses on delivering each stage with attention to detail, coordination and efficiency.</p>
+        </section>
+
+        {/* Intro Section */}
+        <section className="py-2xl bg-white border-b border-outline-variant">
+          <div className="max-w-container-max mx-auto px-gutter">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2xl items-center">
+              <div className="reveal-on-scroll active">
+                <span className="inline-block px-md py-xs bg-secondary-container text-on-secondary-container font-label-md text-label-md rounded-full mb-md uppercase tracking-wider">Technical Services | Fit-Out | Renovation | Civil Works | Home Automation</span>
+                <h1 className="font-display-lg text-display-lg text-primary mb-lg">About Gypspace: Building, Transforming &amp; Connecting Spaces</h1>
+                <p className="text-on-surface-variant font-body-lg text-body-lg mb-4">Gypspace Technical Services LLC is a UAE-based technical services, fit-out and renovation company delivering comprehensive solutions for commercial and residential spaces. Our expertise includes gypsum and ceiling works, partitions, tiling, painting, plastering, block and concrete works, interior fit-out, renovation, and smart home automation, supported by professional project execution and quality workmanship.</p>
+                <p className="text-on-surface-variant font-body-lg text-body-lg">We work with contractors, consultants, businesses, property owners and homeowners to deliver practical, reliable and high-quality solutions tailored to the requirements of every project. From individual technical works to complete renovation and fit-out packages, our team focuses on delivering each stage with attention to detail, coordination and efficiency.</p>
+              </div>
+              <div className="reveal-on-scroll active" style={{ transitionDelay: '200ms' }}>
+                <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/about_hero.jpg'}
+                    alt="About Gypspace"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -62,7 +77,7 @@ const AboutPage = () => {
         <section className="py-2xl bg-white border-b border-outline-variant">
           <div className="max-w-container-max mx-auto px-gutter">
             <div className="max-w-3xl mx-auto text-center reveal-on-scroll active">
-              <h2 className="font-headline-md text-headline-md text-primary mb-lg">Who We Are</h2>
+              <h2 className="font-headline-md text-headline-md text-primary mb-lg">A Legacy of Precision</h2>
               <p className="text-on-surface-variant font-body-lg text-body-lg mb-4">At Gypspace, we believe that successful projects are built on more than just materials and workmanship. They require proper planning, technical knowledge, skilled people, coordination and attention to detail.</p>
               <p className="text-on-surface-variant font-body-lg text-body-lg mb-4">Our team brings hands-on experience across civil, interior finishing, fit-out, renovation and automation works, allowing us to support projects from initial preparation through to final completion.</p>
               <p className="text-on-surface-variant font-body-lg text-body-lg">Whether it is a commercial space, office, retail environment, villa or residential property, we aim to provide solutions that are functional, aesthetically refined and built to last.</p>
