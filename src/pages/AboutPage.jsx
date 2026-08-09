@@ -59,10 +59,21 @@ const AboutPage = () => {
         {/* Intro Section */}
         <section className="py-2xl bg-white border-b border-outline-variant">
           <div className="max-w-container-max mx-auto px-gutter">
-            <div className="max-w-3xl mx-auto text-center reveal-on-scroll active">
-              <h2 className="font-headline-md text-headline-md text-primary mb-lg">A Legacy of Precision</h2>
-              <p className="text-on-surface-variant font-body-lg text-body-lg mb-4">Gypspace Technical Services LLC is a UAE-based technical services, fit-out and renovation company delivering comprehensive solutions for commercial and residential spaces. Our expertise includes gypsum and ceiling works, partitions, tiling, painting, plastering, block and concrete works, interior fit-out, renovation, and smart home automation, supported by professional project execution and quality workmanship.</p>
-              <p className="text-on-surface-variant font-body-lg text-body-lg">We work with contractors, consultants, businesses, property owners and homeowners to deliver practical, reliable and high-quality solutions tailored to the requirements of every project. From individual technical works to complete renovation and fit-out packages, our team focuses on delivering each stage with attention to detail, coordination and efficiency.</p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2xl items-center">
+              <div className="reveal-on-scroll active">
+                <h2 className="font-headline-md text-headline-md text-primary mb-lg">A Legacy of Precision</h2>
+                <p className="text-on-surface-variant font-body-lg text-body-lg mb-4">Gypspace Technical Services LLC is a UAE-based technical services, fit-out and renovation company delivering comprehensive solutions for commercial and residential spaces. Our expertise includes gypsum and ceiling works, partitions, tiling, painting, plastering, block and concrete works, interior fit-out, renovation, and smart home automation, supported by professional project execution and quality workmanship.</p>
+                <p className="text-on-surface-variant font-body-lg text-body-lg">We work with contractors, consultants, businesses, property owners and homeowners to deliver practical, reliable and high-quality solutions tailored to the requirements of every project. From individual technical works to complete renovation and fit-out packages, our team focuses on delivering each stage with attention to detail, coordination and efficiency.</p>
+              </div>
+              <div className="reveal-on-scroll active" style={{ transitionDelay: '200ms' }}>
+                <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
+                  <img
+                    className="w-full h-full object-cover"
+                    src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/about_hero.jpg'}
+                    alt="About Gypspace"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
