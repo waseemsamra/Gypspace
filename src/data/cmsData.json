@@ -2,7 +2,7 @@
   "version": 7,
   "home": {
     "hero": {
-      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/hero-image.png"
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png"
     },
     "stats": [
       { "label": "Projects Delivered", "value": "150+" },

@@ -28,7 +28,7 @@ const AboutPage = () => {
     return () => observer.disconnect()
   }, [])
 
-  const aboutHeroImage = { url: 'https://gypspace.s3.us-east-1.amazonaws.com/hero-image.png' }
+  const aboutHeroImage = { url: 'https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png' }
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -81,7 +81,7 @@ const AboutPage = () => {
                 <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
                   <img
                     className="w-full h-full object-cover"
-                    src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/hero-image.png'}
+                    src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png'}
                     alt="About Gypspace"
                   />
                 </div>
