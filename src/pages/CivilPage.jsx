@@ -1,7 +1,15 @@
 import React, { useEffect, useRef } from 'react'
+import { useAdmin } from '../contexts/AdminContext'
 
 const CivilPage = () => {
   const containerRef = useRef(null)
+  const { cmsData } = useAdmin()
+  const gallery = cmsData?.gallery || []
+  const civilHeroImage = gallery.find(item => {
+    const caption = (item.caption || '').toLowerCase()
+    const url = (item.url || '').toLowerCase()
+    return caption.includes('civil') || url.includes('civil')
+  }) || gallery[0]
 
   useEffect(() => {
     window.scrollTo(0, 0)
@@ -35,7 +43,7 @@ const CivilPage = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-on-background/80 to-transparent z-10" />
             <img
               className="w-full h-full object-cover"
-              src="https://gypspace.s3.us-east-1.amazonaws.com/civil_hero.jpg"
+              src={civilHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/civil_hero.jpg'}
               alt="Technical and industrial environment"
             />
           </div>
