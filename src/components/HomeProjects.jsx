@@ -11,98 +11,98 @@ const HomeProjects = ({ showMoreButton = false, initialCount = 6 }) => {
   const projects = cmsData?.home?.projects || [
     {
       id: 1,
-      title: 'Corporate Headquarters',
-      category: 'fitout',
+      title: 'Luxury Residential Villa',
+      category: 'residential',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg',
-      alt: 'Corporate Headquarters',
+      alt: 'Luxury Residential Villa',
       link: '/projects/1'
     },
     {
       id: 2,
-      title: 'Precision Lab Facility',
-      category: 'mep',
+      title: 'Commercial Office Complex',
+      category: 'commercial',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg',
-      alt: 'Precision Lab Facility',
+      alt: 'Commercial Office Complex',
       link: '/projects/2'
     },
     {
       id: 3,
-      title: 'Executive Hospitality Suite',
-      category: 'fitout',
+      title: 'Hotel & Restaurant Fitout',
+      category: 'f-and-b',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg',
-      alt: 'Executive Hospitality Suite',
+      alt: 'Hotel & Restaurant Fitout',
       link: '/projects/3'
     },
     {
       id: 4,
-      title: 'MEP Advanced Installation',
-      category: 'mep',
+      title: 'Villa Renovation',
+      category: 'renovations',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/mep_case_study.jpg',
-      alt: 'MEP Advanced Installation',
+      alt: 'Villa Renovation',
       link: '/projects/1'
     },
     {
       id: 5,
-      title: 'Fire Safety Systems',
-      category: 'mep',
+      title: 'Custom Joinery Works',
+      category: 'joinery',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/mep_fire_safety.jpg',
-      alt: 'Fire Safety Systems',
+      alt: 'Custom Joinery Works',
       link: '/projects/2'
     },
     {
       id: 6,
-      title: 'Structural Deep Foundation',
-      category: 'civil',
+      title: 'Office Renovation',
+      category: 'renovations',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/civil_blueprint.jpg',
-      alt: 'Structural Deep Foundation',
+      alt: 'Office Renovation',
       link: '/projects/3'
     },
     {
       id: 7,
-      title: 'HVAC Integration',
-      category: 'mep',
+      title: 'Residential Apartment',
+      category: 'residential',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/mep_hvac.jpg',
-      alt: 'HVAC Integration',
+      alt: 'Residential Apartment',
       link: '/projects/1'
     },
     {
       id: 8,
-      title: 'Bespoke Joinery',
-      category: 'fitout',
+      title: 'Retail Store Fitout',
+      category: 'commercial',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/spec_joinery.jpg',
-      alt: 'Bespoke Joinery',
+      alt: 'Retail Store Fitout',
       link: '/projects/3'
     },
     {
       id: 9,
-      title: 'Facility Expansion',
-      category: 'civil',
+      title: 'Café Interior',
+      category: 'f-and-b',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/spec_facility.jpg',
-      alt: 'Facility Expansion',
+      alt: 'Café Interior',
       link: '/projects/2'
     },
     {
       id: 10,
-      title: 'Industrial Fitout',
-      category: 'fitout',
+      title: 'Kitchen Renovation',
+      category: 'renovations',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/fitout_workshop.jpg',
-      alt: 'Industrial Fitout',
+      alt: 'Kitchen Renovation',
       link: '/projects/1'
     },
     {
       id: 11,
-      title: 'Quality Control Lab',
-      category: 'mep',
+      title: 'Wardrobe Joinery',
+      category: 'joinery',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/spec_quality.jpg',
-      alt: 'Quality Control Lab',
+      alt: 'Wardrobe Joinery',
       link: '/projects/2'
     },
     {
       id: 12,
-      title: 'Luxury Lobby',
-      category: 'fitout',
+      title: 'Restaurant Renovation',
+      category: 'renovations',
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/lobby.png',
-      alt: 'Luxury Lobby',
+      alt: 'Restaurant Renovation',
       link: '/projects/3'
     }
   ]
@@ -139,7 +139,7 @@ const HomeProjects = ({ showMoreButton = false, initialCount = 6 }) => {
             editMode={isEditMode}
           />
           <EditableText
-            value={cmsData?.home?.projectsSubtitle || 'A selection of our diversified portfolio across MEP, Fit-out, and Civil disciplines.'}
+            value={cmsData?.home?.projectsSubtitle || 'A selection of our diversified portfolio across Residential, Commercial, F & B, Renovations, and Joinery disciplines.'}
             onChange={(value) => updateCmsData('home', { ...cmsData.home, projectsSubtitle: value })}
             as="p"
             className="text-on-surface-variant font-body-md max-w-xl border-l-4 border-primary pl-md"
@@ -157,9 +157,11 @@ const HomeProjects = ({ showMoreButton = false, initialCount = 6 }) => {
             className="px-md py-2 border border-outline-variant rounded-lg bg-white text-primary font-label-md text-label-md focus:outline-none focus:border-primary"
           >
             <option value="all">All Projects</option>
-            <option value="mep">MEP</option>
-            <option value="fitout">Fitout</option>
-            <option value="civil">Civil Works</option>
+            <option value="residential">Residential</option>
+            <option value="commercial">Commercial</option>
+            <option value="f-and-b">F & B</option>
+            <option value="renovations">Renovations</option>
+            <option value="joinery">Joinery Works</option>
           </select>
         </div>
 
@@ -182,7 +184,7 @@ const HomeProjects = ({ showMoreButton = false, initialCount = 6 }) => {
                   editMode={isEditMode}
                 />
                 <p className="text-on-surface-variant font-body-sm mb-md capitalize">
-                  {project.category === 'mep' ? 'MEP Works' : project.category === 'fitout' ? 'Fit-out Works' : 'Civil Works'}
+                  {project.category === 'residential' ? 'Residential' : project.category === 'commercial' ? 'Commercial' : project.category === 'f-and-b' ? 'F & B' : project.category === 'renovations' ? 'Renovations' : project.category === 'joinery' ? 'Joinery Works' : project.category}
                 </p>
               </div>
             </Link>

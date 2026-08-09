@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "home": {
     "hero": {
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png"
@@ -50,7 +50,7 @@
     {
       "id": 1,
       "title": "Corporate Headquarters",
-      "category": "fitout",
+      "category": "commercial",
       "description": "A multi-floor executive workspace focusing on minimalist aesthetics and seamless technical integration.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/main-project.png",
@@ -61,7 +61,7 @@
     {
       "id": 2,
       "title": "Precision Lab Facility",
-      "category": "mep",
+      "category": "commercial",
       "description": "State-of-the-art technical environment designed for maximum operational efficiency and clinical precision.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/lab.png",
@@ -72,7 +72,7 @@
     {
       "id": 3,
       "title": "Executive Hospitality Suite",
-      "category": "fitout",
+      "category": "f-and-b",
       "description": "Luxury interior solutions featuring bespoke cabinetry and advanced smart-room technology.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/lobby.png",
