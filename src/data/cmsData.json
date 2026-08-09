@@ -1,14 +1,13 @@
 {
-  "version": 2,
+  "version": 3,
   "home": {
     "hero": {
       "title": "Precision Engineering & Interior Excellence",
       "subtitle": "End-to-end technical services across MEP, Fit-out, and Civil disciplines in the UAE.",
       "ctaText": "Explore Our Work",
       "ctaLink": "/projects",
-      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png",
-      "badge": "FLAGSHIP PROJECT"
-    },
+    "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png"
+  },
     "stats": [
       { "label": "Projects Delivered", "value": "150+" },
       { "label": "Years Experience", "value": "15+" },
@@ -43,12 +42,12 @@
   },
   "whyChooseUs": {
     "image": "https://gypspace.s3.us-east-1.amazonaws.com/why_choose_us.jpg",
-    "heading": "Engineered for Excellence",
-    "description": "Gypspace Technical Services LLC operates at the intersection of traditional engineering and future-ready innovation. We build with the precision required by today's leading corporations.",
+    "heading": "Built on Quality & Craftsmanship",
+    "description": "Gypspace Technical Services LLC delivers professional civil and interior finishing works with a strong focus on quality, precision, and reliable project execution. Our experienced team works closely with clients, consultants, and main contractors to deliver projects to the required standards and timelines.",
     "features": [
-      { "icon": "verified", "title": "Unmatched Reliability", "description": "Consistent delivery schedules and rigorous quality control protocols that exceed industry benchmarks." },
-      { "icon": "groups", "title": "Deep Expertise", "description": "A multi-disciplinary team of certified engineers and project managers with global field experience." },
-      { "icon": "adjust", "title": "Precision Focused", "description": "Every dimension, every material, and every line of code is optimized for peak performance." }
+      { "icon": "verified", "title": "Reliable Execution", "description": "We understand the importance of completing work on schedule while maintaining consistent quality and proper coordination with other trades." },
+      { "icon": "groups", "title": "Skilled & Experienced Team", "description": "Our skilled workforce has hands-on experience across gypsum, civil, tiling, plastering, painting, demolition, and renovation works." },
+      { "icon": "adjust", "title": "Quality Focused", "description": "From material selection and preparation to final finishing, we pay close attention to workmanship and project specifications." }
     ]
   },
   "projects": [

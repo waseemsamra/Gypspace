@@ -66,7 +66,7 @@ const Services = () => {
                 value={service.title}
                 onChange={(value) => handleUpdate(idx, 'title', value)}
                 as="h3"
-                className="font-label-md text-label-md text-primary mb-md"
+                className="font-label-md text-label-lg font-bold text-primary mb-md"
                 editMode={isEditMode}
               />
               <EditableText
