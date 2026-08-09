@@ -122,8 +122,8 @@ const WorksPage = () => {
                   onClick={() => setActiveFilter(filter)}
                   className={
                     activeFilter === filter
-                      ? 'bg-primary text-on-primary px-lg py-sm rounded-sm font-label-md'
-                      : 'text-on-surface-variant hover:text-primary px-lg py-sm font-label-md transition-colors'
+                      ? 'bg-primary text-on-primary px-lg py-sm rounded-sm font-label-md font-bold'
+                      : 'text-on-surface-variant hover:text-primary px-lg py-sm font-label-md font-bold transition-colors'
                   }
                 >
                   {filter}
