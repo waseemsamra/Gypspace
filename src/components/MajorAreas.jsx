@@ -11,7 +11,7 @@ const MajorAreas = () => {
       image: 'https://gypspace.s3.us-east-1.amazonaws.com/major_mep.jpg',
       icon: 'settings_input_component',
       label: 'Technical Precision',
-      title: 'M.E.P Works',
+      title: 'M.E.P & Home Automation',
       description: 'Comprehensive Mechanical, Electrical, and Plumbing engineering. We focus on energy efficiency, system longevity, and rigorous technical compliance across all industrial and commercial sectors.',
       linkText: 'View Specialization',
       linkHref: '/mep',
