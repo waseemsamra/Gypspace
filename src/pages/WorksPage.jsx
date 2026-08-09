@@ -181,28 +181,7 @@ const WorksPage = () => {
                 <span className="material-symbols-outlined text-on-tertiary-container mb-md text-3xl">home</span>
                 <h4 className="font-headline-sm text-headline-sm mb-sm">Residential</h4>
                 <p className="font-body-md text-on-surface-variant">
-                  Whether modern, contemporary or classic, every build is designed uniquely to reflect your vision and lifestyle.
-                </p>
-              </div>
-              <div className="p-xl bg-white border border-outline-variant rounded-xl hover:border-on-tertiary-container transition-colors group">
-                <span className="material-symbols-outlined text-on-tertiary-container mb-md text-3xl">shopping_bag</span>
-                <h4 className="font-headline-sm text-headline-sm mb-sm">Retail</h4>
-                <p className="font-body-md text-on-surface-variant">
-                  Custom-crafted interiors that amplify brand identity and customer engagement. Spaces that make every visit memorable.
-                </p>
-              </div>
-              <div className="p-xl bg-white border border-outline-variant rounded-xl hover:border-on-tertiary-container transition-colors group">
-                <span className="material-symbols-outlined text-on-tertiary-container mb-md text-3xl">restaurant</span>
-                <h4 className="font-headline-sm text-headline-sm mb-sm">F&amp;B</h4>
-                <p className="font-body-md text-on-surface-variant">
-                  Bespoke joinery for restaurants that enhance the dining experience through immersive, storyteller-driven design.
-                </p>
-              </div>
-              <div className="p-xl bg-white border border-outline-variant rounded-xl hover:border-on-tertiary-container transition-colors group">
-                <span className="material-symbols-outlined text-on-tertiary-container mb-md text-3xl">hotel</span>
-                <h4 className="font-headline-sm text-headline-sm mb-sm">Hospitality</h4>
-                <p className="font-body-md text-on-surface-variant">
-                  Thoughtfully-crafted interiors for hotels and resorts, delivering comfort, elegance, and unforgettable guest experiences.
+                  Modern and classic living spaces designed to reflect your vision and lifestyle.
                 </p>
               </div>
               <div className="p-xl bg-white border border-outline-variant rounded-xl hover:border-on-tertiary-container transition-colors group">
@@ -213,10 +192,24 @@ const WorksPage = () => {
                 </p>
               </div>
               <div className="p-xl bg-white border border-outline-variant rounded-xl hover:border-on-tertiary-container transition-colors group">
-                <span className="material-symbols-outlined text-on-tertiary-container mb-md text-3xl">precision_manufacturing</span>
-                <h4 className="font-headline-sm text-headline-sm mb-sm">Specialized</h4>
+                <span className="material-symbols-outlined text-on-tertiary-container mb-md text-3xl">restaurant</span>
+                <h4 className="font-headline-sm text-headline-sm mb-sm">F &amp; B</h4>
                 <p className="font-body-md text-on-surface-variant">
-                  High-performance technical fit-outs for laboratories, research facilities, and precision industrial spaces.
+                  Bespoke joinery for restaurants and cafés that enhance the dining experience through immersive design.
+                </p>
+              </div>
+              <div className="p-xl bg-white border border-outline-variant rounded-xl hover:border-on-tertiary-container transition-colors group">
+                <span className="material-symbols-outlined text-on-tertiary-container mb-md text-3xl">home_repair_service</span>
+                <h4 className="font-headline-sm text-headline-sm mb-sm">Renovations</h4>
+                <p className="font-body-md text-on-surface-variant">
+                  Full-scale renovation and upgrade services for villas, offices, and commercial spaces.
+                </p>
+              </div>
+              <div className="p-xl bg-white border border-outline-variant rounded-xl hover:border-on-tertiary-container transition-colors group">
+                <span className="material-symbols-outlined text-on-tertiary-container mb-md text-3xl">carpenter</span>
+                <h4 className="font-headline-sm text-headline-sm mb-sm">Joinery Works</h4>
+                <p className="font-body-md text-on-surface-variant">
+                  Precision carpentry and custom joinery solutions tailored to your interior requirements.
                 </p>
               </div>
             </div>
