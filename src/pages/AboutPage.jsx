@@ -59,7 +59,6 @@ const AboutPage = () => {
         {/* Hero Section */}
         <section className="relative min-h-[80vh] flex items-center overflow-hidden py-2xl">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-primary/60 backdrop-blur-[2px] z-10" />
             <img
               className="w-full h-full object-cover"
               src={aboutHeroImage?.url || 'https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png'}
