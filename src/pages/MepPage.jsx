@@ -22,7 +22,7 @@ const MepPage = () => {
                 Precision M.E.P Engineering
               </h1>
               <p className="font-body-lg text-body-lg text-secondary-fixed-dim mb-xl max-w-lg">
-                Integrated Mechanical, Electrical, and Plumbing solutions engineered for performance, sustainability, and life-cycle efficiency in complex commercial environments.
+                Coordinated MEP solutions through our trusted specialist partners, integrated seamlessly with gypsum, ceiling, partition and interior finishing works.
               </p>
               <div className="flex flex-wrap gap-md">
                 <button className="bg-technical-cyan text-white px-xl py-md font-label-md text-label-md rounded flex items-center gap-2 hover:brightness-110 transition-all">
