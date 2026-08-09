@@ -8,7 +8,7 @@ const WhyChooseUs = () => {
 
   const sectionData = cmsData?.home?.whyChooseUs || {
     heading: 'Built on Quality & Craftsmanship',
-    description: 'Gypspace Technical Services LLC delivers professional civil and interior finishing works with a strong focus on quality, precision, and reliable project execution. Our experienced team works closely with clients, consultants, and main contractors to deliver projects to the required standards and timelines.',
+    description: 'Professional workmanship and reliable execution tailored to your project requirements.',
     features: [
       { icon: 'verified', title: 'Reliable Execution', description: 'We understand the importance of completing work on schedule while maintaining consistent quality and proper coordination with other trades.' },
       { icon: 'groups', title: 'Skilled & Experienced Team', description: 'Our skilled workforce has hands-on experience across gypsum, civil, tiling, plastering, painting, demolition, and renovation works.' },
@@ -67,9 +67,9 @@ const WhyChooseUs = () => {
               />
             </div>
             <div className="absolute -bottom-6 -right-6 bg-primary p-lg rounded-lg text-white shadow-xl max-w-[240px]">
-              <p className="font-headline-sm text-headline-sm mb-xs">15+</p>
+              <p className="font-headline-sm text-headline-sm mb-xs">Quality First</p>
               <p className="font-body-sm text-body-sm opacity-80">
-                Years of Technical Mastery in the Region
+                Professional Workmanship & Reliable Execution
               </p>
             </div>
           </div>
