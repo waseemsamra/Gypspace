@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import Hero from '../components/Hero'
-import Services from '../components/Services'
-import WhyChooseUs from '../components/WhyChooseUs'
-import Contact from '../components/Contact'
-import HomeProjects from '../components/HomeProjects'
+import { useAdmin } from '../contexts/AdminContext'
+import { EditableText, EditableImage } from '../components/EditableFields'
 
 const ProjectsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
-  }, [])
-  const projects = [
+  })
+  const { cmsData, updateCmsData, isEditMode } = useAdmin()
+  const gallery = cmsData?.gallery || []
+  const projects = cmsData?.projects || [
     {
       id: 1,
       title: 'Corporate Headquarters',
@@ -34,13 +33,23 @@ const ProjectsPage = () => {
     }
   ]
 
+  const updateProject = (index, field, value) => {
+    const updated = [...projects]
+    updated[index] = { ...updated[index], [field]: value }
+    updateCmsData('projects', updated)
+  }
+
   return (
     <main>
       <section className="relative min-h-[85vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0 transition-all duration-700 opacity-100 translate-y-0">
-          <div
-            className="w-full h-full bg-cover bg-center brightness-[0.95]"
-            style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/joinery.png')` }}
+          <EditableImage
+            src={cmsData?.projectsPage?.heroImage || 'https://gypspace.s3.us-east-1.amazonaws.com/joinery.png'}
+            onChange={(value) => updateCmsData('projectsPage', { ...cmsData?.projectsPage, heroImage: value })}
+            alt="Projects hero"
+            editMode={isEditMode}
+            galleryItems={gallery}
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-surface/90 to-transparent" />
         </div>
@@ -48,38 +57,77 @@ const ProjectsPage = () => {
           <div className="max-w-2xl">
             <div className="mb-md inline-flex items-center gap-sm bg-primary/5 px-md py-1 border border-primary/10 rounded-full">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-              <span className="font-mono-utility text-mono-utility uppercase tracking-widest text-primary">Projects</span>
+              <EditableText
+                value={cmsData?.projectsPage?.badge || 'Projects'}
+                onChange={(value) => updateCmsData('projectsPage', { ...cmsData?.projectsPage, badge: value })}
+                as="span"
+                className="font-mono-utility text-mono-utility uppercase tracking-widest text-primary"
+                editMode={isEditMode}
+              />
             </div>
-            <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-lg leading-tight">
-              Our Projects
-            </h1>
-            <p className="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-lg">
-              Showcasing technical interior excellence and high-performance fit-out solutions across the UAE.
-            </p>
+            <EditableText
+              value={cmsData?.projectsPage?.title || 'Our Projects'}
+              onChange={(value) => updateCmsData('projectsPage', { ...cmsData?.projectsPage, title: value })}
+              as="h1"
+              className="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-lg leading-tight"
+              editMode={isEditMode}
+            />
+            <EditableText
+              value={cmsData?.projectsPage?.subtitle || 'Showcasing technical interior excellence and high-performance fit-out solutions across the UAE.'}
+              onChange={(value) => updateCmsData('projectsPage', { ...cmsData?.projectsPage, subtitle: value })}
+              as="p"
+              className="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-lg"
+              editMode={isEditMode}
+            />
           </div>
         </div>
       </section>
       <section className="py-2xl bg-surface" id="featured-projects">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="mb-xl">
-            <h2 className="font-headline-md text-headline-md text-primary mb-sm">Featured Projects</h2>
-            <p className="text-on-surface-variant font-body-md max-w-xl border-l-4 border-primary pl-md">
-              A showcase of our most complex and high-fidelity technical interior solutions.
-            </p>
+            <EditableText
+              value={cmsData?.projectsPage?.featuredTitle || 'Featured Projects'}
+              onChange={(value) => updateCmsData('projectsPage', { ...cmsData?.projectsPage, featuredTitle: value })}
+              as="h2"
+              className="font-headline-md text-headline-md text-primary mb-sm"
+              editMode={isEditMode}
+            />
+            <EditableText
+              value={cmsData?.projectsPage?.featuredSubtitle || 'A showcase of our most complex and high-fidelity technical interior solutions.'}
+              onChange={(value) => updateCmsData('projectsPage', { ...cmsData?.projectsPage, featuredSubtitle: value })}
+              as="p"
+              className="text-on-surface-variant font-body-md max-w-xl border-l-4 border-primary pl-md"
+              editMode={isEditMode}
+            />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-lg">
-            {projects.map((project) => (
+            {projects.map((project, idx) => (
               <div key={project.id} className="group flex flex-col gap-md">
                 <div className="relative aspect-video overflow-hidden rounded-xl border border-outline-variant">
-                  <img
-                    alt={project.alt}
-                    className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
+                  <EditableImage
                     src={project.image}
+                    alt={project.alt || project.title}
+                    onChange={(value) => updateProject(idx, 'image', value)}
+                    editMode={isEditMode}
+                    galleryItems={gallery}
+                    className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
                   />
                 </div>
                 <div>
-                  <h3 className="font-headline-sm text-headline-sm text-primary mb-xs">{project.title}</h3>
-                  <p className="text-on-surface-variant font-body-sm mb-md">{project.description}</p>
+                  <EditableText
+                    value={project.title}
+                    onChange={(value) => updateProject(idx, 'title', value)}
+                    as="h3"
+                    className="font-headline-sm text-headline-sm text-primary mb-xs"
+                    editMode={isEditMode}
+                  />
+                  <EditableText
+                    value={project.description}
+                    onChange={(value) => updateProject(idx, 'description', value)}
+                    as="p"
+                    className="text-on-surface-variant font-body-sm mb-md"
+                    editMode={isEditMode}
+                  />
                   <Link
                     className="inline-flex items-center gap-xs text-label-md font-label-md text-primary hover:opacity-70 transition-opacity"
                     to={`/projects/${project.id}`}
@@ -92,10 +140,6 @@ const ProjectsPage = () => {
           </div>
         </div>
       </section>
-      <HomeProjects showMoreButton />
-      <Services />
-      <WhyChooseUs />
-      <Contact />
     </main>
   )
 }

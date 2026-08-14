@@ -112,5 +112,39 @@
     { "id": 5, "url": "https://gypspace.s3.us-east-1.amazonaws.com/major_mep.jpg", "caption": "MEP Works", "category": "mep" },
     { "id": 6, "url": "https://gypspace.s3.us-east-1.amazonaws.com/major_civil.jpg", "caption": "Civil Works", "category": "civil" },
     { "id": 7, "url": "https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery1.jpg", "caption": "Fitout Gallery 1", "category": "fitout" }
-  ]
+  ],
+  "projectsPage": {
+    "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/joinery.png",
+    "badge": "Projects",
+    "title": "Our Projects",
+    "subtitle": "Showcasing technical interior excellence and high-performance fit-out solutions across the UAE.",
+    "featuredTitle": "Featured Projects",
+    "featuredSubtitle": "A showcase of our most complex and high-fidelity technical interior solutions."
+  },
+  "projectDetail": {
+    "engineeringTitle": "Precision BIM Level 3 Integration",
+    "engineeringText1": "The Vertex represents the pinnacle of our technical services capability. Orchestrated through full BIM Level 3 integration, the structural and MEP scope was executed with a tolerance of 0.05mm precision across all primary load-bearing elements.",
+    "engineeringText2": "Our engineering team managed over 45,000 technical clashes in the pre-construction phase using proprietary AI-driven spatial analysis, ensuring a zero-rework fabrication cycle for the primary steel framework. The MEP systems leverage a decentralized smart-grid architecture, reducing operational energy overhead by 22% compared to standard commercial benchmarks.",
+    "siteDocTitle": "Engineering Detail",
+    "performanceTitle": "Project Performance",
+    "stat1Value": "100%",
+    "stat1Title": "Safety Compliance",
+    "stat1Desc": "Zero-incident delivery during 1.2M collective man-hours.",
+    "stat2Value": "99%",
+    "stat2Title": "On-time Delivery",
+    "stat2Desc": "Handover completed 2 weeks ahead of the primary milestone.",
+    "stat3Value": "Gold",
+    "stat3Title": "Energy Efficiency",
+    "stat3Desc": "LEED Gold Certified with optimized thermal envelope.",
+    "featuresTitle": "Key Technical Features",
+    "featuresSubtitle": "Our modular delivery framework allows for rapid deployment of complex industrial assets without compromising structural fidelity.",
+    "feature1Title": "Structural Engineering",
+    "feature1Desc": "Advanced tensile steel designs integrated with seismic-responsive foundations. Every joint is ultrasonic tested for 100% structural verification.",
+    "feature2Title": "MEP Systems",
+    "feature2Desc": "Tier-4 data-center grade cooling solutions and automated smart-building protocols for real-time HVAC optimization.",
+    "feature3Title": "Bespoke Joinery",
+    "feature3Desc": "Custom laboratory furniture and high-traffic acoustic panelling manufactured in-house to millimeter-exact specifications.",
+    "ctaTitle": "Ready to Scale Your Infrastructure?",
+    "ctaText": "Consult with our senior engineering team to discuss your next flagship development. From BIM modelling to final handover, we deliver precision at scale."
+  }
 }
