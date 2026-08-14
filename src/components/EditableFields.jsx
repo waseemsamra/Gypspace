@@ -88,6 +88,7 @@ const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = []
               <div
                 key={item.id}
                 onClick={(e) => {
+                  e.preventDefault()
                   e.stopPropagation()
                   onChange(item.url)
                   setDraft(item.url)
@@ -147,7 +148,7 @@ const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = []
 
   return (
     <div
-      onClick={(e) => { e.stopPropagation(); setIsEditing(true) }}
+      onClick={(e) => { e.preventDefault(); e.stopPropagation(); setIsEditing(true) }}
       className="cursor-pointer relative group block"
       title="Click to change image"
     >

@@ -64,50 +64,79 @@ const MajorAreas = () => {
           />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-lg">
-          {areas.map((area, idx) => (
-            <Link
-              key={area.id}
-              to={area.linkHref}
-              className="group relative overflow-hidden rounded-xl border border-outline-variant bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl block"
-            >
-              <div className="h-64 overflow-hidden relative">
-                <EditableImage
-                  src={area.image}
-                  alt={area.title}
-                  onChange={(value) => updateArea(idx, 'image', value)}
-                  editMode={isEditMode}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-md left-md flex items-center gap-xs text-white">
-                  <span className="material-symbols-outlined">{area.icon}</span>
-                  <span className="font-label-md text-label-md">{area.label}</span>
+          {areas.map((area, idx) =>
+            isEditMode ? (
+              <div
+                key={area.id}
+                className="group relative overflow-hidden rounded-xl border border-outline-variant bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl block"
+              >
+                <div className="h-64 overflow-hidden relative">
+                  <EditableImage
+                    src={area.image}
+                    alt={area.title}
+                    onChange={(value) => updateArea(idx, 'image', value)}
+                    editMode={isEditMode}
+                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-md left-md flex items-center gap-xs text-white">
+                    <span className="material-symbols-outlined">{area.icon}</span>
+                    <span className="font-label-md text-label-md">{area.label}</span>
+                  </div>
+                </div>
+                <div className="p-lg">
+                  <EditableText
+                    value={area.title}
+                    onChange={(value) => updateArea(idx, 'title', value)}
+                    as="h3"
+                    className="font-headline-md text-xl font-semibold text-primary mb-sm"
+                    editMode={isEditMode}
+                  />
+                  <EditableText
+                    value={area.description}
+                    onChange={(value) => updateArea(idx, 'description', value)}
+                    as="p"
+                    className="font-body-md text-body-md text-secondary mb-xl line-clamp-2"
+                    editMode={isEditMode}
+                  />
+                  <span className="inline-flex items-center gap-sm font-label-md text-label-md text-technical-cyan group/btn">
+                    <span>{area.linkText}</span>
+                    <span className="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">
+                      arrow_forward
+                    </span>
+                  </span>
                 </div>
               </div>
-              <div className="p-lg">
-                <EditableText
-                  value={area.title}
-                  onChange={(value) => updateArea(idx, 'title', value)}
-                  as="h3"
-                  className="font-headline-md text-xl font-semibold text-primary mb-sm"
-                  editMode={isEditMode}
-                />
-                <EditableText
-                  value={area.description}
-                  onChange={(value) => updateArea(idx, 'description', value)}
-                  as="p"
-                  className="font-body-md text-body-md text-secondary mb-xl line-clamp-2"
-                  editMode={isEditMode}
-                />
-                <span className="inline-flex items-center gap-sm font-label-md text-label-md text-technical-cyan group/btn">
-                  <span>{area.linkText}</span>
-                  <span className="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">
-                    arrow_forward
+            ) : (
+              <Link
+                key={area.id}
+                to={area.linkHref}
+                className="group relative overflow-hidden rounded-xl border border-outline-variant bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl block"
+              >
+                <div className="h-64 overflow-hidden relative">
+                  <div
+                    className="bg-cover bg-center w-full h-full transition-transform duration-700 group-hover:scale-110"
+                    style={{ backgroundImage: `url('${area.image}')` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                  <div className="absolute bottom-md left-md flex items-center gap-xs text-white">
+                    <span className="material-symbols-outlined">{area.icon}</span>
+                    <span className="font-label-md text-label-md">{area.label}</span>
+                  </div>
+                </div>
+                <div className="p-lg">
+                  <h3 className="font-headline-md text-xl font-semibold text-primary mb-sm">{area.title}</h3>
+                  <p className="font-body-md text-body-md text-secondary mb-xl line-clamp-2">{area.description}</p>
+                  <span className="inline-flex items-center gap-sm font-label-md text-label-md text-technical-cyan group/btn">
+                    <span>{area.linkText}</span>
+                    <span className="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">
+                      arrow_forward
+                    </span>
                   </span>
-                </span>
-              </div>
-            </Link>
-          ))}
+                </div>
+              </Link>
+            )
+          )}
         </div>
       </div>
     </section>
