@@ -8,32 +8,37 @@ const ADMIN_CREDENTIALS = {
   password: 'admin123'
 }
 
-const loadCmsData = () => {
-  try {
-    const stored = localStorage.getItem('gypspace_cms_data')
-    if (stored) {
-      const parsed = JSON.parse(stored)
-      if (parsed.version !== initialCmsData.version) {
-        localStorage.removeItem('gypspace_cms_data')
-        return initialCmsData
+  const loadCmsData = () => {
+    try {
+      const stored = localStorage.getItem('gypspace_cms_data')
+      if (stored) {
+        const parsed = JSON.parse(stored)
+        if (parsed.version !== initialCmsData.version) {
+          localStorage.removeItem('gypspace_cms_data')
+          return initialCmsData
+        }
+        
+        const merged = { ...initialCmsData, ...parsed }
+        
+        if (!merged.gallery || !Array.isArray(merged.gallery)) {
+          merged.gallery = initialCmsData.gallery
+        } else {
+          merged.gallery = merged.gallery.filter(item => {
+            return item && typeof item === 'object' && item.id && item.url
+          })
+        }
+        
+        if (!Array.isArray(merged.projects) || merged.projects.length < initialCmsData.projects.length) {
+          merged.projects = initialCmsData.projects
+        }
+        
+        return merged
       }
-      const merged = { ...initialCmsData, ...parsed }
-      
-      if (!merged.gallery || !Array.isArray(merged.gallery)) {
-        merged.gallery = initialCmsData.gallery
-      } else {
-        merged.gallery = merged.gallery.filter(item => {
-          return item && typeof item === 'object' && item.id && item.url
-        })
-      }
-      
-      return merged
+    } catch (e) {
+      console.error('Failed to load CMS data', e)
     }
-  } catch (e) {
-    console.error('Failed to load CMS data', e)
+    return initialCmsData
   }
-  return initialCmsData
-}
 
 const saveCmsData = (data) => {
   try {
