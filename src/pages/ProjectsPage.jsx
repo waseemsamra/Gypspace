@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAdmin } from '../contexts/AdminContext'
 import { EditableText, EditableImage } from '../components/EditableFields'
@@ -13,34 +13,25 @@ const ProjectsPage = () => {
   })
   const { cmsData, updateCmsData, isEditMode } = useAdmin()
   const gallery = cmsData?.gallery || []
-  const projects = cmsData?.projects || [
-    {
-      id: 1,
-      title: 'Corporate Headquarters',
-      description: 'A multi-floor executive workspace focusing on minimalist aesthetics and seamless technical integration.',
-      image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg',
-      alt: 'Corporate Headquarters'
-    },
-    {
-      id: 2,
-      title: 'Precision Lab Facility',
-      description: 'State-of-the-art technical environment designed for maximum operational efficiency and clinical precision.',
-      image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg',
-      alt: 'Precision Lab Facility'
-    },
-    {
-      id: 3,
-      title: 'Executive Hospitality Suite',
-      description: 'Luxury interior solutions featuring bespoke cabinetry and advanced smart-room technology.',
-      image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg',
-      alt: 'Executive Hospitality Suite'
-    }
-  ]
+  const projects = cmsData?.projects || []
+  const [activeCategory, setActiveCategory] = useState('all')
+  const [visibleCount, setVisibleCount] = useState(20)
 
   const updateProject = (index, field, value) => {
     const updated = [...projects]
     updated[index] = { ...updated[index], [field]: value }
     updateCmsData('projects', updated)
+  }
+
+  const filteredProjects = activeCategory === 'all'
+    ? projects
+    : projects.filter(project => project.category === activeCategory)
+
+  const visibleProjects = filteredProjects.slice(0, visibleCount)
+  const hasMore = visibleCount < filteredProjects.length
+
+  const handleShowMore = () => {
+    setVisibleCount(prev => prev + 10)
   }
 
   return (
@@ -86,11 +77,12 @@ const ProjectsPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-2xl bg-surface" id="featured-projects">
+
+      <section className="py-2xl bg-surface" id="our-projects">
         <div className="max-w-container-max mx-auto px-gutter">
           <div className="mb-xl">
             <EditableText
-              value={cmsData?.projectsPage?.featuredTitle || 'Featured Projects'}
+              value={cmsData?.projectsPage?.featuredTitle || 'Our Projects'}
               onChange={(value) => updateCmsData('projectsPage', { ...cmsData?.projectsPage, featuredTitle: value })}
               as="h2"
               className="font-headline-md text-headline-md text-primary mb-sm"
@@ -104,13 +96,31 @@ const ProjectsPage = () => {
               editMode={isEditMode}
             />
           </div>
+
+          <div className="mb-lg">
+            <select
+              value={activeCategory}
+              onChange={(e) => {
+                setActiveCategory(e.target.value)
+                setVisibleCount(20)
+              }}
+              className="px-md py-2 border border-outline-variant rounded-lg bg-white text-primary font-label-md text-label-md focus:outline-none focus:border-primary"
+            >
+              <option value="all">All Projects</option>
+              <option value="residential">Residential</option>
+              <option value="commercial">Commercial</option>
+              <option value="f-and-b">F & B</option>
+              <option value="renovations">Renovations</option>
+            </select>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-lg">
-            {projects.map((project, idx) => (
+            {visibleProjects.map((project, idx) => (
               <div key={project.id} className="group flex flex-col gap-md">
                 <div className="relative aspect-video overflow-hidden rounded-xl border border-outline-variant">
                   <EditableImage
                     src={project.image}
-                    alt={project.alt || project.title}
+                    alt={project.title}
                     onChange={(value) => updateProject(idx, 'image', value)}
                     editMode={isEditMode}
                     galleryItems={gallery}
@@ -142,8 +152,20 @@ const ProjectsPage = () => {
               </div>
             ))}
           </div>
+
+          {hasMore && (
+            <div className="mt-xl flex justify-center">
+              <button
+                onClick={handleShowMore}
+                className="h-12 px-8 bg-primary text-on-primary font-label-md uppercase tracking-widest rounded-lg hover:opacity-80 transition-all active:scale-[0.98]"
+              >
+                Show More ({filteredProjects.length - visibleCount} remaining)
+              </button>
+            </div>
+          )}
         </div>
       </section>
+
       <HomeProjects showMoreButton />
       <Services />
       <WhyChooseUs />
