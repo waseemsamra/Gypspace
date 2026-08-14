@@ -81,7 +81,7 @@ const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = []
   if (isEditing) {
     if (galleryItems.length > 0) {
       return (
-        <div className="space-y-2">
+        <div className="space-y-2" onMouseDown={(e) => e.preventDefault()}>
           <p className="text-xs text-on-surface-variant font-body-sm">Choose from gallery:</p>
           <div className="grid grid-cols-4 gap-2">
             {galleryItems.map((item) => (
@@ -102,11 +102,8 @@ const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = []
               </div>
             ))}
           </div>
-          <div className="flex items-center gap-2 pt-2 border-t border-outline-variant">
-            <label
-              className="px-3 py-1.5 border border-outline-variant rounded-lg font-label-md text-label-md text-primary cursor-pointer hover:bg-surface-container transition-colors text-sm"
-              onMouseDown={(e) => e.preventDefault()}
-            >
+          <div className="flex items-center gap-2 pt-2 border-t border-outline-variant" onMouseDown={(e) => e.preventDefault()}>
+            <label className="px-3 py-1.5 border border-outline-variant rounded-lg font-label-md text-label-md text-primary cursor-pointer hover:bg-surface-container transition-colors text-sm">
               {uploading ? 'Uploading...' : 'Upload New'}
               <input type="file" accept="image/*" onChange={handleFileChange} disabled={uploading} className="hidden" />
             </label>
@@ -118,7 +115,7 @@ const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = []
     }
 
     return (
-      <div className="space-y-2">
+      <div className="space-y-2" onMouseDown={(e) => e.preventDefault()}>
         <input
           type="text"
           value={draft}
@@ -138,10 +135,7 @@ const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = []
           autoFocus
         />
         <div className="flex items-center gap-2">
-          <label
-            className="px-3 py-1.5 border border-outline-variant rounded-lg font-label-md text-label-md text-primary cursor-pointer hover:bg-surface-container transition-colors text-sm"
-            onMouseDown={(e) => e.preventDefault()}
-          >
+          <label className="px-3 py-1.5 border border-outline-variant rounded-lg font-label-md text-label-md text-primary cursor-pointer hover:bg-surface-container transition-colors text-sm">
             {uploading ? 'Uploading...' : 'Upload Image'}
             <input type="file" accept="image/*" onChange={handleFileChange} disabled={uploading} className="hidden" />
           </label>

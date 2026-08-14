@@ -76,7 +76,7 @@ const MajorAreas = () => {
                     alt={area.title}
                     onChange={(value) => updateArea(idx, 'image', value)}
                     editMode={isEditMode}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
                   <div className="absolute bottom-md left-md flex items-center gap-xs text-white pointer-events-none">

@@ -27,12 +27,17 @@ export async function uploadImage(file) {
   const key = `gallery/${Date.now()}-${finalFile.name}`
   const buffer = await finalFile.arrayBuffer()
 
-  await s3.send(new PutObjectCommand({
-    Bucket: import.meta.env.VITE_AWS_S3_BUCKET,
-    Key: key,
-    Body: buffer,
-    ContentType: finalFile.type || 'image/jpeg',
-  }))
+  try {
+    await s3.send(new PutObjectCommand({
+      Bucket: import.meta.env.VITE_AWS_S3_BUCKET,
+      Key: key,
+      Body: buffer,
+      ContentType: finalFile.type || 'image/jpeg',
+    }))
+  } catch (err) {
+    console.error('S3 upload error:', err)
+    throw new Error(`Upload failed: ${err.message || err.code || 'Unknown error'}`)
+  }
 
   return `https://${import.meta.env.VITE_AWS_S3_BUCKET}.s3.${import.meta.env.VITE_AWS_REGION}.amazonaws.com/${key}`
 }
