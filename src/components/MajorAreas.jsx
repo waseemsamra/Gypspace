@@ -5,6 +5,7 @@ import { EditableText, EditableImage } from './EditableFields'
 
 const MajorAreas = () => {
   const { cmsData, updateCmsData, isEditMode } = useAdmin()
+  const gallery = cmsData?.gallery || []
   const areas = cmsData?.home?.majorAreas || [
     {
       id: 'mep',
@@ -70,19 +71,14 @@ const MajorAreas = () => {
                 key={area.id}
                 className="group relative overflow-hidden rounded-xl border border-outline-variant bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl block"
               >
-                <div className="h-64 overflow-hidden relative">
+                <div className="rounded-xl overflow-hidden border border-outline-variant shadow-sm">
                   <EditableImage
                     src={area.image}
                     alt={area.title}
                     onChange={(value) => updateArea(idx, 'image', value)}
                     editMode={isEditMode}
-                    className="w-full h-full object-cover"
+                    galleryItems={gallery}
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
-                  <div className="absolute bottom-md left-md flex items-center gap-xs text-white pointer-events-none">
-                    <span className="material-symbols-outlined">{area.icon}</span>
-                    <span className="font-label-md text-label-md">{area.label}</span>
-                  </div>
                 </div>
                 <div className="p-lg">
                   <EditableText
@@ -99,11 +95,9 @@ const MajorAreas = () => {
                     className="font-body-md text-body-md text-secondary mb-xl line-clamp-2"
                     editMode={isEditMode}
                   />
-                  <span className="inline-flex items-center gap-sm font-label-md text-label-md text-technical-cyan group/btn">
+                  <span className="inline-flex items-center gap-sm font-label-md text-label-md text-technical-cyan">
                     <span>{area.linkText}</span>
-                    <span className="material-symbols-outlined transition-transform group-hover/btn:translate-x-1">
-                      arrow_forward
-                    </span>
+                    <span className="material-symbols-outlined">arrow_forward</span>
                   </span>
                 </div>
               </div>
