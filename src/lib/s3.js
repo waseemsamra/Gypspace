@@ -31,7 +31,7 @@ export async function uploadImage(file) {
     Bucket: import.meta.env.VITE_AWS_S3_BUCKET,
     Key: key,
     Body: buffer,
-    ContentType: 'image/jpeg',
+    ContentType: finalFile.type || 'image/jpeg',
   }))
 
   return `https://${import.meta.env.VITE_AWS_S3_BUCKET}.s3.${import.meta.env.VITE_AWS_REGION}.amazonaws.com/${key}`
