@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useAdmin } from '../contexts/AdminContext'
-import { EditableText } from './EditableFields'
+import { EditableText, EditableImage } from './EditableFields'
 
-const HomeProjects = ({ showMoreButton = false, initialCount = 6 }) => {
+const HomeProjects = ({ showMoreButton = false, initialCount = 20 }) => {
   const [activeCategory, setActiveCategory] = useState('all')
   const [visibleCount, setVisibleCount] = useState(initialCount)
   const { cmsData, updateCmsData, isEditMode } = useAdmin()
+  const gallery = cmsData?.gallery || []
 
   const projects = cmsData?.home?.projects || [
     {
@@ -124,7 +125,7 @@ const HomeProjects = ({ showMoreButton = false, initialCount = 6 }) => {
   const hasMore = showMoreButton && visibleCount < filteredProjects.length
 
   const handleShowMore = () => {
-    setVisibleCount(prev => prev + 6)
+    setVisibleCount(prev => prev + 10)
   }
 
   return (
@@ -167,27 +168,48 @@ const HomeProjects = ({ showMoreButton = false, initialCount = 6 }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
           {visibleProjects.map((project, idx) => (
-            <Link key={project.id} to={project.link} className="group flex flex-col gap-md">
-              <div className="relative aspect-video overflow-hidden rounded-xl border border-outline-variant">
-                <img
-                  alt={project.alt}
-                  className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
-                  src={project.image}
-                />
+            isEditMode ? (
+              <div key={project.id} className="flex flex-col gap-md">
+                <div className="relative aspect-video overflow-hidden rounded-xl border border-outline-variant">
+                  <EditableImage
+                    src={project.image}
+                    alt={project.alt || project.title}
+                    onChange={(value) => updateProject(idx, 'image', value)}
+                    editMode={isEditMode}
+                    galleryItems={gallery}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <EditableText
+                    value={project.title}
+                    onChange={(value) => updateProject(idx, 'title', value)}
+                    as="h3"
+                    className="font-headline-sm text-lg font-semibold text-primary mb-xs"
+                    editMode={isEditMode}
+                  />
+                  <p className="text-on-surface-variant font-body-sm mb-md capitalize">
+                    {project.category === 'residential' ? 'Residential' : project.category === 'commercial' ? 'Commercial' : project.category === 'f-and-b' ? 'F & B' : project.category === 'renovations' ? 'Renovations' : project.category === 'joinery' ? 'Joinery Works' : project.category}
+                  </p>
+                </div>
               </div>
-              <div>
-                <EditableText
-                  value={project.title}
-                  onChange={(value) => updateProject(idx, 'title', value)}
-                  as="h3"
-                  className="font-headline-sm text-lg font-semibold text-primary mb-xs"
-                  editMode={isEditMode}
-                />
-                <p className="text-on-surface-variant font-body-sm mb-md capitalize">
-                  {project.category === 'residential' ? 'Residential' : project.category === 'commercial' ? 'Commercial' : project.category === 'f-and-b' ? 'F & B' : project.category === 'renovations' ? 'Renovations' : project.category === 'joinery' ? 'Joinery Works' : project.category}
-                </p>
-              </div>
-            </Link>
+            ) : (
+              <Link key={project.id} to={project.link} className="group flex flex-col gap-md">
+                <div className="relative aspect-video overflow-hidden rounded-xl border border-outline-variant">
+                  <img
+                    alt={project.alt}
+                    className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
+                    src={project.image}
+                  />
+                </div>
+                <div>
+                  <h3 className="font-headline-sm text-lg font-semibold text-primary mb-xs">{project.title}</h3>
+                  <p className="text-on-surface-variant font-body-sm mb-md capitalize">
+                    {project.category === 'residential' ? 'Residential' : project.category === 'commercial' ? 'Commercial' : project.category === 'f-and-b' ? 'F & B' : project.category === 'renovations' ? 'Renovations' : project.category === 'joinery' ? 'Joinery Works' : project.category}
+                  </p>
+                </div>
+              </Link>
+            )
           ))}
         </div>
 

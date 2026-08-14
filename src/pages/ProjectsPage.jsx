@@ -2,6 +2,10 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useAdmin } from '../contexts/AdminContext'
 import { EditableText, EditableImage } from '../components/EditableFields'
+import Services from '../components/Services'
+import WhyChooseUs from '../components/WhyChooseUs'
+import Contact from '../components/Contact'
+import HomeProjects from '../components/HomeProjects'
 
 const ProjectsPage = () => {
   useEffect(() => {
@@ -140,6 +144,10 @@ const ProjectsPage = () => {
           </div>
         </div>
       </section>
+      <HomeProjects showMoreButton />
+      <Services />
+      <WhyChooseUs />
+      <Contact />
     </main>
   )
 }

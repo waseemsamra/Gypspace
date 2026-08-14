@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom'
 import { useAdmin } from '../contexts/AdminContext'
 import { EditableText, EditableImage } from '../components/EditableFields'
 
 const ProjectDetailPage = () => {
+  const containerRef = useRef(null)
   const { id } = useParams()
   const { cmsData, updateCmsData, isEditMode } = useAdmin()
   const gallery = cmsData?.gallery || []
@@ -15,9 +17,32 @@ const ProjectDetailPage = () => {
     updateCmsData('projects', updated)
   }
 
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
+    const observerOptions = { threshold: 0.1 }
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active')
+        }
+      })
+    }, observerOptions)
+
+    const container = containerRef.current
+    if (container) {
+      const elements = container.querySelectorAll('.reveal-on-scroll')
+      elements.forEach((el) => observer.observe(el))
+    }
+
+    return () => observer.disconnect()
+  }, [])
+
   if (!project) {
     return (
-      <div className="font-body-md text-body-md overflow-x-hidden">
+      <div className="font-body-md text-body-md overflow-x-hidden" ref={containerRef}>
         <main>
           <section className="relative h-[80vh] flex items-center overflow-hidden">
             <div className="absolute inset-0 z-0">
@@ -47,7 +72,7 @@ const ProjectDetailPage = () => {
   }
 
   return (
-    <div className="font-body-md text-body-md overflow-x-hidden">
+    <div className="font-body-md text-body-md overflow-x-hidden" ref={containerRef}>
       <main>
         <section className="relative w-full h-[80vh] flex items-end overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -90,11 +115,11 @@ const ProjectDetailPage = () => {
         </section>
 
         <section className="py-2xl max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-xl items-center">
-          <div className="md:col-span-7">
+          <div className="md:col-span-7 scroll-reveal">
             <span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Engineering Scope</span>
             <EditableText
               value="Precision BIM Level 3 Integration"
-              onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, engineeringTitle: value })}
+              onChange={(value) => updateProject('engineeringTitle', value)}
               as="h2"
               className="font-headline-md text-headline-md text-on-surface mt-sm mb-lg"
               editMode={isEditMode}
@@ -102,14 +127,14 @@ const ProjectDetailPage = () => {
             <div className="space-y-md text-on-surface-variant">
               <EditableText
                 value="The Vertex represents the pinnacle of our technical services capability. Orchestrated through full BIM Level 3 integration, the structural and MEP scope was executed with a tolerance of 0.05mm precision across all primary load-bearing elements."
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, engineeringText1: value })}
+                onChange={(value) => updateProject('engineeringText1', value)}
                 as="p"
                 className="font-body-lg text-body-lg leading-relaxed"
                 editMode={isEditMode}
               />
               <EditableText
                 value="Our engineering team managed over 45,000 technical clashes in the pre-construction phase using proprietary AI-driven spatial analysis, ensuring a zero-rework fabrication cycle for the primary steel framework. The MEP systems leverage a decentralized smart-grid architecture, reducing operational energy overhead by 22% compared to standard commercial benchmarks."
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, engineeringText2: value })}
+                onChange={(value) => updateProject('engineeringText2', value)}
                 as="p"
                 className="font-body-md text-body-md"
                 editMode={isEditMode}
@@ -130,8 +155,8 @@ const ProjectDetailPage = () => {
               </div>
             </div>
           </div>
-          <div className="md:col-span-5 relative">
-            <div className="aspect-[4/5] bg-surface-container-high overflow-hidden border border-outline-variant">
+          <div className="md:col-span-5 relative scroll-reveal" style={{ transitionDelay: '200ms' }}>
+            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
               <EditableImage
                 src={project.blueprintImage || project.image}
                 alt={project.title}
@@ -140,10 +165,6 @@ const ProjectDetailPage = () => {
                 galleryItems={gallery}
                 className="w-full h-full object-cover"
               />
-            </div>
-            <div className="absolute -bottom-lg -right-lg bg-primary text-on-primary p-lg shadow-xl max-w-[200px]">
-              <div className="font-display-lg text-display-lg-mobile leading-none">15+</div>
-              <div className="font-label-md text-label-md uppercase mt-xs">Years of Operational Excellence</div>
             </div>
           </div>
         </section>
@@ -155,7 +176,7 @@ const ProjectDetailPage = () => {
                 <span className="font-label-md text-label-md text-secondary uppercase">Site Documentation</span>
                 <EditableText
                   value="Engineering Detail"
-                  onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, siteDocTitle: value })}
+                  onChange={(value) => updateProject('siteDocTitle', value)}
                   as="h2"
                   className="font-headline-md text-headline-md text-on-surface"
                   editMode={isEditMode}
@@ -203,11 +224,11 @@ const ProjectDetailPage = () => {
           </div>
         </section>
 
-        <section className="py-2xl max-w-container-max mx-auto px-gutter">
+        <section className="py-2xl max-w-container-max mx-auto px-gutter scroll-reveal">
           <div className="text-center mb-2xl">
             <EditableText
               value="Project Performance"
-              onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, performanceTitle: value })}
+              onChange={(value) => updateProject('performanceTitle', value)}
               as="h2"
               className="font-headline-md text-headline-md"
               editMode={isEditMode}
@@ -221,21 +242,21 @@ const ProjectDetailPage = () => {
               </div>
               <EditableText
                 value="100%"
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, stat1Value: value })}
+                onChange={(value) => updateProject('stat1Value', value)}
                 as="div"
                 className="font-display-lg text-display-lg text-primary mb-xs"
                 editMode={isEditMode}
               />
               <EditableText
                 value="Safety Compliance"
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, stat1Title: value })}
+                onChange={(value) => updateProject('stat1Title', value)}
                 as="h3"
                 className="font-headline-sm text-headline-sm mb-sm"
                 editMode={isEditMode}
               />
               <EditableText
                 value="Zero-incident delivery during 1.2M collective man-hours."
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, stat1Desc: value })}
+                onChange={(value) => updateProject('stat1Desc', value)}
                 as="p"
                 className="text-on-surface-variant text-body-md"
                 editMode={isEditMode}
@@ -247,21 +268,21 @@ const ProjectDetailPage = () => {
               </div>
               <EditableText
                 value="99%"
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, stat2Value: value })}
+                onChange={(value) => updateProject('stat2Value', value)}
                 as="div"
                 className="font-display-lg text-display-lg text-primary mb-xs"
                 editMode={isEditMode}
               />
               <EditableText
                 value="On-time Delivery"
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, stat2Title: value })}
+                onChange={(value) => updateProject('stat2Title', value)}
                 as="h3"
                 className="font-headline-sm text-headline-sm mb-sm"
                 editMode={isEditMode}
               />
               <EditableText
                 value="Handover completed 2 weeks ahead of the primary milestone."
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, stat2Desc: value })}
+                onChange={(value) => updateProject('stat2Desc', value)}
                 as="p"
                 className="text-on-surface-variant text-body-md"
                 editMode={isEditMode}
@@ -273,21 +294,21 @@ const ProjectDetailPage = () => {
               </div>
               <EditableText
                 value="Gold"
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, stat3Value: value })}
+                onChange={(value) => updateProject('stat3Value', value)}
                 as="div"
                 className="font-display-lg text-display-lg text-primary mb-xs"
                 editMode={isEditMode}
               />
               <EditableText
                 value="Energy Efficiency"
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, stat3Title: value })}
+                onChange={(value) => updateProject('stat3Title', value)}
                 as="h3"
                 className="font-headline-sm text-headline-sm mb-sm"
                 editMode={isEditMode}
               />
               <EditableText
                 value="LEED Gold Certified with optimized thermal envelope."
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, stat3Desc: value })}
+                onChange={(value) => updateProject('stat3Desc', value)}
                 as="p"
                 className="text-on-surface-variant text-body-md"
                 editMode={isEditMode}
@@ -301,14 +322,14 @@ const ProjectDetailPage = () => {
             <div className="max-w-xl mb-2xl">
               <EditableText
                 value="Key Technical Features"
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, featuresTitle: value })}
+                onChange={(value) => updateProject('featuresTitle', value)}
                 as="h2"
                 className="font-headline-md text-headline-md mb-md"
                 editMode={isEditMode}
               />
               <EditableText
                 value="Our modular delivery framework allows for rapid deployment of complex industrial assets without compromising structural fidelity."
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, featuresSubtitle: value })}
+                onChange={(value) => updateProject('featuresSubtitle', value)}
                 as="p"
                 className="font-body-lg text-body-lg opacity-80"
                 editMode={isEditMode}
@@ -321,14 +342,14 @@ const ProjectDetailPage = () => {
                 </div>
                 <EditableText
                   value="Structural Engineering"
-                  onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, feature1Title: value })}
+                  onChange={(value) => updateProject('feature1Title', value)}
                   as="h4"
                   className="font-headline-sm text-headline-sm"
                   editMode={isEditMode}
                 />
                 <EditableText
                   value="Advanced tensile steel designs integrated with seismic-responsive foundations. Every joint is ultrasonic tested for 100% structural verification."
-                  onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, feature1Desc: value })}
+                  onChange={(value) => updateProject('feature1Desc', value)}
                   as="p"
                   className="text-white/60 text-body-sm leading-relaxed"
                   editMode={isEditMode}
@@ -348,14 +369,14 @@ const ProjectDetailPage = () => {
                 </div>
                 <EditableText
                   value="MEP Systems"
-                  onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, feature2Title: value })}
+                  onChange={(value) => updateProject('feature2Title', value)}
                   as="h4"
                   className="font-headline-sm text-headline-sm"
                   editMode={isEditMode}
                 />
                 <EditableText
                   value="Tier-4 data-center grade cooling solutions and automated smart-building protocols for real-time HVAC optimization."
-                  onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, feature2Desc: value })}
+                  onChange={(value) => updateProject('feature2Desc', value)}
                   as="p"
                   className="text-white/60 text-body-sm leading-relaxed"
                   editMode={isEditMode}
@@ -375,14 +396,14 @@ const ProjectDetailPage = () => {
                 </div>
                 <EditableText
                   value="Bespoke Joinery"
-                  onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, feature3Title: value })}
+                  onChange={(value) => updateProject('feature3Title', value)}
                   as="h4"
                   className="font-headline-sm text-headline-sm"
                   editMode={isEditMode}
                 />
                 <EditableText
                   value="Custom laboratory furniture and high-traffic acoustic panelling manufactured in-house to millimeter-exact specifications."
-                  onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, feature3Desc: value })}
+                  onChange={(value) => updateProject('feature3Desc', value)}
                   as="p"
                   className="text-white/60 text-body-sm leading-relaxed"
                   editMode={isEditMode}
@@ -408,14 +429,14 @@ const ProjectDetailPage = () => {
             <div className="relative z-10">
               <EditableText
                 value="Ready to Scale Your Infrastructure?"
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, ctaTitle: value })}
+                onChange={(value) => updateProject('ctaTitle', value)}
                 as="h2"
                 className="font-display-lg text-white mb-lg"
                 editMode={isEditMode}
               />
               <EditableText
                 value="Consult with our senior engineering team to discuss your next flagship development. From BIM modelling to final handover, we deliver precision at scale."
-                onChange={(value) => updateCmsData('projectDetail', { ...cmsData?.projectDetail, ctaText: value })}
+                onChange={(value) => updateProject('ctaText', value)}
                 as="p"
                 className="text-white/70 max-w-2xl mx-auto mb-xl font-body-lg"
                 editMode={isEditMode}
