@@ -10,7 +10,16 @@ const ProjectDetailPage = () => {
   const { cmsData, updateCmsData, isEditMode } = useAdmin()
   const gallery = cmsData?.gallery || []
   const projects = cmsData?.projects || []
-  const project = projects.find(p => p.id === parseInt(id))
+  const project = projects.find(p => p.id === parseInt(id)) || {
+    id: parseInt(id),
+    title: 'The Vertex Commercial Hub',
+    description: 'A multi-floor executive workspace focusing on minimalist aesthetics and seamless technical integration.',
+    image: 'https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg',
+    heroImage: 'https://gypspace.s3.us-east-1.amazonaws.com/main-project.png',
+    blueprintImage: 'https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg',
+    gallery1: 'https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery1.jpg',
+    gallery2: 'https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery2.jpg'
+  }
 
   const updateProject = (field, value) => {
     const updated = projects.map(p => p.id === project.id ? { ...p, [field]: value } : p)
@@ -40,40 +49,10 @@ const ProjectDetailPage = () => {
     return () => observer.disconnect()
   }, [])
 
-  if (!project) {
-    return (
-      <div className="font-body-md text-body-md overflow-x-hidden" ref={containerRef}>
-        <main>
-          <section className="relative h-[80vh] flex items-center overflow-hidden">
-            <div className="absolute inset-0 z-0">
-              <div
-                className="w-full h-full bg-cover bg-center"
-                style={{ backgroundImage: `url('https://gypspace.s3.us-east-1.amazonaws.com/main-project.png')` }}
-              />
-              <div className="absolute inset-0 bg-primary/40 backdrop-blur-[2px]" />
-            </div>
-            <div className="relative z-10 max-w-container-max mx-auto px-gutter w-full">
-              <div className="max-w-2xl">
-                <span className="inline-block px-md py-base bg-secondary-container text-on-secondary-container font-label-md text-label-md rounded-full mb-md">
-                  FEATURED PROJECT
-                </span>
-                <h1 className="font-display-lg text-display-lg text-white mb-lg">
-                  {project?.title}
-                </h1>
-                <p className="text-white/90 text-body-lg font-body-lg mb-xl max-w-lg">
-                  {project?.description}
-                </p>
-              </div>
-            </div>
-          </section>
-        </main>
-      </div>
-    )
-  }
-
   return (
     <div className="font-body-md text-body-md overflow-x-hidden" ref={containerRef}>
       <main>
+        {/* Hero Section */}
         <section className="relative w-full h-[80vh] flex items-end overflow-hidden">
           <div className="absolute inset-0 z-0">
             <EditableImage
@@ -114,6 +93,7 @@ const ProjectDetailPage = () => {
           </div>
         </section>
 
+        {/* Technical Overview */}
         <section className="py-2xl max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-xl items-center">
           <div className="md:col-span-7 scroll-reveal">
             <span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Engineering Scope</span>
@@ -156,7 +136,7 @@ const ProjectDetailPage = () => {
             </div>
           </div>
           <div className="md:col-span-5 relative scroll-reveal" style={{ transitionDelay: '200ms' }}>
-            <div className="aspect-[4/3] rounded-xl overflow-hidden shadow-xl border border-outline-variant">
+            <div className="aspect-[4/5] bg-surface-container-high overflow-hidden border border-outline-variant">
               <EditableImage
                 src={project.blueprintImage || project.image}
                 alt={project.title}
@@ -169,6 +149,7 @@ const ProjectDetailPage = () => {
           </div>
         </section>
 
+        {/* Technical Gallery */}
         <section className="py-2xl bg-surface-container-low border-y border-outline-variant">
           <div className="max-w-container-max mx-auto px-gutter">
             <div className="flex justify-between items-end mb-2xl">
@@ -224,7 +205,8 @@ const ProjectDetailPage = () => {
           </div>
         </section>
 
-        <section className="py-2xl max-w-container-max mx-auto px-gutter scroll-reveal">
+        {/* Performance Grid */}
+        <section className="py-2xl max-w-container-max mx-auto px-gutter">
           <div className="text-center mb-2xl">
             <EditableText
               value="Project Performance"
@@ -317,6 +299,7 @@ const ProjectDetailPage = () => {
           </div>
         </section>
 
+        {/* Technical Features */}
         <section className="py-2xl bg-tertiary-container text-white overflow-hidden relative">
           <div className="max-w-container-max mx-auto px-gutter relative z-10">
             <div className="max-w-xl mb-2xl">
@@ -421,6 +404,7 @@ const ProjectDetailPage = () => {
           </div>
         </section>
 
+        {/* CTA Section */}
         <section className="py-2xl max-w-container-max mx-auto px-gutter scroll-reveal">
           <div className="bg-primary p-2xl text-center relative overflow-hidden">
             <div className="absolute top-0 right-0 p-lg opacity-10">
