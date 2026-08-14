@@ -9,9 +9,7 @@ import FitoutPage from './pages/FitoutPage'
 import MepPage from './pages/MepPage'
 import CivilPage from './pages/CivilPage'
 import ProjectsPage from './pages/ProjectsPage'
-import Project1Page from './pages/Project1Page'
-import Project2Page from './pages/Project2Page'
-import Project3Page from './pages/Project3Page'
+import ProjectDetailPage from './components/ProjectDetailPage'
 import ProductionPage from './pages/ProductionPage'
 import BrandStoryPage from './pages/BrandStoryPage'
 import CareersPage from './pages/CareersPage'
@@ -42,9 +40,6 @@ const App = () => {
             <Route path="mep" element={<MepPage />} />
             <Route path="civil" element={<CivilPage />} />
             <Route path="projects" element={<ProjectsPage />} />
-            <Route path="projects/1" element={<Project1Page />} />
-            <Route path="projects/2" element={<Project2Page />} />
-            <Route path="projects/3" element={<Project3Page />} />
             <Route path="projects/:id" element={<ProjectDetailPage />} />
             <Route path="production" element={<ProductionPage />} />
             <Route path="brand-story" element={<BrandStoryPage />} />

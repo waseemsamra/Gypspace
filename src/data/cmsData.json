@@ -1,14 +1,26 @@
 {
-  "version": 7,
+  "version": 8,
   "home": {
     "hero": {
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/logo_main_update.png"
     },
     "stats": [
-      { "label": "Projects Delivered", "value": "150+" },
-      { "label": "Years Experience", "value": "15+" },
-      { "label": "Client Partners", "value": "80+" },
-      { "label": "Cities Covered", "value": "5" }
+      {
+        "label": "Projects Delivered",
+        "value": "150+"
+      },
+      {
+        "label": "Years Experience",
+        "value": "15+"
+      },
+      {
+        "label": "Client Partners",
+        "value": "80+"
+      },
+      {
+        "label": "Cities Covered",
+        "value": "5"
+      }
     ],
     "servicesTitle": "Systematic approaches",
     "servicesSubtitle": "Professional execution, quality workmanship, and reliable project delivery tailored to your project requirements.",
@@ -18,21 +30,30 @@
         "number": "01",
         "title": "Site Assessment & Planning",
         "description": "We assess the site requirements, review drawings and specifications, and plan the work sequence to ensure smooth and efficient execution.",
-        "features": ["Site inspection & measurements", "Drawing & scope review"]
+        "features": [
+          "Site inspection & measurements",
+          "Drawing & scope review"
+        ]
       },
       {
         "id": 2,
         "number": "02",
         "title": "Professional Execution",
         "description": "Our experienced team executes the works with attention to detail, proper coordination, and adherence to approved specifications.",
-        "features": ["Skilled workforce", "Quality workmanship"]
+        "features": [
+          "Skilled workforce",
+          "Quality workmanship"
+        ]
       },
       {
         "id": 3,
         "number": "03",
         "title": "Quality & Timely Delivery",
         "description": "We maintain quality throughout the project while coordinating with other trades and working toward agreed project timelines.",
-        "features": ["Quality control & inspection", "Timely project completion"]
+        "features": [
+          "Quality control & inspection",
+          "Timely project completion"
+        ]
       }
     ]
   },
@@ -41,50 +62,62 @@
     "heading": "Built on Quality & Craftsmanship",
     "description": "Professional workmanship and reliable execution tailored to your project requirements.",
     "features": [
-      { "icon": "verified", "title": "Reliable Execution", "description": "We understand the importance of completing work on schedule while maintaining consistent quality and proper coordination with other trades." },
-      { "icon": "groups", "title": "Skilled & Experienced Team", "description": "Our skilled workforce has hands-on experience across gypsum, civil, tiling, plastering, painting, demolition, and renovation works." },
-      { "icon": "adjust", "title": "Quality Focused", "description": "From material selection and preparation to final finishing, we pay close attention to workmanship and project specifications." }
+      {
+        "icon": "verified",
+        "title": "Reliable Execution",
+        "description": "We understand the importance of completing work on schedule while maintaining consistent quality and proper coordination with other trades."
+      },
+      {
+        "icon": "groups",
+        "title": "Skilled & Experienced Team",
+        "description": "Our skilled workforce has hands-on experience across gypsum, civil, tiling, plastering, painting, demolition, and renovation works."
+      },
+      {
+        "icon": "adjust",
+        "title": "Quality Focused",
+        "description": "From material selection and preparation to final finishing, we pay close attention to workmanship and project specifications."
+      }
     ]
   },
   "projects": [
     {
       "id": 1,
-      "title": "Corporate Headquarters",
+      "title": "VIP Entrance \u2013 Global Village, Dubai",
       "category": "commercial",
-      "description": "A multi-floor executive workspace focusing on minimalist aesthetics and seamless technical integration.",
+      "description": "Gypsum and Paint work for Naam Creation LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg",
-      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/main-project.png",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg",
-      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery1.jpg",
-      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery2.jpg"
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg"
     },
     {
       "id": 2,
-      "title": "Precision Lab Facility",
-      "category": "commercial",
-      "description": "State-of-the-art technical environment designed for maximum operational efficiency and clinical precision.",
+      "title": "57 Meraas Estate Private Villa \u2013 Al Mamzar, Dubai",
+      "category": "residential",
+      "description": "Gypsum and Paint work for Golden Square.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg",
-      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/lab.png",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg",
-      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/mep_case_study.jpg",
-      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/mep_fire_safety.jpg"
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg"
     },
     {
       "id": 3,
-      "title": "Executive Hospitality Suite",
-      "category": "f-and-b",
-      "description": "Luxury interior solutions featuring bespoke cabinetry and advanced smart-room technology.",
+      "title": "Executive DAMAC Heights, Tecom - Al Barsha, Dubai",
+      "category": "commercial",
+      "description": "Gypsum and Paint work for Naam Creation LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg",
-      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/lobby.png",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg",
-      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/production_gallery1.jpg",
-      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/production_gallery2.jpg"
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg"
     },
     {
       "id": 4,
-      "title": "Dubai Marina Tower Fit-out",
-      "category": "commercial",
-      "description": "Complete interior fit-out for a 42-storey commercial tower in Dubai Marina with premium finishes and smart-building infrastructure.",
+      "title": "Apartment 108 \u2013 Kamoon 03 \u2013 Downtown, Dubai",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for Interior Design Studio.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_4.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_4.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_4.jpg",
@@ -93,9 +126,9 @@
     },
     {
       "id": 5,
-      "title": "Al Khor Residential Complex",
-      "category": "residential",
-      "description": "Full interior fit-out for a luxury residential compound in Al Khor with modern amenities and family-friendly layouts.",
+      "title": "Apartment 108 \u2013 Antara \u2013 The Palm Resort \u2013 Palm Jumeirah, Dubai",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for Roche Bobois .",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_5.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_5.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_5.jpg",
@@ -104,9 +137,9 @@
     },
     {
       "id": 6,
-      "title": "Downtown Dubai F&B Outlet",
-      "category": "f-and-b",
-      "description": "Bespoke restaurant fit-out in Downtown Dubai featuring custom millwork, acoustic treatments, and advanced kitchen ventilation systems.",
+      "title": "Apartment 3305 \u2013 The Links East Tower \u2013 Golf Residence, Dubai",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for Interior Design Studio.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_6.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_6.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_6.jpg",
@@ -115,9 +148,9 @@
     },
     {
       "id": 7,
-      "title": "JBR Renovation & Restoration",
-      "category": "renovations",
-      "description": "Complete renovation of a beachfront apartment complex in JBR with upgraded finishes, waterproofing, and modern interiors.",
+      "title": "Dhaba Lane Restaurant \u2013 Al Nahda, Dubai",
+      "category": "f-and-b",
+      "description": "Gypsum and Paint work for Naam Creation LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_7.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_7.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_7.jpg",
@@ -126,9 +159,9 @@
     },
     {
       "id": 8,
-      "title": "Business Bay Joinery Works",
-      "category": "joinery",
-      "description": "Custom joinery package for a corporate office in Business Bay including executive desks, reception counters, and storage solutions.",
+      "title": "Apartment 908 Claren Tower 1 \u2013 Downtown, Dubai",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for Interior Design Studio.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_8.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_8.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_8.jpg",
@@ -137,9 +170,9 @@
     },
     {
       "id": 9,
-      "title": "Dubai Sports City MEP",
-      "category": "mep",
-      "description": "Comprehensive MEP installation for a sports complex in Dubai Sports City with energy-efficient HVAC and firefighting systems.",
+      "title": "Apartment 307 \u2013 Downtown View 3, Dubai",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for Interior Design Studio.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_9.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_9.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_9.jpg",
@@ -148,9 +181,9 @@
     },
     {
       "id": 10,
-      "title": "Al Qouz Industrial Fit-out",
-      "category": "commercial",
-      "description": "Industrial warehouse and office fit-out in Al Qouz with reinforced flooring, mezzanine structures, and climate-controlled zones.",
+      "title": "Apartment 207 Building 2B \u2013 City Walk, Dubai",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for Interior Design Studio.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_10.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_10.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_10.jpg",
@@ -159,9 +192,9 @@
     },
     {
       "id": 11,
-      "title": "Palm Jumeirah Villa",
-      "category": "residential",
-      "description": "Luxury villa fit-out on Palm Jumeirah with custom cabinetry, smart home integration, and premium marble finishes throughout.",
+      "title": "Pure Veg Restaurant \u2013 Al Sajaa, Sharjah",
+      "category": "f-and-b",
+      "description": "Full Turnkey Restaurant Fit-Out for Private Client - Owners.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_11.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_11.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_11.jpg",
@@ -170,9 +203,9 @@
     },
     {
       "id": 12,
-      "title": "Mall of Emirates Commercial",
-      "category": "commercial",
-      "description": "Retail fit-out for a flagship store in Mall of the Emirates with dynamic displays, lighting design, and seamless customer flow.",
+      "title": "Tariq Wadi Al Khair Restaurant \u2013  Al Sajaa, Sharjah",
+      "category": "f-and-b",
+      "description": "Full Turnkey Restaurant Fit-Out for Private Client - Owners.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_12.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_12.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_12.jpg",
@@ -181,9 +214,9 @@
     },
     {
       "id": 13,
-      "title": "Dubai Creek Harbour F&B",
-      "category": "f-and-b",
-      "description": "Trendsetting restaurant fit-out at Dubai Creek Harbour with suspended feature walls, designer lighting, and modular seating.",
+      "title": "Apartment 801 \u2013 Diamond, Tiara Residence \u2013 Palm Jumeirah",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for Private Client - Owners.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_13.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_13.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_13.jpg",
@@ -192,9 +225,9 @@
     },
     {
       "id": 14,
-      "title": "DIFC Office Renovation",
-      "category": "renovations",
-      "description": "Strategic renovation of a DIFC office space with open-plan reconfiguration, new raised floors, and contemporary ceiling designs.",
+      "title": "Private Villa 4 \u2013 Street 5 \u2013 Meadows 5 \u2013 Emaar",
+      "category": "residential",
+      "description": "PU Foam Moldings and Skirting work for ANID Trunkey Projects Contracting.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_14.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_14.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_14.jpg",
@@ -203,9 +236,9 @@
     },
     {
       "id": 15,
-      "title": "Emirates Hills Joinery",
-      "category": "joinery",
-      "description": "High-end bespoke joinery for a private mansion in Emirates Hills including walk-in wardrobes, theatre rooms, and wine cellars.",
+      "title": "Private Majlis - Al Khawaneej, Dubai",
+      "category": "residential",
+      "description": "Gypsum and Paint work for Echo Art D\u00e9cor Cont.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_15.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_15.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_15.jpg",
@@ -214,9 +247,9 @@
     },
     {
       "id": 16,
-      "title": "Al Wasl MEP Installation",
-      "category": "mep",
-      "description": "Full MEP scope for a mid-rise residential building in Al Wasl district with VRF air conditioning and hydronic piping.",
+      "title": "Towers at Dubai Hills Estate by Ginco Contracting LLC",
+      "category": "residential",
+      "description": "Gypsum work for Sharif Carpentry & D\u00e9cor .",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_16.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_16.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_16.jpg",
@@ -225,9 +258,9 @@
     },
     {
       "id": 17,
-      "title": "Jebel Ali Port Civil Works",
-      "category": "civil",
-      "description": "Large-scale civil works at Jebel Ali Port including reinforced concrete plinths, road paving, and drainage infrastructure.",
+      "title": "Warehouse, Dubai",
+      "category": "residential",
+      "description": "GRC seating work for Fino Interiors LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_17.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_17.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_17.jpg",
@@ -236,9 +269,9 @@
     },
     {
       "id": 18,
-      "title": "Dubai Silicon Oasis Commercial",
-      "category": "commercial",
-      "description": "Modern office fit-out in Dubai Silicon Oasis with collaborative workspaces, phone booths, and integrated AV solutions.",
+      "title": "Private Villa, Jumeirah Park, Dubai",
+      "category": "residential",
+      "description": "Tiling work for Yaser Fannari LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_18.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_18.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_18.jpg",
@@ -247,9 +280,9 @@
     },
     {
       "id": 19,
-      "title": "Arabian Ranches Residential",
-      "category": "residential",
-      "description": "Premium residential fit-out for a townhouse in Arabian Ranches with natural stone cladding and landscaped patio areas.",
+      "title": "Mamlakati Pastry Restaurant \u2013 Al Jaddaf, Dubai",
+      "category": "f-and-b",
+      "description": "Full Turnkey Restaurant Fit-Out for Private Client - Owners.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_19.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_19.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_19.jpg",
@@ -258,9 +291,9 @@
     },
     {
       "id": 20,
-      "title": "JLT Restaurant Fit-out",
-      "category": "f-and-b",
-      "description": "Upscale restaurant fit-out in Jumeirah Lakes Towers with feature ceilings, statement lighting, and custom banquettes.",
+      "title": "The Gate Tower, Al Khan, Sharjah",
+      "category": "residential",
+      "description": "Gypsum and Paint work for Al Qabah Global Contracting LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_20.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_20.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_20.jpg",
@@ -269,9 +302,9 @@
     },
     {
       "id": 21,
-      "title": "Al Satwa Building Renovation",
-      "category": "renovations",
-      "description": "Facade and interior renovation of a mixed-use building in Al Satwa with upgraded cladding and modern retail spaces.",
+      "title": "Jazz Lounge Spa \u2013 Nation Towers Mall \u2013 Abu Dhabi",
+      "category": "commercial",
+      "description": "Interior Fit-Out & Renovation Works for Ambizione Connect Marketing Management .",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_21.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_21.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_21.jpg",
@@ -280,9 +313,9 @@
     },
     {
       "id": 22,
-      "title": "Karama Custom Joinery",
-      "category": "joinery",
-      "description": "Custom furniture and joinery package for a residential villa in Karama with built-in wardrobes and kitchen cabinetry.",
+      "title": "Naturelife Spa Premium \u2013 JBR \u2013 Dubai",
+      "category": "commercial",
+      "description": "Interior Fit-Out & Renovation Works for Ambizione Connect Marketing Management .",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_22.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_22.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_22.jpg",
@@ -291,9 +324,9 @@
     },
     {
       "id": 23,
-      "title": "Dubai World Trade Centre MEP",
-      "category": "mep",
-      "description": "MEP upgrade and modernization for exhibition halls at DWTC with upgraded air distribution and smart energy management.",
+      "title": "Naturelife Spa Premium  at Rixos JBR, Dubai",
+      "category": "commercial",
+      "description": "Interior Fit-Out & Renovation Works for Ambizione Connect Marketing Management .",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_23.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_23.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_23.jpg",
@@ -302,9 +335,9 @@
     },
     {
       "id": 24,
-      "title": "Mirdif Villa Fit-out",
-      "category": "residential",
-      "description": "Turnkey interior fit-out for a standalone villa in Mirdif with home automation, cinema room, and landscaped gardens.",
+      "title": "Naturelife Spa Premium  at Rixos Marina Abu Dhabi",
+      "category": "commercial",
+      "description": "Interior Fit-Out & Renovation Works for Ambizione Connect Marketing Management .",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_24.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_24.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_24.jpg",
@@ -313,9 +346,9 @@
     },
     {
       "id": 25,
-      "title": "Dubai Canal Commercial",
-      "category": "commercial",
-      "description": "Retail and office fit-out along Dubai Canal with glass-fronted facades, waterfront terraces, and premium finishes.",
+      "title": "Fruit Bowl Caf\u00e9 Restaurant \u2013Muweilah, Sharjah",
+      "category": "f-and-b",
+      "description": "Full Turnkey Restaurant Fit-Out for Private Client - Owners.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_25.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_25.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_25.jpg",
@@ -324,9 +357,9 @@
     },
     {
       "id": 26,
-      "title": "Al Barsha F&B Outlet",
+      "title": "Royal Tiger Restaurant \u2013 Al Sajaa, Sharjah",
       "category": "f-and-b",
-      "description": "Cafeteria and quick-service restaurant fit-out in Al Barsha with durable finishes, fast-service counters, and digital menu boards.",
+      "description": "Full Turnkey Restaurant Fit-Out for Private Client - Owners.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_26.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_26.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_26.jpg",
@@ -335,9 +368,9 @@
     },
     {
       "id": 27,
-      "title": "Nad Al Sheba Renovation",
-      "category": "renovations",
-      "description": "Full renovation of a residential villa in Nad Al Sheba with modern open-plan layouts, upgraded bathrooms, and smart wiring.",
+      "title": "GOBI Restaurant \u2013 Ritz Carlton \u2013 RAK",
+      "category": "f-and-b",
+      "description": "Gypsum and Paint work for Veloche Interior and Exhibition.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_27.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_27.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_27.jpg",
@@ -346,9 +379,9 @@
     },
     {
       "id": 28,
-      "title": "Muhaisnah Joinery Works",
-      "category": "joinery",
-      "description": "Bespoke timber joinery for a community centre in Muhaisnah including stage structures, reception desks, and timber paneling.",
+      "title": "Private Villa F13 \u2013 Mudon, Dubai",
+      "category": "residential",
+      "description": "Interior Fit-Out & Renovation Works for Private Client - Owners.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_28.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_28.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_28.jpg",
@@ -357,9 +390,9 @@
     },
     {
       "id": 29,
-      "title": "Dubai Airport Civil Works",
-      "category": "civil",
-      "description": "Civil infrastructure works at Dubai International Airport including taxiway reinforcement, drainage channels, and utility trenches.",
+      "title": "Apartment 1332  Central Park Tower \u2013 DIFC, Dubai",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for BuildMode Industries LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_29.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_29.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_29.jpg",
@@ -368,9 +401,9 @@
     },
     {
       "id": 30,
-      "title": "Green Community Residential",
-      "category": "residential",
-      "description": "Interior fit-out for a residential tower in Green Community with compact layouts, built-in storage, and budget-friendly finishes.",
+      "title": "Private Villa 44 \u2013 Al Furjan Villas \u2013 Nakheel Properties",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for BuildMode Industries LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_30.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_30.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_30.jpg",
@@ -379,9 +412,9 @@
     },
     {
       "id": 31,
-      "title": "Jumeirah Beach Residence Commercial",
-      "category": "commercial",
-      "description": "High-street retail fit-out in JBR with durable flooring, security systems, and glass shopfronts for premium tenant brands.",
+      "title": "Private Villa 160 \u2013 Al Furjan Villas \u2013 Nakheel Properties",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for BuildMode Industries LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_31.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_31.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_31.jpg",
@@ -390,9 +423,9 @@
     },
     {
       "id": 32,
-      "title": "Al Rigga F&B Fit-out",
-      "category": "f-and-b",
-      "description": "Catering kitchen and front-of-house fit-out in Al Rigga with food-grade surfaces, exhaust hoods, and refrigeration fit-out.",
+      "title": "Showroom \u2013 Build Mode",
+      "category": "commercial",
+      "description": "Interior Fit-Out & Renovation Works for BuildMode Industries LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_32.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_32.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_32.jpg",
@@ -401,9 +434,9 @@
     },
     {
       "id": 33,
-      "title": "Deira Renovation Project",
-      "category": "renovations",
-      "description": "Heritage building renovation in Deira with careful restoration of original facades combined with modern interior services.",
+      "title": "Private Villa 30 \u2013 Street 7 Meadows 5, Dubai",
+      "category": "residential",
+      "description": "GRG Casted Molding & Cornish work for Wahat Babil Electromechanical Works LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_33.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_33.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_33.jpg",
@@ -412,9 +445,9 @@
     },
     {
       "id": 34,
-      "title": "Al Safa Joinery & Carpentry",
-      "category": "joinery",
-      "description": "Bespoke timber and laminate joinery for a family home in Al Safa including built-in beds, desks, and entertainment units.",
+      "title": "Private Villa 63 \u2013 Emerald Hills \u2013 Dubai Hills",
+      "category": "residential",
+      "description": "Gypsum, Tiling and Painting works for yoshi contracting LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_34.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_34.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_34.jpg",
@@ -423,9 +456,9 @@
     },
     {
       "id": 35,
-      "title": "Dubai Festival City MEP",
-      "category": "mep",
-      "description": "Complex MEP retrofit for a hotel in Dubai Festival City with chilled beam systems, BMS integration, and energy metering.",
+      "title": "Private Villa 12 \u2013 Springs 5 \u2013 Emaar",
+      "category": "residential",
+      "description": "Micro topping work for Wahat Babil Electromechanical Works LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_35.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_35.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_35.jpg",
@@ -434,9 +467,9 @@
     },
     {
       "id": 36,
-      "title": "Mirdif Hills Residential",
+      "title": "Private Villa 28 \u2013 Al Barsha",
       "category": "residential",
-      "description": "Bulk residential fit-out for a mid-rise apartment block in Mirdif Hills with standardised kitchen and bathroom packages.",
+      "description": "GRG Casted and Gypsum work for elenora interior dezign works LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_36.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_36.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_36.jpg",
@@ -445,9 +478,9 @@
     },
     {
       "id": 37,
-      "title": "Dubai Hills Mall Commercial",
-      "category": "commercial",
-      "description": "Retail shell-and-core fit-out for a premium outlet in Dubai Hills Mall with suspended ceilings and raised access floors.",
+      "title": "Private Villa E40 \u2013 Emirates Hills",
+      "category": "residential",
+      "description": "GRC and GRP works for Royat Massar Decorations LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_37.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_37.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_37.jpg",
@@ -456,9 +489,9 @@
     },
     {
       "id": 38,
-      "title": "Al Garhoud F&B Kitchen",
-      "category": "f-and-b",
-      "description": "Commercial kitchen fit-out in Al Garhoud with stainless steel fabrication, walk-in refrigeration, and grease duct systems.",
+      "title": "Office Fit-Out Work \u2013 Liberty House \u2013 DIFC",
+      "category": "commercial",
+      "description": "Interior Fit-Out & Renovation Works for Cosmo Interiors LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_38.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_38.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_38.jpg",
@@ -467,9 +500,9 @@
     },
     {
       "id": 39,
-      "title": "Al Nahda Building Renovation",
+      "title": "Loft Apartment 4606 \u2013 Sadaf 6 \u2013JBR, Dubai",
       "category": "renovations",
-      "description": "Complete renovation of a residential tower in Al Nahda with new lifts, facade restoration, and upgraded lobby finishes.",
+      "description": "Interior Fit-Out & Renovation Works for BuildMode Industries LLC.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_39.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_39.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_39.jpg",
@@ -478,47 +511,319 @@
     },
     {
       "id": 40,
-      "title": "Dubai Production City Civil",
-      "category": "civil",
-      "description": "Civil engineering works for an industrial warehouse in Dubai Production City with hardstanding, kerbing, and utility connections.",
+      "title": "Gypsum Work \u2013 Private Villa \u2013 Al Barari",
+      "category": "residential",
+      "description": "GRG Casted and Gypsum work for Private Client - Owners.",
       "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_40.jpg",
       "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_40.jpg",
       "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_40.jpg",
       "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_40.jpg",
       "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_40.jpg"
+    },
+    {
+      "id": 41,
+      "title": "Private Villa 02 \u2013 Nudra \u2013 St. Regis, Abu Dhabi",
+      "category": "renovations",
+      "description": "GRG Casted and Gypsum work for Riwaq Decorations LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_41.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_41.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_41.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_41.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_41.jpg"
+    },
+    {
+      "id": 42,
+      "title": "Private Villa B7 \u2013 Jumeirah Park Villa, Dubai",
+      "category": "renovations",
+      "description": "GRC and GRG work for Riwaq Decorations LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_42.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_42.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_42.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_42.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_42.jpg"
+    },
+    {
+      "id": 43,
+      "title": "Private Villa 82 \u2013 Caya \u2013 Arabian Ranches 3, Dubai",
+      "category": "renovations",
+      "description": "Tiling, Gypsum and paint work for Riwaq Decorations LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_43.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_43.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_43.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_43.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_43.jpg"
+    },
+    {
+      "id": 44,
+      "title": "Private Villa 77 \u2013 Sidra \u2013 Dubai Hills, Dubai",
+      "category": "renovations",
+      "description": "Tiling, Gypsum and paint work for Riwaq Decorations LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_44.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_44.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_44.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_44.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_44.jpg"
+    },
+    {
+      "id": 45,
+      "title": "Private Villa \u2013 Al Barsha",
+      "category": "renovations",
+      "description": "GRG Casted and Gypsum work for Abeer Alamal Technical Works.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_45.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_45.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_45.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_45.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_45.jpg"
+    },
+    {
+      "id": 46,
+      "title": "Renovation Work \u2013 The Hive \u2013 Studio City, Dubai",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for Dream work Technical Services LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_46.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_46.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_46.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_46.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_46.jpg"
+    },
+    {
+      "id": 47,
+      "title": "Private Villa 02 \u2013 Al Wasl \u2013 Jumeirah, Dubai",
+      "category": "renovations",
+      "description": "External and Internal Tiling works for Orbis Creative Solutions LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_47.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_47.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_47.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_47.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_47.jpg"
+    },
+    {
+      "id": 48,
+      "title": "Private Villa 14 \u2013 Street 02 \u2013 Hattan \u2013 Arabian Ranches 1",
+      "category": "renovations",
+      "description": "Interior Fit-Out & Renovation Works for BuildMode Industries LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_48.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_48.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_48.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_48.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_48.jpg"
+    },
+    {
+      "id": 49,
+      "title": "Salwan Villa \u2013 Al Barsha",
+      "category": "renovations",
+      "description": "Gypsum and Paint work for Elenora interior dezign works LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_49.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_49.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_49.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_49.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_49.jpg"
+    },
+    {
+      "id": 50,
+      "title": "Gazebo Restaurant - Circle Mall - JVC, Dubai",
+      "category": "commercial",
+      "description": "GRG and Gypsum Work for Construction group international LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_50.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_50.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_50.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_50.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_50.jpg"
+    },
+    {
+      "id": 51,
+      "title": "Tilal Al Ghaf - Motor City, Dubai",
+      "category": "residential",
+      "description": "Cement Baord work at Canopy for Oculus Middle East Contracting LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_51.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_51.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_51.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_51.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_51.jpg"
+    },
+    {
+      "id": 52,
+      "title": "Elementary School - Nad Al sheba, Dubai",
+      "category": "commercial",
+      "description": "Interior Fit-Out & Renovation Works for Orbis Creative Solutions LLC.",
+      "image": "https://gypspace.s3.us-east-1.amazonaws.com/project_52.jpg",
+      "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_52.jpg",
+      "blueprintImage": "https://gypspace.s3.us-east-1.amazonaws.com/project_52.jpg",
+      "gallery1": "https://gypspace.s3.us-east-1.amazonaws.com/project_52.jpg",
+      "gallery2": "https://gypspace.s3.us-east-1.amazonaws.com/project_52.jpg"
     }
   ],
   "clients": [
-    { "name": "Abeer Alamal Technical Works", "project": "Technical Works", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/abeer_alamal.jpeg" },
-    { "name": "Al Qabdah Global Contructions", "project": "Construction", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/al_qabdah.png" },
-    { "name": "Buildmode", "project": "Industrial Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/build_mode.png" },
-    { "name": "Cosmo Interiors", "project": "Interior Design", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/cosmo-interiors.png" },
-    { "name": "Echo Art Décor Cont.", "project": "Decor & Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/echo-art.png" },
-    { "name": "Elenora Interior Design", "project": "Interior Design", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/elenora.jpeg" },
-    { "name": "Emaar", "project": "Commercial Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/emaar.png" },
-    { "name": "Fino Interiors", "project": "Interior Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/fino-international.png" },
-    { "name": "Golden Square Interior Design", "project": "Interior Design", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/golden-square.png" },
-    { "name": "Naam creations", "project": "Creative Solutions", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/Naam-creation.png" },
-    { "name": "Nakheel", "project": "Civil & Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/Nakheel_Properties.png" },
-    { "name": "Orbis Creative Solutions", "project": "Creative Solutions", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/orbis_interiors.png" },
-    { "name": "Oculus Middle East", "project": "Technical Services", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/Oculus.png" },
-    { "name": "Pza Interiors", "project": "Interior Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/pza-interiors.png" },
-    { "name": "Roche Bobois", "project": "Luxury Furniture", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/roche-bobois.svg" },
-    { "name": "Royat Massar Decorations LLC", "project": "Decorations", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/royat-massar.png" },
-    { "name": "Sharif Carpentry", "project": "Carpentry & Joinery", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/sharif_carpentry.png" },
-    { "name": "Veloche Interiors", "project": "Interior Fit-out", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/veloche-global.png" },
-    { "name": "Wahat Babil Electromechanical LLC", "project": "MEP Works", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/wahat-babil.png" },
-    { "name": "Yaser Fannari", "project": "Technical Works", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/yaser-fanari.png" },
-    { "name": "Yoshi COntruction", "project": "Construction", "location": "Dubai, UAE", "logo": "https://gypspace.s3.us-east-1.amazonaws.com/yoshii.jpeg" }
+    {
+      "name": "Abeer Alamal Technical Works",
+      "project": "Technical Works",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/abeer_alamal.jpeg"
+    },
+    {
+      "name": "Al Qabdah Global Contructions",
+      "project": "Construction",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/al_qabdah.png"
+    },
+    {
+      "name": "Buildmode",
+      "project": "Industrial Fit-out",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/build_mode.png"
+    },
+    {
+      "name": "Cosmo Interiors",
+      "project": "Interior Design",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/cosmo-interiors.png"
+    },
+    {
+      "name": "Echo Art D\u00e9cor Cont.",
+      "project": "Decor & Fit-out",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/echo-art.png"
+    },
+    {
+      "name": "Elenora Interior Design",
+      "project": "Interior Design",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/elenora.jpeg"
+    },
+    {
+      "name": "Emaar",
+      "project": "Commercial Fit-out",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/emaar.png"
+    },
+    {
+      "name": "Fino Interiors",
+      "project": "Interior Fit-out",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/fino-international.png"
+    },
+    {
+      "name": "Golden Square Interior Design",
+      "project": "Interior Design",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/golden-square.png"
+    },
+    {
+      "name": "Naam creations",
+      "project": "Creative Solutions",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/Naam-creation.png"
+    },
+    {
+      "name": "Nakheel",
+      "project": "Civil & Fit-out",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/Nakheel_Properties.png"
+    },
+    {
+      "name": "Orbis Creative Solutions",
+      "project": "Creative Solutions",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/orbis_interiors.png"
+    },
+    {
+      "name": "Oculus Middle East",
+      "project": "Technical Services",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/Oculus.png"
+    },
+    {
+      "name": "Pza Interiors",
+      "project": "Interior Fit-out",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/pza-interiors.png"
+    },
+    {
+      "name": "Roche Bobois",
+      "project": "Luxury Furniture",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/roche-bobois.svg"
+    },
+    {
+      "name": "Royat Massar Decorations LLC",
+      "project": "Decorations",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/royat-massar.png"
+    },
+    {
+      "name": "Sharif Carpentry",
+      "project": "Carpentry & Joinery",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/sharif_carpentry.png"
+    },
+    {
+      "name": "Veloche Interiors",
+      "project": "Interior Fit-out",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/veloche-global.png"
+    },
+    {
+      "name": "Wahat Babil Electromechanical LLC",
+      "project": "MEP Works",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/wahat-babil.png"
+    },
+    {
+      "name": "Yaser Fannari",
+      "project": "Technical Works",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/yaser-fanari.png"
+    },
+    {
+      "name": "Yoshi COntruction",
+      "project": "Construction",
+      "location": "Dubai, UAE",
+      "logo": "https://gypspace.s3.us-east-1.amazonaws.com/yoshii.jpeg"
+    }
   ],
   "gallery": [
-    { "id": 1, "url": "https://gypspace.s3.us-east-1.amazonaws.com/main-logo.png", "caption": "main-logo", "category": "general" },
-    { "id": 2, "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg", "caption": "Corporate Headquarters", "category": "fitout" },
-    { "id": 3, "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg", "caption": "Precision Lab Facility", "category": "mep" },
-    { "id": 4, "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg", "caption": "Executive Hospitality Suite", "category": "fitout" },
-    { "id": 5, "url": "https://gypspace.s3.us-east-1.amazonaws.com/major_mep.jpg", "caption": "MEP Works", "category": "mep" },
-    { "id": 6, "url": "https://gypspace.s3.us-east-1.amazonaws.com/major_civil.jpg", "caption": "Civil Works", "category": "civil" },
-    { "id": 7, "url": "https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery1.jpg", "caption": "Fitout Gallery 1", "category": "fitout" }
+    {
+      "id": 1,
+      "url": "https://gypspace.s3.us-east-1.amazonaws.com/main-logo.png",
+      "caption": "main-logo",
+      "category": "general"
+    },
+    {
+      "id": 2,
+      "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_1.jpg",
+      "caption": "Corporate Headquarters",
+      "category": "fitout"
+    },
+    {
+      "id": 3,
+      "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_2.jpg",
+      "caption": "Precision Lab Facility",
+      "category": "mep"
+    },
+    {
+      "id": 4,
+      "url": "https://gypspace.s3.us-east-1.amazonaws.com/project_3.jpg",
+      "caption": "Executive Hospitality Suite",
+      "category": "fitout"
+    },
+    {
+      "id": 5,
+      "url": "https://gypspace.s3.us-east-1.amazonaws.com/major_mep.jpg",
+      "caption": "MEP Works",
+      "category": "mep"
+    },
+    {
+      "id": 6,
+      "url": "https://gypspace.s3.us-east-1.amazonaws.com/major_civil.jpg",
+      "caption": "Civil Works",
+      "category": "civil"
+    },
+    {
+      "id": 7,
+      "url": "https://gypspace.s3.us-east-1.amazonaws.com/fitout_gallery1.jpg",
+      "caption": "Fitout Gallery 1",
+      "category": "fitout"
+    }
   ],
   "projectsPage": {
     "heroImage": "https://gypspace.s3.us-east-1.amazonaws.com/joinery.png",
