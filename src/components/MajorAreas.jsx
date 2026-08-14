@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useAdmin } from '../contexts/AdminContext'
-import { EditableText } from './EditableFields'
+import { EditableText, EditableImage } from './EditableFields'
 
 const MajorAreas = () => {
   const { cmsData, updateCmsData, isEditMode } = useAdmin()
@@ -71,9 +71,12 @@ const MajorAreas = () => {
               className="group relative overflow-hidden rounded-xl border border-outline-variant bg-white shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-xl block"
             >
               <div className="h-64 overflow-hidden relative">
-                <div
-                  className="bg-cover bg-center w-full h-full transition-transform duration-700 group-hover:scale-110"
-                  style={{ backgroundImage: `url('${area.image}')` }}
+                <EditableImage
+                  src={area.image}
+                  alt={area.title}
+                  onChange={(value) => updateArea(idx, 'image', value)}
+                  editMode={isEditMode}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-md left-md flex items-center gap-xs text-white">

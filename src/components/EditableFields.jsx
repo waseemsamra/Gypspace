@@ -48,7 +48,7 @@ const EditableText = ({ value, onChange, as = 'p', className = '', editMode = fa
   )
 }
 
-const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = [] }) => {
+const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = [], className = '' }) => {
   const [isEditing, setIsEditing] = useState(false)
   const [draft, setDraft] = useState(src)
   const [uploading, setUploading] = useState(false)
@@ -75,7 +75,7 @@ const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = []
   }
 
   if (!editMode) {
-    return <img src={src} alt={alt} className="w-full h-full object-cover" />
+    return <img src={src} alt={alt} className={className} />
   }
 
   if (isEditing) {
@@ -150,7 +150,7 @@ const EditableImage = ({ src, alt, onChange, editMode = false, galleryItems = []
       className="cursor-pointer relative group block"
       title="Click to change image"
     >
-      <img src={src} alt={alt} className="w-full h-full object-cover" />
+      <img src={src} alt={alt} className={className} />
       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-200 flex items-center justify-center">
         <span className="material-symbols-outlined text-white opacity-0 group-hover:opacity-100 transition-opacity text-4xl drop-shadow-lg">
           edit
