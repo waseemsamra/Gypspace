@@ -29,7 +29,15 @@ const ADMIN_CREDENTIALS = {
         }
         
         if (!Array.isArray(merged.projects) || merged.projects.length < initialCmsData.projects.length) {
-          merged.projects = initialCmsData.projects
+          const localProjects = merged.projects || []
+          const initialById = new Map((initialCmsData.projects || []).map(p => [p.id, p]))
+          const localById = new Map(localProjects.map(p => [p.id, p]))
+          const mergedProjects = []
+          for (const initialProject of initialCmsData.projects || []) {
+            const localProject = localById.get(initialProject.id)
+            mergedProjects.push(localProject ? { ...initialProject, ...localProject } : initialProject)
+          }
+          merged.projects = mergedProjects
         }
         
         return merged
