@@ -4,7 +4,6 @@ import Layout from './layouts/AppShell'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ServicesPage from './pages/ServicesPage'
-import ProcessPage from './pages/ProcessPage'
 import ContactPage from './pages/ContactPage'
 import FitoutPage from './pages/FitoutPage'
 import MepPage from './pages/MepPage'
@@ -13,7 +12,6 @@ import ProjectsPage from './pages/ProjectsPage'
 import Project1Page from './pages/Project1Page'
 import Project2Page from './pages/Project2Page'
 import Project3Page from './pages/Project3Page'
-import WorksPage from './pages/WorksPage'
 import ProductionPage from './pages/ProductionPage'
 import BrandStoryPage from './pages/BrandStoryPage'
 import CareersPage from './pages/CareersPage'
@@ -39,7 +37,6 @@ const App = () => {
             <Route index element={<HomePage />} />
             <Route path="about" element={<AboutPage />} />
             <Route path="services" element={<ServicesPage />} />
-            <Route path="process" element={<ProcessPage />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="fitout" element={<FitoutPage />} />
             <Route path="mep" element={<MepPage />} />
@@ -48,7 +45,6 @@ const App = () => {
             <Route path="projects/1" element={<Project1Page />} />
             <Route path="projects/2" element={<Project2Page />} />
             <Route path="projects/3" element={<Project3Page />} />
-            <Route path="works" element={<WorksPage />} />
             <Route path="production" element={<ProductionPage />} />
             <Route path="brand-story" element={<BrandStoryPage />} />
             <Route path="careers" element={<CareersPage />} />

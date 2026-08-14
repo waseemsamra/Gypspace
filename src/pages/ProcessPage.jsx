@@ -27,10 +27,10 @@ const ProcessPage = () => {
               </p>
               <div className="flex flex-wrap gap-md">
                 <Link
-                  to="/works"
+                  to="/projects"
                   className="bg-cyan-tech text-white px-lg py-md rounded-lg font-label-md flex items-center gap-sm hover:scale-[1.02] transition-transform"
                 >
-                  Our Works <span className="material-symbols-outlined">arrow_forward</span>
+                  Our Projects <span className="material-symbols-outlined">arrow_forward</span>
                 </Link>
                 <Link
                   to="/specifications"

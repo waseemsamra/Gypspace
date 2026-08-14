@@ -25,18 +25,8 @@ const Footer = () => {
         <h4 className="font-label-md text-label-md mb-md uppercase">QUICK LINKS</h4>
         <ul className="space-y-sm">
           <li>
-            <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/process">
-              Our Process
-            </a>
-          </li>
-          <li>
             <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/services">
               Services
-            </a>
-          </li>
-          <li>
-            <a className="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-all" href="/works">
-              Work
             </a>
           </li>
           <li>

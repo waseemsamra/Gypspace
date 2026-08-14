@@ -37,9 +37,6 @@ const ProductionPage = () => {
               <Link to="/services" className="font-body-md text-secondary hover:text-primary transition-colors">
                 Services
               </Link>
-              <Link to="/works" className="font-body-md text-secondary hover:text-primary transition-colors">
-                Work
-              </Link>
               <Link to="/about" className="font-body-md text-secondary hover:text-primary transition-colors">
                 About
               </Link>
