@@ -10,7 +10,7 @@ import HomeProjects from '../components/HomeProjects'
 const ProjectsPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0)
-  })
+  }, [])
   const { cmsData, updateCmsData, isEditMode } = useAdmin()
   const gallery = cmsData?.gallery || []
   const projects = cmsData?.projects || []
