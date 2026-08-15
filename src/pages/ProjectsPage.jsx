@@ -5,6 +5,7 @@ import { EditableText, EditableImage } from '../components/EditableFields'
 import Services from '../components/Services'
 import WhyChooseUs from '../components/WhyChooseUs'
 import Contact from '../components/Contact'
+import HomeProjects from '../components/HomeProjects'
 
 const ProjectsPage = () => {
   useEffect(() => {
@@ -73,6 +74,65 @@ const ProjectsPage = () => {
               className="font-body-lg text-body-lg text-on-surface-variant mb-xl max-w-lg"
               editMode={isEditMode}
             />
+          </div>
+        </div>
+      </section>
+
+      <section className="py-2xl bg-surface" id="featured-projects">
+        <div className="max-w-container-max mx-auto px-gutter">
+          <div className="mb-xl">
+            <EditableText
+              value={cmsData?.projectsPage?.featuredTitle || 'Featured Projects'}
+              onChange={(value) => updateCmsData('projectsPage', { ...cmsData?.projectsPage, featuredTitle: value })}
+              as="h2"
+              className="font-headline-md text-headline-md text-primary mb-sm"
+              editMode={isEditMode}
+            />
+            <EditableText
+              value={cmsData?.projectsPage?.featuredSubtitle || 'A showcase of our most complex and high-fidelity technical interior solutions.'}
+              onChange={(value) => updateCmsData('projectsPage', { ...cmsData?.projectsPage, featuredSubtitle: value })}
+              as="p"
+              className="text-on-surface-variant font-body-md max-w-xl border-l-4 border-primary pl-md"
+              editMode={isEditMode}
+            />
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-lg">
+            {projects.slice(0, 3).map((project, idx) => (
+              <div key={project.id} className="group flex flex-col gap-md">
+                <div className="relative aspect-video overflow-hidden rounded-xl border border-outline-variant">
+                  <EditableImage
+                    src={project.image}
+                    alt={project.title}
+                    onChange={(value) => updateProject(idx, 'image', value)}
+                    editMode={isEditMode}
+                    galleryItems={gallery}
+                    className="w-full h-full object-cover transition-all duration-300 group-hover:scale-105"
+                  />
+                </div>
+                <div>
+                  <EditableText
+                    value={project.title}
+                    onChange={(value) => updateProject(idx, 'title', value)}
+                    as="h3"
+                    className="font-headline-sm text-headline-sm text-primary mb-xs"
+                    editMode={isEditMode}
+                  />
+                  <EditableText
+                    value={project.description}
+                    onChange={(value) => updateProject(idx, 'description', value)}
+                    as="p"
+                    className="text-on-surface-variant font-body-sm mb-md"
+                    editMode={isEditMode}
+                  />
+                  <Link
+                    className="inline-flex items-center gap-xs text-label-md font-label-md text-primary hover:opacity-70 transition-opacity"
+                    to={`/projects/${project.id}`}
+                  >
+                    View Project <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
